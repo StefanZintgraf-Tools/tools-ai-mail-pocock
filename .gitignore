@@ -1,0 +1,8 @@
+# Brainstorm scope-steer toggle — purely local session state, never committed.
+# The hook activates while `brainstorm_scope_boundary_on.md` exists in the root.
+brainstorm_scope_boundary_on.md
+brainstorm_scope_boundary_off.md
+
+# brainstorm-vision skill is canonically in ai-knowhow/skills-plugins; this is a
+# local junction into it, not files to track here.
+.claude/skills/brainstorm-vision/
