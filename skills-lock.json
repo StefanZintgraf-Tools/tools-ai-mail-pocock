@@ -25,6 +25,12 @@
       "skillPath": "skills/personal/edit-article/SKILL.md",
       "computedHash": "e0c50de6d64f528cb4ea32b142e2ec499e291efbc6996369ac4a1eea76d4870c"
     },
+    "git-guardrails-claude-code": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "computedHash": "a04bf71be9abc44ca3b00e2f1740b37d2e471abadd20d43a31bccff7135baedf"
+    },
     "grill-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
