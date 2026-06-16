@@ -61,8 +61,9 @@
   all neatly filed where it belongs — sorted into sensible places rather than
   heaped in one spot — so my correspondence is organized and safe, not a mess.
 - **UC8.** As someone who loses track of important attachments, I can finally have the ones
-  that matter saved off into a sensible, well-organized place of their own — so a
-  contract, an invoice, or a photo is never trapped inside a buried email again.
+  that matter just appear, correctly filed, in the place I already keep my documents — so my
+  mail and my document store stop being two separate worlds I shuttle files between by hand,
+  and a contract, an invoice, or a photo is never trapped inside a buried email again.
 - **UC9.** As someone who leaves the awkward emails unread for days, I can finally have the
   reply I dread already drafted in my own voice — the polite no, the third chase,
   the delicate client note — so the hardest ones take a tweak and a nod, not an
@@ -239,76 +240,94 @@
   specialist and hand it over with the full picture, so the customer reaches the person who can
   actually answer instead of being bounced around, and escalating is one nod rather than a hunt
   for who deals with this.
-
-## Resume notes
-
-- **Status: PAUSED mid-session. Now 50 use-cases (UC1–UC50, numbered), both visions
-  drafted.** User did NOT finalize: they paused to **continue in a fresh session with
-  more topics OF THEIR OWN** they have in mind — these were never named (I asked twice;
-  they paused before listing). **AT RESUME: lead by asking what their own topics are**,
-  open them one at a time, keep generating; finalize only once they signal done. Breadth
-  is deliberately NOT spent.
-- **This sitting (what changed):** opened all three of my prompted "team" veins and added
-  **UC44–UC50**: shared-inbox dispatch (UC44 — assistant learns how the team already
-  splits work, files into people's folders, "better nothing than wrong" — leaves unsure
-  ones in the common pile, people re-assign & it learns); availability awareness (UC45 —
-  knows who's on holiday/sick/travelling, never drops time-sensitive mail on someone
-  out, routes to whoever's covering); live collision-avoidance (UC46 — see a colleague
-  is already on a message right now, no double/contradictory replies); personal audit
-  "no black box" (UC47 — show me everything you did & why, plain-words reasons); company
-  audit trail (UC48 — complete lasting traceable record of the *assistant's* decisions,
-  audit-safe, NEVER staff surveillance); clean thread hand-off with full context
-  travelling along (UC49); escalation to the right specialist (UC50). The hand-off
-  receiver-relief + hander-confidence were folded into ONE use-case (UC49) at user's
-  push; escalation kept separate (UC50).
-- **New HARD PRINCIPLES surfaced this sitting (fold into the principles list / honour
-  at finalize):** routing temperament is "**better do nothing than do something wrong**"
-  — acts only when sure, else leaves it for a human; the audit/log record is an account
-  of the **assistant's own actions, never a tool to surveil staff**. (Logging detail the
-  user gave — timestamps, sender/receiver, topic, every message re-traceable from the
-  record — is a SPEC requirement, deliberately kept OUT of the captured bullets; lives in
-  UC48 only as the human promise "any single message can be traced back & accounted
-  for.")
-- **PRIOR sitting (for context):** numbered UC1–UCn; merged old UC2+UC11 and old
-  UC5+UC45 (nothing dropped); list had gone 45→43 then renumbered. **UC18** (decades →
-  knowledge well) kept separate from UC5. Resolved: **business vision gets NO chat-apps
-  bullet** (individual-only).
-- **FINALIZE STEPS (when the user finally signals done):** strip this whole
-  `## Resume notes` section; rename `ai-mail-foundation-vision.wip.md` →
-  `ai-mail-foundation-vision.md`; rename the steering flag back to
-  `brainstorm_scope_boundary_off.md`. Finished artifact = TWO sections only
-  (Vision + Use-cases). Note: use-cases currently carry **UCn** number labels — decide
-  at finalize whether to keep them or strip back to plain `- ` bullets per the
-  two-sections format.
-
-- **HARD PRINCIPLES** (load-bearing, must survive finalize): human always in the
-  loop — nothing ever **sent, decided, or deleted** without explicit approval; no
-  silent autonomy; the assistant never locks the user out (always free to open and
-  read everything); what it learns **stays the user's / the company's alone**, never
-  used to surveil staff; protection flags/sets-aside, **never silently deletes**;
-  proactive behaviours are **configurable** (can be turned down/off); chat-app reach
-  is **opt-in**, email stays the home base.
-
-- **VISION — now TWO sub-visions, both as terse bullets (user explicitly rejected
-  prose / "marketing blabla" for both).** "For individuals" (10 bullets, incl. chat
-  apps named: WhatsApp/Telegram — user insisted these stay) and "For businesses" (10
-  bullets, manager POV). The original individual prose paragraph was replaced by
-  bullets this sitting.
-
-- **Breadth — REOPENED by the user.** The previous pass had closed every flagged
-  vein (composing-from-scratch / proactive outbound (configurable), delight / being a
-  *warmer* correspondent, reducing inflow at source (unsubscribe), the vulnerable
-  user's own first-person POV, talk-or-type, trust earned step-by-step, multilingual,
-  plus support-queue and search-old-mail). But the user has now said they want to
-  bring **more topics** in a fresh session, so do NOT treat breadth as exhausted —
-  resume in divergent mode. Note: archiving/filing of mail & attachments is already
-  covered by three bullets (filing, attachments-saved-off, taming the old pile) — do
-  NOT re-add; sharpen wording only if asked.
-
-- **Veins now opened (this sitting):** team/shared-mailbox dispatch + availability +
-  collision (UC44–46), audit trail personal & company (UC47–48), thread hand-off &
-  escalation (UC49–50). Don't re-open these — sharpen wording only if asked.
-- **Veins NOT yet opened (candidates if the user wants prompts):** whatever NEW topics
-  the user brings (lead with their list — they paused specifically to bring their own);
-  then possibly — temporarily looping someone in without fully letting go of a thread;
-  approvals/limits a manager sets on what the assistant may do per person or per inbox.
+- **UC51.** As someone whose conversations live in my chat apps as much as my email, I can finally
+  just ask in plain words and have the assistant find it wherever it actually happened — "when did
+  Anna send me the address?", "what did the plumber quote?" — reaching into WhatsApp, Telegram and
+  the rest the same way it reaches into my mail, so I never have to remember *which* app a thing was
+  said in to get it back.
+- **UC52.** As someone whose answer is never just in one place, I can finally ask one question and
+  get the whole thing back together — "find me everything about the Müller project" returns the
+  email thread, the contract I filed, and the meeting it's tied to as one connected picture — so I
+  stop stitching together mail, files, and calendar by hand to reconstruct what I already have.
+- **UC53.** As someone quietly drowning in copies of the same thing, I can finally have the assistant
+  notice when I'm holding duplicates — the same attachment saved three times, a thread forwarded back
+  to me, a contact entered twice — and offer to tidy them up, so my mail and files get genuinely
+  lighter instead of just better sorted; and it always shows me what it wants to merge or remove and
+  waits for my nod, never quietly throwing a copy away.
+- **UC54.** As someone on a team where the answer often sits in a colleague's mail rather than mine, I
+  can finally search across what we hold together — the shared mailboxes, the threads someone else
+  handled — so a question already answered once by anyone on the team is findable by all of us, and
+  knowledge stops being trapped in whichever person happened to deal with it.
+- **UC55.** As someone whose answer sometimes isn't in any email at all, I can finally ask once and
+  have the assistant reach into the company's shared files too — the document on the network drive, the
+  spec everyone refers to — and bring it back alongside the mail, so I find what I need by asking for
+  it rather than knowing whether it was sent to me or filed away somewhere.
+- **UC56.** As someone who sometimes needs a second pair of eyes without giving the thread away, I
+  can finally pull a colleague in for just this moment — to glance, weigh in, or take one piece —
+  while the conversation stays mine to carry; the assistant brings them up to speed on only what
+  they need to see, and quietly drops them back out once they've helped, so I get the input without
+  copying someone onto everything forever or losing the thread to a full hand-off.
+- **UC57.** As the manager answerable for how my team's mail is handled, I can finally decide for
+  myself how far the assistant may go — let it draft but never send for a new hire, keep it away
+  from the most sensitive accounts entirely, give it a longer leash on the routine stuff — so I can
+  let it help across the whole team without ever fearing it'll overstep where it matters most, and
+  the boundary is mine to set, not something I have to simply trust.
+- **UC58.** As someone who loses track of what's still in flight, I can finally see at a glance where
+  every open thread actually stands — what's waiting on me, what I'm waiting on someone else to come
+  back on, and what's truly done and closed — so a conversation never stalls in the limbo of "did I
+  ever hear back?" and I always know, at any moment, which balls are still in the air and whose court
+  they're in.
+- **UC59.** As the manager answerable for a shared inbox, I can finally see the whole team's work in
+  one honest picture — every open request and the stage it's at, who the ball is with, and what's
+  quietly aged past where it should be — so nothing rots unnoticed in a corner and I can tell at a
+  glance whether we're on top of things, without having to interrogate anyone or treat the view as a
+  way of clocking my people rather than minding the work.
+- **UC60.** As someone whose public inbox draws a daily crowd of strangers, I can finally have the
+  assistant act as a doorkeeper who actually knows my world — telling the real first-contact worth my
+  time (a genuine customer enquiry that names what we do, a partner or reseller lead I'd hate to lose)
+  apart from the generic mass pitch (the cold outsourcing offer, the SEO spam, the recruiter fishing
+  for my staff) — so a stranger who matters is brought to me warm and ready to answer while the junk is
+  held quietly at the door, and the one real lead in the pile never gets buried in the same "decide
+  later" heap as the noise; and because it's holding, never deleting, nothing is lost if it misjudges —
+  I can always see who knocked and overrule it.
+- **UC61.** As someone who forgets the replies I'm still owed, I can finally have the assistant keep
+  watch on the things other people promised me and never delivered — the quote the supplier said
+  he'd send, the answer I've been waiting two weeks on, the sign-off that's gone quiet — and offer to
+  chase them for me before the silence costs me ("you asked them a fortnight ago and heard nothing —
+  want me to nudge?"), so the ball I'm waiting on doesn't quietly die just because the other side
+  dropped it and I forgot I was waiting.
+- **UC62.** As someone the same people reach from all over — a colleague's work address and her
+  private one, the supplier who emails and also messages me, the friend who's on three apps — I can
+  finally have the assistant know it's all one person, not a dozen strangers who happen to share a
+  name, so everything I've ever exchanged with someone comes together into a single thread of a
+  relationship, and a nudge, a draft, or an answer is never half-blind just because the history was
+  scattered across addresses and apps.
+- **UC63.** As someone who wants help without being asked the same thing forever, I can finally tell
+  the assistant once where it may simply go ahead — "always file the receipts," "always hold the
+  obvious junk," "you can confirm slots with my own team" — and where it must always stop and ask me
+  first, so the routine stops needing my nod every single time while the things that matter still
+  never happen without it; and the line is mine to move either way as my trust grows or a mistake
+  teaches me to pull it back, never a setting forced on me.
+- **UC64.** As someone who loses days to back-and-forth I wish I could just hand off, I can finally
+  let the assistant carry a whole exchange to its finish on my behalf — chase the supplier across the
+  three rounds it takes to pin down the quote, sort out the delivery mix-up, settle a date with a
+  group — keeping me posted as it goes and bringing me in whenever it needs a real decision or my
+  approval to commit, so what used to be a week of ping-pong I babysat becomes a result I'm handed,
+  without ever giving up the final say or being kept in the dark about what was said in my name.
+- **UC65.** As someone always one slip from a reply-all disaster, the wrong attachment, or firing off
+  something I'll regret, I can finally have the assistant catch me in the very moment before I send —
+  "this is going to two hundred people, sure?", "you've picked the other Anna", "the contract you
+  mention isn't attached", "this invoice's bank details just changed from last time" — so my own
+  worst mistakes are stopped at my hand before they're gone, not apologised for after.
+- **UC66.** As someone forever copying things out of email into my calendar, my to-do list and my
+  files by hand, I can finally have the assistant carry each message through to wherever it actually
+  needs to live — the appointment onto my calendar, the promise onto my task list, the document into
+  my filing, the subscription I'm finished with actually cancelled — so acting on my mail stops
+  meaning a dozen little chores scattered across a dozen other apps, and email stops being an island I
+  have to ferry everything off of by hand, with my nod before anything is committed.
+- **UC67.** As someone bringing the assistant in on top of a lifetime of mail I already have, I can
+  finally have it useful from the very first day — already understanding my history, my people and my
+  commitments because it learned from everything that's already there, not only the mail that arrives
+  after I start — so I'm never left with an empty, clueless helper that won't be worth anything for
+  months, and the years I've already piled up become an asset on day one instead of a void it has to
+  fill from scratch.
