@@ -6,3 +6,7 @@ brainstorm_scope_boundary_off.md
 # brainstorm-vision skill is canonically in ai-knowhow/skills-plugins; this is a
 # local junction into it, not files to track here.
 .claude/skills/brainstorm-vision/
+
+# create-vision-companion skill is canonically in ai-knowhow/skills-plugins; this
+# is a local junction into it, not files to track here.
+.claude/skills/create-vision-companion/

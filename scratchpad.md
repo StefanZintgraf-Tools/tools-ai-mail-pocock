@@ -17,15 +17,19 @@
 - [x] currently brainstorming-vision and scope-boundary strictly forbid to put architecture/integration items into the vision
       Adjust: In case this pops up, ask user if that shall be added into a new "Constraints" section (just to not forget the idea)
       --> Add DMS integration, RAG etc. (ask AI agent, what could make sense)
-- [ ] shorter output wording (adjust skill?)
-- [ ] shorten skill itself (reduce token usage)
+- [x] shorter output wording 
+- [ ] Skill create-vision-companion Test und Ergebnis-Review (match mit pocock Rules Books). 
+  - [ ] Review - C:\PROJ\ai-mail\ai-mail.pocock\docs\brainstorming\ai-mail-vision-ai-spec
+    - [ ] in OKF umwandeln?
+- [ ] shorten skills itself (reduce token usage)
 - [ ] Dokumenten-Management Brainstorming
   - [ ] Architektur-Dinge jetzt erlaubt (BV#)
   - [ ] shorter wording
 - [ ] RAG Brainstorming
 - [ ] EC-Engineer Brainstorming (EC-Engineer Doku als Input, Sourcen?)
 - [ ] EtherCAT Diagnosis tool Brainstorming (EC-Inspector Doku als Input)
-- [ ] next step after brainstorming: architecture, design, entity model, PRD
+- [ ] next step after brainstorming: architecture, design, entity model, PRD (was genau? welches Steps bis zu den Spezen?)
+  - [ ] siehe auch C:\PROJ\github\pocock\agent-rules-books
   - [ ] sub-goal: find/detect one/multiple use-cases that cover the whole related architecture (tracer-bullet)
 
 
