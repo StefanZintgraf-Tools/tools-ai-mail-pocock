@@ -18,15 +18,23 @@
       Adjust: In case this pops up, ask user if that shall be added into a new "Constraints" section (just to not forget the idea)
       --> Add DMS integration, RAG etc. (ask AI agent, what could make sense)
 - [x] shorter output wording 
+- [x] Skill create-vision-companion must be able to be paused temporarily (marked as work-in-progress, wip). Maybe similar as in the brainstorm-vision skill if it makes sense.  In addition, the AI agent shall suggest to pause and continue fresh after finishing each of the internal phases, whenever reasonable.  
+- [x] Skill create-vision-companion shall be executed multiple times on the same vision document.
+  - use case 1: Skill was enhanced and Companion files must be adjusted
+  - use case 2: Companion Review (e.g. with stronger LLM), Ralph-Looping
+- [ ] Skill create-vision-companion Re-run and Test (shall stop after phase complete, Updated strategies.md considered?) 
 - [ ] Skill create-vision-companion Test und Ergebnis-Review (match mit pocock Rules Books). 
+- [ ] Neuer Use-case: Vision Enhancement (vor/nach companion erstellung)
+  - [ ] Neuer Fall für brainstorm-vision Skill?
+  - [ ] new case: AI with its own mailbox acting as a separate person
   - [ ] Review - C:\PROJ\ai-mail\ai-mail.pocock\docs\brainstorming\ai-mail-vision-ai-spec
     - [ ] in OKF umwandeln?
-- [ ] shorten skills itself (reduce token usage)
 - [ ] Dokumenten-Management Brainstorming
   - [ ] Architektur-Dinge jetzt erlaubt (BV#)
   - [ ] shorter wording
 - [ ] RAG Brainstorming
 - [ ] EC-Engineer Brainstorming (EC-Engineer Doku als Input, Sourcen?)
+  - [ ] Reverse-Engineering: wie Vision-Companion-Dokumente erzeugen? Evtl. erst mal strukturiert den Code analysieren? Welche Skills/Tools gibt es?ke
 - [ ] EtherCAT Diagnosis tool Brainstorming (EC-Inspector Doku als Input)
 - [ ] next step after brainstorming: architecture, design, entity model, PRD (was genau? welches Steps bis zu den Spezen?)
   - [ ] siehe auch C:\PROJ\github\pocock\agent-rules-books

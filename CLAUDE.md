@@ -1,6 +1,9 @@
 # ai-mail.pocock
 
-This is a git submodule of `tools-ai-mail`. To push changes, run `.\git_push.ps1 "message"` — then run `.\git_sync-submodule.ps1` from the parent repo to advance the submodule pointer.
+Submodule of parent repo `ai-mail` (`c:\PROJ\ai-mail`).
+
+- Commit/push this submodule: `.\git_push.ps1 "message"` (in this dir)
+- Advance submodule pointer in parent: `..\git_sync-submodule.ps1` (in parent dir)
 
 ## Off-limits — never read, search, or reference
 
@@ -10,7 +13,11 @@ This is a git submodule of `tools-ai-mail`. To push changes, run `.\git_push.ps1
 
 ## Read only when relevant
 
-- `skills/` — read only when creating, refactoring, or debugging a skill. 
+- `skills/` — read only when creating, refactoring, or debugging a skill.
+
+## Linked skills
+
+Some files under `.claude/skills/` are symlinks into the `ai-knowledgebase` repo (`c:\PROJ\ai-knowhow\skills-plugins`). Changes to linked skills require git commit/push in that repo, not here.
 
 ## Agent skills
 
