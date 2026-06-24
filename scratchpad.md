@@ -22,6 +22,7 @@
 - [x] Skill create-vision-companion shall be executed multiple times on the same vision document.
   - use case 1: Skill was enhanced and Companion files must be adjusted
   - use case 2: Companion Review (e.g. with stronger LLM), Ralph-Looping
+- [ ] manual review skill create-vision-companion
 - [ ] Skill create-vision-companion Re-run and Test (shall stop after phase complete, Updated strategies.md considered?) 
 - [ ] Skill create-vision-companion Test und Ergebnis-Review (match mit pocock Rules Books). 
 - [ ] Neuer Use-case: Vision Enhancement (vor/nach companion erstellung)
