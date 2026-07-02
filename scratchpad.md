@@ -22,8 +22,17 @@
 - [x] Skill create-vision-companion shall be executed multiple times on the same vision document.
   - use case 1: Skill was enhanced and Companion files must be adjusted
   - use case 2: Companion Review (e.g. with stronger LLM), Ralph-Looping
-- [ ] manual review skill brainstorm-vision (siehe auch neuer Skill von Pocock und das Video dazu)
+- [x] manual review skill brainstorm-vision (siehe auch neuer Skill von Pocock und das Video dazu)
+  - [x] SKILL.md
+  - [x] brainstorm.md
+  - [x] architecture-significance-lens-template.md
+  - [x] finalizing.md
+- [x] Phase 1: assure scope boundary works
+
+- [ ] Test mit Re-run ai-mail (auch wegen neuen Artefakt/en)
+- [ ] Test mit neuer Idee: brainstorm-Automat (vorher create-vision-companion skill review?)
 - [ ] manual review skill create-vision-companion (siehe auch neuer Skill von Pocock und das Video dazu)
+- [ ] Test mit neuer Idee: brainstorm-Automat
 - [ ] Test, ob man via claude -p oder sonst irgendwie die Skills automatisiert testen kann
 - [ ] Skill create-vision-companion Re-run and Test (shall stop after phase complete, Updated strategies.md considered?) 
 - [ ] Skill create-vision-companion Test und Ergebnis-Review (match mit pocock Rules Books). 
@@ -42,5 +51,5 @@
 - [ ] next step after brainstorming: architecture, design, entity model, PRD (was genau? welches Steps bis zu den Spezen?)
   - [ ] siehe auch C:\PROJ\github\pocock\agent-rules-books
   - [ ] sub-goal: find/detect one/multiple use-cases that cover the whole related architecture (tracer-bullet)
-
+  - [ ] siehe C:\PROJ\ai-mail\ai-mail.pocock\docs\ideas
 

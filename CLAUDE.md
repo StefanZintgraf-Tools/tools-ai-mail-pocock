@@ -5,9 +5,10 @@ Submodule of parent repo `ai-mail` (`c:\PROJ\ai-mail`).
 - Commit/push this submodule: `.\git_push.ps1 "message"` (in this dir)
 - Advance submodule pointer in parent: `..\git_sync-submodule.ps1` (in parent dir)
 
-## Off-limits — never read, search, or reference
+## Off-limits — never read, search, or reference (including sub folders)
 
 - `archive/`
+- `ideas/`
 - `outlook-RAG/`
 - `scratchpad.md` — human-only scratchpad
 
