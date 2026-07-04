@@ -9,12 +9,26 @@
 - Nothing you needed gets silently lost.
 - Costly fakes and scams caught before they cost you.
 - Reads everything, does the legwork, taps you only when it matters.
+- Takes in more than email — the paper letter you photograph, the voicemail, the
+  video, the recorded meeting — and even makes the dreaded phone call for you.
+- Carries a whole errand to the finish when you ask — the reply chased, the slot
+  agreed, the okayed invoice paid, the booking made — money only ever moving on
+  your explicit say-so.
 - Spans your chat apps too, by choice — WhatsApp, Telegram and the rest in one
   calm place.
+- Spans all your inboxes — personal, work, side-projects — under one roof, or
+  walled apart, exactly as you choose.
+- Comes offline with you and stays one live picture across every device.
 - Makes you warmer to people — not just less behind on them.
 - Reach it however you like — speak or type, in any language.
+- Can watch over a vulnerable relative's inbox, or step in with proper authority
+  for someone who can't manage their own.
+- Shared life, shared assistant — a household's admin handled between you, your
+  private mail still your own.
+- Handles a hard season gently — a loss, a long absence, a fresh start.
 - What it learns stays yours alone, and it earns your trust step by step.
-- Nothing sent, decided, or deleted without your nod — you're always in charge.
+- Gets you to a real, honest end of the day — you can finally put it down and rest.
+- Nothing sent, decided, paid, or deleted without your nod — you're always in charge.
 
 ### For businesses
 
@@ -22,13 +36,25 @@
 - Promising leads never cool off forgotten.
 - Promised follow-ups actually go out.
 - Repeat support questions answered fast, from how you solved them before.
+- Shared inbox keeps flowing even when someone's away — routed to whoever's
+  covering, never two answers to one customer.
+- Every conversation handed over already understood, not a cold "fwd:".
+- Managers see the whole picture — what's open, who holds the ball, what's aged —
+  and set how far the assistant may go, per person and per account.
 - Years of email stay the company's — not gone when someone leaves.
-- New hires brought up to speed from that memory.
+- New hires brought up to speed from that memory; a leaver hands over cleanly,
+  what's personal separated fairly from what's the firm's.
 - Money traps caught and questioned — forged invoice, changed bank details,
   urgent wire — before anyone's rushed into a costly mistake.
+- Produces the paperwork itself — the contract, the invoice, the filled-in form —
+  ready to check, not just the covering note.
+- A complete, lasting record of the assistant's own decisions — ready for an
+  audit, a legal hold, or a data request.
+- Can run entirely within your own walls where secrecy or regulation demands it,
+  nothing ever leaving.
 - Works *for* the company, never spying on staff.
 - Every reply goes out in a real person's name.
-- Nothing sent, decided, or deleted on its own — your people stay in charge.
+- Nothing sent, decided, paid, or deleted on its own — your people stay in charge.
 
 ## Use-cases
 
@@ -331,3 +357,157 @@
   after I start — so I'm never left with an empty, clueless helper that won't be worth anything for
   months, and the years I've already piled up become an asset on day one instead of a void it has to
   fill from scratch.
+- **UC68.** As someone leaving a job, I can finally hand over my whole role's worth of mail cleanly
+  instead of dumping a chaotic inbox on whoever's next — the assistant lays out everything still in
+  flight, who each open thread is with, what I promised and what's owed to me, and the standing
+  relationships behind it all, and passes it on already understood, so I leave with a clear conscience
+  and nothing rots in the gap after I'm gone, and no one can say a ball was dropped on my way out.
+- **UC69.** As someone leaving a job with years of my own life tangled into my work inbox, I can finally
+  separate what's genuinely mine from what belongs to the company — cleanly and fairly to both sides —
+  so I walk away with my personal correspondence, my own records and the private threads that were never
+  the employer's, and leave everything that is theirs behind, without an anxious manual sort and without
+  anyone able to say I took what I shouldn't or abandoned what I should have kept.
+- **UC70.** As someone stepping into a role somebody just vacated, I can finally inherit a warm inbox
+  instead of a cold graveyard of "fwd:" — arriving already understanding the people, the open threads,
+  what was promised and what's owed, and the history behind each ongoing relationship — so I'm useful in
+  days instead of months and never blunder into a conversation blind to everything that came before me.
+- **UC71.** As someone whose back-and-forth with the other side eats days even when we both want the same
+  outcome, I can finally have it just settle itself when the person I'm dealing with has their own
+  assistant too — the two work out the meeting time, line up the invoice and its details, or trade the
+  documents each side needs, and we're each handed the finished result to approve — so the drudge part
+  of the conversation happens between our helpers in the background and only the decision comes to me.
+- **UC72.** As someone trusted to look after the mail of a person who can't manage it themselves — a
+  parent slipping into illness, a relative who has died and left me their affairs, someone who has
+  formally put me in charge — I can finally step into their inbox with proper authority and actually
+  handle it: notify the banks and insurers, stop the subscriptions still draining their account, answer
+  what needs answering and preserve what's precious — carrying the practical weight of their
+  correspondence for them, on their behalf and within the bounds I'm actually permitted, so grief or
+  incapacity isn't compounded by an inbox no one is allowed to touch.
+- **UC73.** As someone who's fine letting the assistant tee things up but not act with real money, I can
+  finally let it carry the whole errand to the finish when I want it to — pay the invoice I've okayed,
+  file the dispute over the wrong charge, actually make the booking rather than just draft the request —
+  so a task doesn't stall half-done waiting for me to go and press the final button somewhere else,
+  while every real commitment of money still happens only with my explicit go-ahead and never on a whim.
+- **UC74.** As two people running a shared life together — a couple, a household, partners splitting the
+  admin — we can finally have one assistant span both our inboxes for the things we hold in common, so
+  the bill, the kids' school thread, the renewal or the tradesperson is handled between us without it
+  falling twice or not at all, each of us still owns our own private mail and controls what's shared,
+  and neither of us is stuck being the household's sole inbox-manager by default.
+- **UC75.** As someone who can only ever learn from my own bad experiences, I can finally be protected by
+  everyone else's too — a scam or a fake invoice that caught anyone, anywhere, is something my assistant
+  already knows to stop before it reaches me, and when I'm fighting to get a refund or cancel a stubborn
+  contract it can draw on what actually worked for other people up against the same company — so I get
+  the benefit of a whole crowd's hard-won experience without any of my own private mail ever being exposed.
+- **UC76.** As someone whose life-admin doesn't only arrive by email, I can finally bring all my
+  correspondence under one roof — the paper letter I photograph, the scanned document, the bill that
+  comes through official channels rather than my inbox — and have it read, understood and handled exactly
+  like my mail, so nothing gets a free pass to slip through just because it came on paper or by some other
+  route, and I finally have one place that truly sees everything that's asking something of me.
+- **UC77.** As someone who can never be sure a message really is from who it claims, I can finally know for
+  certain — the assistant can prove an incoming message genuinely came from my real bank or my real client,
+  not a convincing impostor, and prove to the people I write that a message is really from me — so trust
+  stops being a nervous guess and impersonation simply stops working, on the way in and on the way out.
+- **UC78.** As someone who dreads the phone calls an email can't finish — sitting on hold to cancel, ringing
+  the utility, chasing the one company that won't answer mail — I can finally hand the call itself to the
+  assistant: it makes the call, waits through the hold music, says what needs saying and comes back to me
+  with the result, so the errands that force me onto the phone stop being mine to endure, with my say-so
+  before it commits to anything on the line.
+- **UC79.** As someone whose trade has its own peculiar mail I wish the assistant just *knew* how to handle,
+  I can finally switch on a specialist helper built for exactly my world — the accountant's tax-document
+  collector, the lawyer's contract intake, the shop's order-and-returns desk — made by people who know that
+  niche, so I get expertise tailored to my line of work without waiting for one company to build everything,
+  and only ever let in the extra helpers I've chosen and trust.
+- **UC80.** As someone who gets blindsided by things I had no way to see coming, I can finally have the
+  assistant watch the world beyond my inbox for what actually affects me — the flight that just got delayed,
+  the product I bought being recalled, a breach at a service I use, a rate about to jump on a bill I pay —
+  and bring it to me in time to act, so being on top of my life stops depending on the warning happening to
+  land as an email I noticed.
+- **UC81.** As someone — or an organisation — that can't let sensitive mail leave our own walls, I can
+  finally have all this help without any of it going outside: the assistant works entirely within our own
+  perimeter, and nothing it reads or learns is ever handed to an outside service, so the places bound by
+  secrecy, regulation or plain caution can finally have an assistant they're actually allowed to use.
+- **UC82.** As the person answerable when the law comes asking, I can finally meet those demands without dread
+  — produce everything a data-access request or a legal hold requires, show what we kept and why, and hand
+  over a complete, trustworthy record on demand — so what used to be weeks of frantic digging becomes a
+  question the assistant simply answers, fully and defensibly.
+- **UC83.** As someone whose needs are too particular for any preset, I can finally teach the assistant my own
+  rules in plain words and have it follow them faithfully — "when an enquiry comes from a new region, gather
+  X and route it to Y," "always treat mail from this client as urgent" — so the handling bends to how I
+  actually work rather than making me bend to it, and the rules stay mine to add to, change or switch off.
+- **UC84.** As someone who loses all control the instant I press send, I can finally keep a hold on what
+  leaves me — send something that can't be quietly forwarded on, that expires after a while, or whose access
+  I can pull back later if I need to — so a sensitive document or a private word isn't out of my hands
+  forever the moment it's gone, and I can share things I'd otherwise never dare to.
+- **UC85.** As someone who doesn't just send messages but has to produce the actual paperwork around them, I
+  can finally have the assistant put together the finished document itself — the contract, the invoice, the
+  filled-in form, the tidy report — ready to check and send, not just the covering note, so the real work an
+  email is really asking of me is done, not merely described.
+- **UC86.** As someone who can't use an ordinary inbox at all — because I can't see it, can't work a mouse and
+  keyboard, or simply drown in its clutter — I can finally have the assistant *be* my email: I reach my whole
+  correspondence entirely by talking and listening, or in whatever way works for me, never forced to touch a
+  conventional inbox, so email stops being a wall I'm shut out from and becomes something I can fully use on
+  my own terms.
+- **UC87.** As someone who gets sent things I actually have to watch or listen to, I can finally have the
+  assistant take in more than text — it hears the voicemail, follows the video message, sits through the
+  recorded meeting — understands what was said and acts on it, so a promise left on my voicemail becomes a
+  tracked task and a two-hour recording becomes something I can search and ask about, instead of media that
+  just sits there demanding my time before I even know if it matters.
+- **UC88.** As someone who has never once seen the bottom of my inbox, I can finally reach a real,
+  earned *done* — the assistant gets me to a genuine end of the day where everything that wanted
+  something from me is handled or set for later and I can see it's true, so instead of inbox-zero
+  theatre or the low background hum that there's always more, I get to actually close the day,
+  put it down, and rest — and pick it up clean tomorrow rather than carrying today's tail into it.
+- **UC89.** As someone for whom the good things drown in the pile just as easily as the bad, I can
+  finally have the assistant make sure the genuinely warm message isn't lost with the noise — the old
+  friend resurfacing, the heartfelt thank-you three screens down, the photo from someone I love
+  sandwiched between receipts — surfaced quietly, the same way it sets the junk aside, not dressed up
+  or nagged at me like an engagement trick; so the inbox that only ever took something from me
+  occasionally *gives* one back, without ever stooping to manufacture cheer.
+- **UC90.** As someone grieving a person I've lost, I can finally trust the assistant to handle my
+  inbox with tenderness rather than blunder through it — it understands that they're gone, so the
+  cheerful nudges and stale chases about them stop ("reply to Mum, it's going cold" never happens),
+  their mail is never filed at me as an unfinished to-do, and instead the assistant quietly gathers
+  and protects what I'd want to keep of them — the last words, the photos, the voice — so my own mail
+  never reopens the wound by accident and I'm never forced to sort a loss before I'm ready.
+- **UC91.** As someone coming back after a long time away — parental leave, a sabbatical, a long
+  illness, a holiday I actually unplugged on — I can finally return to a warm re-entry instead of a
+  wall of thousands unread: the assistant tells me what really happened while I was gone, what's
+  genuinely still waiting on me versus what sorted itself out or went stale, and where each ongoing
+  thread now stands — so I step back into my life in an hour instead of losing my whole first week
+  digging out, and taking real time off stops meaning I pay for it the moment I'm back.
+- **UC92.** As someone whose work brings a flood of heartfelt messages from strangers — readers, fans,
+  people my work reached — I can finally stay a real human to my audience instead of going silent under
+  the weight: the assistant helps me understand what's arriving, surfaces the ones I'd most regret
+  missing, and drafts warm, genuine replies in my own voice so I can answer far more of them
+  meaningfully — and the ones I can't reach personally are still acknowledged rather than swallowed —
+  so success stops meaning I inevitably ghost the very people who care most about what I do.
+- **UC93.** As someone deep in a job search, I can finally keep the whole campaign straight instead of
+  losing chances to my own chaos — the assistant tracks every application and where each one actually
+  stands, never lets a recruiter's reply or an interview invite slip, reminds me of the thank-you I owe
+  and the follow-up that's gone quiet, pulls together what I need to prep from the whole thread before
+  each conversation, and helps me chase gracefully and take a "no" without derailing — so the search
+  runs like something I'm on top of rather than something drowning me at the worst possible time.
+- **UC94.** As someone often out of signal — on a plane, on the road, deep inside a building — I can
+  finally still reach my mail and my assistant when I'm offline: read what's there, triage it, and draft
+  or queue my replies, then have it all sync and go out the moment I'm back in range — so being
+  disconnected stops meaning being cut off from my own correspondence.
+- **UC95.** As someone who starts on my phone at the bus stop and finishes at my desk, I can finally have
+  one assistant with one live picture across every device and every way I reach it — pick up a draft
+  exactly where I left it, by voice or on screen — so it never feels like separate copies that forget
+  each other, and wherever I am is simply where my mail is.
+
+## Beyond the vision (parking lot)
+
+- **BV1.** Provider/OS/format-agnostic + no-lock-in + clean exit as a user-visible promise —
+  add on top of ANY existing mail (Gmail, arbitrary IMAP, multi-host, Win/mac/Linux) without
+  migration; user can leave with data intact. (Considered as UC88; parked instead of captured as
+  a use-case — decide at scoping whether it's a distinct promise or already implied by UC24+UC27.)
+- **BV2.** Agentic layer / proxy ON TOP of existing infra, not a new mail client — the additive
+  deployment shape that makes the "keep what you have / help comes to you" use-cases true.
+- **BV3.** Local-first / self-hosted as the trust foundation; model access swappable (BYO
+  model/key, cost control). User-visible privacy promise lives in UC24/UC81; this is the *how* +
+  the model-portability angle the use-cases don't carry.
+- **BV4.** Provider/OS/format-agnostic + open-source / no-vendor-lock-in as an explicit
+  non-negotiable / differentiator vs. managed-service competitors. (Overlaps BV1 if that lands;
+  open-source itself is a go-to-market call, not architecture.)
+
