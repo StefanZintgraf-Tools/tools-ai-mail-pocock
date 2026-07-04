@@ -1,60 +1,66 @@
 # AI-Mail — Foundation Vision
 
-## Vision (press release)
+## Vision points (press release)
+
+It's the end of the day and your inbox is genuinely handled — the important things
+done or scheduled, the noise gone quiet, nothing you needed lost, and not a single
+thing sent, paid, or deleted without your say-so. Email stopped being the pile you
+carry in your head and became something that quietly works for you, at home and at
+work alike, while you stay firmly the one in charge.
 
 ### For individuals
 
-- Important things handled or scheduled — you stop carrying email in your head.
-- Noise shrinks itself instead of piling up.
-- Nothing you needed gets silently lost.
-- Costly fakes and scams caught before they cost you.
-- Reads everything, does the legwork, taps you only when it matters.
-- Takes in more than email — the paper letter you photograph, the voicemail, the
+- **V1.** Important things handled or scheduled — you stop carrying email in your head.
+- **V2.** Noise shrinks itself instead of piling up.
+- **V3.** Nothing you needed gets silently lost.
+- **V4.** Costly fakes and scams caught before they cost you.
+- **V5.** Reads everything, does the legwork, taps you only when it matters.
+- **V6.** Takes in more than email — the paper letter you photograph, the voicemail, the
   video, the recorded meeting — and even makes the dreaded phone call for you.
-- Carries a whole errand to the finish when you ask — the reply chased, the slot
+- **V7.** Carries a whole errand to the finish when you ask — the reply chased, the slot
   agreed, the okayed invoice paid, the booking made — money only ever moving on
   your explicit say-so.
-- Spans your chat apps too, by choice — WhatsApp, Telegram and the rest in one
+- **V8.** Spans your chat apps too, by choice — WhatsApp, Telegram and the rest in one
   calm place.
-- Spans all your inboxes — personal, work, side-projects — under one roof, or
+- **V9.** Spans all your inboxes — personal, work, side-projects — under one roof, or
   walled apart, exactly as you choose.
-- Comes offline with you and stays one live picture across every device.
-- Makes you warmer to people — not just less behind on them.
-- Reach it however you like — speak or type, in any language.
-- Can watch over a vulnerable relative's inbox, or step in with proper authority
+- **V10.** Comes offline with you and stays one live picture across every device.
+- **V11.** Makes you warmer to people — not just less behind on them.
+- **V12.** Reach it however you like — speak or type, in any language.
+- **V13.** Can watch over a vulnerable relative's inbox, or step in with proper authority
   for someone who can't manage their own.
-- Shared life, shared assistant — a household's admin handled between you, your
+- **V14.** Shared life, shared assistant — a household's admin handled between you, your
   private mail still your own.
-- Handles a hard season gently — a loss, a long absence, a fresh start.
-- What it learns stays yours alone, and it earns your trust step by step.
-- Gets you to a real, honest end of the day — you can finally put it down and rest.
-- Nothing sent, decided, paid, or deleted without your nod — you're always in charge.
+- **V15.** Handles a hard season gently — a loss, a long absence, a fresh start.
+- **V16.** What it learns stays yours alone, and it earns your trust step by step.
+- **V17.** Gets you to a real, honest end of the day — you can finally put it down and rest.
+- **V18.** Nothing sent, decided, paid, or deleted without your nod — you're always in charge.
 
 ### For businesses
 
-- Client requests answered — nothing slips.
-- Promising leads never cool off forgotten.
-- Promised follow-ups actually go out.
-- Repeat support questions answered fast, from how you solved them before.
-- Shared inbox keeps flowing even when someone's away — routed to whoever's
+- **V19.** Client requests answered — nothing slips.
+- **V20.** Promising leads never cool off forgotten.
+- **V21.** Promised follow-ups actually go out.
+- **V22.** Repeat support questions answered fast, from how you solved them before.
+- **V23.** Shared inbox keeps flowing even when someone's away — routed to whoever's
   covering, never two answers to one customer.
-- Every conversation handed over already understood, not a cold "fwd:".
-- Managers see the whole picture — what's open, who holds the ball, what's aged —
+- **V24.** Every conversation handed over already understood, not a cold "fwd:".
+- **V25.** Managers see the whole picture — what's open, who holds the ball, what's aged —
   and set how far the assistant may go, per person and per account.
-- Years of email stay the company's — not gone when someone leaves.
-- New hires brought up to speed from that memory; a leaver hands over cleanly,
+- **V26.** Years of email stay the company's — not gone when someone leaves.
+- **V27.** New hires brought up to speed from that memory; a leaver hands over cleanly,
   what's personal separated fairly from what's the firm's.
-- Money traps caught and questioned — forged invoice, changed bank details,
+- **V28.** Money traps caught and questioned — forged invoice, changed bank details,
   urgent wire — before anyone's rushed into a costly mistake.
-- Produces the paperwork itself — the contract, the invoice, the filled-in form —
+- **V29.** Produces the paperwork itself — the contract, the invoice, the filled-in form —
   ready to check, not just the covering note.
-- A complete, lasting record of the assistant's own decisions — ready for an
+- **V30.** A complete, lasting record of the assistant's own decisions — ready for an
   audit, a legal hold, or a data request.
-- Can run entirely within your own walls where secrecy or regulation demands it,
+- **V31.** Can run entirely within your own walls where secrecy or regulation demands it,
   nothing ever leaving.
-- Works *for* the company, never spying on staff.
-- Every reply goes out in a real person's name.
-- Nothing sent, decided, paid, or deleted on its own — your people stay in charge.
+- **V32.** Works *for* the company, never spying on staff.
+- **V33.** Every reply goes out in a real person's name.
+- **V34.** Nothing sent, decided, paid, or deleted on its own — your people stay in charge.
 
 ## Use-cases
 
@@ -62,10 +68,9 @@
   message is either fully handled or scheduled to be — so I can close the laptop
   without it living rent-free in my head.
 - **UC2.** As someone who doesn't want a robot running my life, I can finally have all the
-  prep done for me — the reply drafted, the slot found, the decision laid out, some
-  of it ready the moment it's needed and the rest on demand when I ask — while I stay
-  the one who approves it, so nothing is ever sent or settled behind my back until
-  I've confirmed it.
+  prep done for me — the reply drafted, the slot found, the decision laid out, ready
+  when it's needed or on demand when I ask — while I stay the one who approves, so
+  nothing's sent or settled until I've confirmed it.
 - **UC3.** As someone who mostly uses email for life-admin (bills, the kids' school,
   renewals, appointments, parcels), I can finally stop fearing the one dropped
   ball that costs money or time — the assistant catches the costly miss before it
@@ -84,8 +89,8 @@
   confirmation the morning I travel, the warranty when the appliance breaks —
   before I even think to look for it.
 - **UC7.** As someone whose email is one giant undifferentiated pile, I can finally have it
-  all neatly filed where it belongs — sorted into sensible places rather than
-  heaped in one spot — so my correspondence is organized and safe, not a mess.
+  all neatly filed where it belongs rather than heaped in one spot — so my
+  correspondence is organized and safe, not a mess.
 - **UC8.** As someone who loses track of important attachments, I can finally have the ones
   that matter just appear, correctly filed, in the place I already keep my documents — so my
   mail and my document store stop being two separate worlds I shuttle files between by hand,
@@ -202,9 +207,8 @@
   makes me put it off.
 - **UC37.** As someone who forgets the things I promised to send, I can finally have the assistant
   spot the loose ends on its own — "you said you'd send Tom your slides, want me to draft
-  it?" — and offer to start the message before I've remembered I owe it; and if I find
-  that too forward, I can simply turn that nudging down or off so it only ever drafts
-  when I ask.
+  it?" — before I've even remembered I owe it; and if I find that too forward, I can simply
+  turn the nudging down or off.
 - **UC38.** As someone drowning in subscriptions I never chose to keep, I can finally have the
   assistant notice what I never actually read and offer to unsubscribe me — quietly
   shrinking the firehose at the source instead of just sweeping it aside — so over time
@@ -278,8 +282,8 @@
 - **UC53.** As someone quietly drowning in copies of the same thing, I can finally have the assistant
   notice when I'm holding duplicates — the same attachment saved three times, a thread forwarded back
   to me, a contact entered twice — and offer to tidy them up, so my mail and files get genuinely
-  lighter instead of just better sorted; and it always shows me what it wants to merge or remove and
-  waits for my nod, never quietly throwing a copy away.
+  lighter instead of just better sorted; and it always shows me what it wants to merge or remove
+  and waits for my nod.
 - **UC54.** As someone on a team where the answer often sits in a colleague's mail rather than mine, I
   can finally search across what we hold together — the shared mailboxes, the threads someone else
   handled — so a question already answered once by anyone on the team is findable by all of us, and
@@ -313,9 +317,8 @@
   time (a genuine customer enquiry that names what we do, a partner or reseller lead I'd hate to lose)
   apart from the generic mass pitch (the cold outsourcing offer, the SEO spam, the recruiter fishing
   for my staff) — so a stranger who matters is brought to me warm and ready to answer while the junk is
-  held quietly at the door, and the one real lead in the pile never gets buried in the same "decide
-  later" heap as the noise; and because it's holding, never deleting, nothing is lost if it misjudges —
-  I can always see who knocked and overrule it.
+  held quietly at the door; and because it's holding, never deleting, I can always see who knocked and
+  overrule it, so nothing is lost if it misjudges.
 - **UC61.** As someone who forgets the replies I'm still owed, I can finally have the assistant keep
   watch on the things other people promised me and never delivered — the quote the supplier said
   he'd send, the answer I've been waiting two weeks on, the sign-off that's gone quiet — and offer to
@@ -326,8 +329,7 @@
   private one, the supplier who emails and also messages me, the friend who's on three apps — I can
   finally have the assistant know it's all one person, not a dozen strangers who happen to share a
   name, so everything I've ever exchanged with someone comes together into a single thread of a
-  relationship, and a nudge, a draft, or an answer is never half-blind just because the history was
-  scattered across addresses and apps.
+  relationship, and a nudge, a draft, or an answer is never half-blind again.
 - **UC63.** As someone who wants help without being asked the same thing forever, I can finally tell
   the assistant once where it may simply go ahead — "always file the receipts," "always hold the
   obvious junk," "you can confirm slots with my own team" — and where it must always stop and ask me
@@ -335,22 +337,21 @@
   never happen without it; and the line is mine to move either way as my trust grows or a mistake
   teaches me to pull it back, never a setting forced on me.
 - **UC64.** As someone who loses days to back-and-forth I wish I could just hand off, I can finally
-  let the assistant carry a whole exchange to its finish on my behalf — chase the supplier across the
-  three rounds it takes to pin down the quote, sort out the delivery mix-up, settle a date with a
-  group — keeping me posted as it goes and bringing me in whenever it needs a real decision or my
-  approval to commit, so what used to be a week of ping-pong I babysat becomes a result I'm handed,
-  without ever giving up the final say or being kept in the dark about what was said in my name.
+  let the assistant carry a whole exchange to its finish — chase the supplier across the three rounds
+  it takes to pin down the quote, sort out the delivery mix-up, settle a date with a group — keeping me
+  posted and bringing me in whenever it needs a real decision or my approval to commit, so what used to
+  be a week of ping-pong I babysat becomes a result I'm handed, without giving up the final say or being
+  kept in the dark.
 - **UC65.** As someone always one slip from a reply-all disaster, the wrong attachment, or firing off
   something I'll regret, I can finally have the assistant catch me in the very moment before I send —
   "this is going to two hundred people, sure?", "you've picked the other Anna", "the contract you
   mention isn't attached", "this invoice's bank details just changed from last time" — so my own
   worst mistakes are stopped at my hand before they're gone, not apologised for after.
-- **UC66.** As someone forever copying things out of email into my calendar, my to-do list and my
-  files by hand, I can finally have the assistant carry each message through to wherever it actually
-  needs to live — the appointment onto my calendar, the promise onto my task list, the document into
-  my filing, the subscription I'm finished with actually cancelled — so acting on my mail stops
-  meaning a dozen little chores scattered across a dozen other apps, and email stops being an island I
-  have to ferry everything off of by hand, with my nod before anything is committed.
+- **UC66.** As someone forever ferrying things out of email by hand — the appointment to my
+  calendar, the promise to my task list, the document to my filing, the subscription I'm done
+  with actually cancelled — I can finally have the assistant carry each message through to where
+  it needs to live, so email stops being an island I empty by hand, my nod before anything is
+  committed.
 - **UC67.** As someone bringing the assistant in on top of a lifetime of mail I already have, I can
   finally have it useful from the very first day — already understanding my history, my people and my
   commitments because it learned from everything that's already there, not only the mail that arrives
@@ -361,7 +362,7 @@
   instead of dumping a chaotic inbox on whoever's next — the assistant lays out everything still in
   flight, who each open thread is with, what I promised and what's owed to me, and the standing
   relationships behind it all, and passes it on already understood, so I leave with a clear conscience
-  and nothing rots in the gap after I'm gone, and no one can say a ball was dropped on my way out.
+  and nothing rots in the gap after I'm gone.
 - **UC69.** As someone leaving a job with years of my own life tangled into my work inbox, I can finally
   separate what's genuinely mine from what belongs to the company — cleanly and fairly to both sides —
   so I walk away with my personal correspondence, my own records and the private threads that were never
@@ -380,9 +381,8 @@
   parent slipping into illness, a relative who has died and left me their affairs, someone who has
   formally put me in charge — I can finally step into their inbox with proper authority and actually
   handle it: notify the banks and insurers, stop the subscriptions still draining their account, answer
-  what needs answering and preserve what's precious — carrying the practical weight of their
-  correspondence for them, on their behalf and within the bounds I'm actually permitted, so grief or
-  incapacity isn't compounded by an inbox no one is allowed to touch.
+  what needs answering and preserve what's precious — all within the bounds I'm actually permitted, so
+  grief or incapacity isn't compounded by an inbox no one is allowed to touch.
 - **UC73.** As someone who's fine letting the assistant tee things up but not act with real money, I can
   finally let it carry the whole errand to the finish when I want it to — pay the invoice I've okayed,
   file the dispute over the wrong charge, actually make the booking rather than just draft the request —
@@ -465,10 +465,10 @@
   occasionally *gives* one back, without ever stooping to manufacture cheer.
 - **UC90.** As someone grieving a person I've lost, I can finally trust the assistant to handle my
   inbox with tenderness rather than blunder through it — it understands that they're gone, so the
-  cheerful nudges and stale chases about them stop ("reply to Mum, it's going cold" never happens),
-  their mail is never filed at me as an unfinished to-do, and instead the assistant quietly gathers
-  and protects what I'd want to keep of them — the last words, the photos, the voice — so my own mail
-  never reopens the wound by accident and I'm never forced to sort a loss before I'm ready.
+  cheerful nudges and stale chases stop ("reply to Mum, it's going cold" never happens) and their mail
+  is never filed at me as an unfinished to-do; instead it quietly gathers and protects what I'd want to
+  keep of them — the last words, the photos, the voice — so my own mail never reopens the wound by
+  accident, and I'm never forced to sort a loss before I'm ready.
 - **UC91.** As someone coming back after a long time away — parental leave, a sabbatical, a long
   illness, a holiday I actually unplugged on — I can finally return to a warm re-entry instead of a
   wall of thousands unread: the assistant tells me what really happened while I was gone, what's
