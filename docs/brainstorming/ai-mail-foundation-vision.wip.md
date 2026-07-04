@@ -1,5 +1,16 @@
 # AI-Mail — Foundation Vision
 
+## Vision scope
+
+This vision commits to handling **every message that reaches you, whatever channel it
+arrives on** — not just your email inbox but chat apps, a photographed paper letter, a
+voicemail, a video or a recorded meeting, and the phone calls it makes on your behalf.
+
+- **S1.** Handle your email inbox — the important things done or scheduled, the noise
+  quieted, nothing lost, and nothing sent, paid, or deleted without your say-so.
+- **S2.** Handle every message that reaches you, on any channel — email, chat apps, paper,
+  voice, and video, under one calm roof or walled apart exactly as you choose. *(anchor)*
+
 ## Vision points (press release)
 
 It's the end of the day and your inbox is genuinely handled — the important things
@@ -8,20 +19,16 @@ thing sent, paid, or deleted without your say-so. Email stopped being the pile y
 carry in your head and became something that quietly works for you, at home and at
 work alike, while you stay firmly the one in charge.
 
-### For individuals
+### S1 — Your email inbox
 
 - **V1.** Important things handled or scheduled — you stop carrying email in your head.
 - **V2.** Noise shrinks itself instead of piling up.
 - **V3.** Nothing you needed gets silently lost.
 - **V4.** Costly fakes and scams caught before they cost you.
 - **V5.** Reads everything, does the legwork, taps you only when it matters.
-- **V6.** Takes in more than email — the paper letter you photograph, the voicemail, the
-  video, the recorded meeting — and even makes the dreaded phone call for you.
 - **V7.** Carries a whole errand to the finish when you ask — the reply chased, the slot
   agreed, the okayed invoice paid, the booking made — money only ever moving on
   your explicit say-so.
-- **V8.** Spans your chat apps too, by choice — WhatsApp, Telegram and the rest in one
-  calm place.
 - **V9.** Spans all your inboxes — personal, work, side-projects — under one roof, or
   walled apart, exactly as you choose.
 - **V10.** Comes offline with you and stays one live picture across every device.
@@ -34,10 +41,6 @@ work alike, while you stay firmly the one in charge.
 - **V15.** Handles a hard season gently — a loss, a long absence, a fresh start.
 - **V16.** What it learns stays yours alone, and it earns your trust step by step.
 - **V17.** Gets you to a real, honest end of the day — you can finally put it down and rest.
-- **V18.** Nothing sent, decided, paid, or deleted without your nod — you're always in charge.
-
-### For businesses
-
 - **V19.** Client requests answered — nothing slips.
 - **V20.** Promising leads never cool off forgotten.
 - **V21.** Promised follow-ups actually go out.
@@ -60,6 +63,14 @@ work alike, while you stay firmly the one in charge.
   nothing ever leaving.
 - **V32.** Works *for* the company, never spying on staff.
 - **V33.** Every reply goes out in a real person's name.
+
+### S2 — Every message that reaches you, on any channel
+
+- **V6.** Takes in more than email — the paper letter you photograph, the voicemail, the
+  video, the recorded meeting — and even makes the dreaded phone call for you.
+- **V8.** Spans your chat apps too, by choice — WhatsApp, Telegram and the rest in one
+  calm place.
+- **V18.** Nothing sent, decided, paid, or deleted without your nod — you're always in charge.
 - **V34.** Nothing sent, decided, paid, or deleted on its own — your people stay in charge.
 
 ## Use-cases
@@ -510,4 +521,33 @@ work alike, while you stay firmly the one in charge.
 - **BV4.** Provider/OS/format-agnostic + open-source / no-vendor-lock-in as an explicit
   non-negotiable / differentiator vs. managed-service competitors. (Overlaps BV1 if that lands;
   open-source itself is a go-to-market call, not architecture.)
+
+## Resume notes
+
+**State: divergence saturated, wrap-up agreed, ladder open — resume runs the scope lens
+([`scope-lens.md`](../../../../../ai-knowhow/skills-plugins/brainstorm-vision/scope-lens.md)).**
+
+Old-format retrofit applied on re-open (2026-07-04): a `## Vision scope` section was derived
+from the evidence and existing vision points sorted into `### S1`/`### S2` groups — numbers
+untouched, original relative order preserved. The old "For individuals" / "For businesses"
+persona headings were dissolved (they are a *breadth axis*, not scope rungs); within S1 the
+individual points (V1–V17) still precede the business points (V19–V33) by original order.
+
+Derived ladder (two rungs the vision points already live on):
+- **S1** — your email inbox (nearly all points).
+- **S2 (anchor)** — every message that reaches you, on any channel (V6, V8) + the all-rung
+  "you're always in charge" invariants (V18, V34).
+
+**Next climb the scope lens should weigh (do NOT pre-record it):** *"everything that asks
+something of you"* — obligations and events that never arrived as a message at all: the bill
+via an official channel (UC76), the flight delay / recall / breach / rate-hike you'd never see
+coming (UC80). This altitude lives only in the **use-cases** today; **no vision point reaches
+it** — the point↔use-case altitude gap is the signal to climb. On a climb, focused divergence
+grows the missing S3 vision points and closes that gap.
+
+**Eventual horizon (declined rung, when the ladder closes):** a trusted chief-of-staff for
+your whole life — acting on your goals unprompted, not just handling what comes to you.
+
+At wrap-up, reconcile the existing sibling `ai-mail-foundation-vision-architecture-lens.md`
+(`S<n>` cross-references) rather than regenerating it.
 

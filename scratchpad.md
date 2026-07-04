@@ -28,20 +28,24 @@
   - [x] architecture-significance-lens-template.md
   - [x] finalizing.md
 - [x] Phase 1: assure scope boundary works
-
-- [ ] Test mit Re-run ai-mail (auch wegen neuen Artefakt/en)
+- [x] Test mit Re-run ai-mail (auch wegen neuen Artefakt/en)
   - nochmal weitermachen mit der einen neuen Idee
-- [ ] Vision in Bullet-List Shape (better for humans, and make them also better for AI compared to long sentence)
-- [ ] Use-cases also in Bullet-List Shape
-- [ ] Neue Lens-Phase: Abstraktion eine Ebene drüber (Human Mail --> Human Interaction --> Interaction)
+- [x] Vision in Bullet-List Shape (better for humans, and make them also better for AI compared to long sentence)
+- [x] Use-cases also in Bullet-List Shape
+- [x] Neue Lens-Phase: Abstraktion eine Ebene drüber (Human Mail --> Human Interaction --> Interaction)
   - Lens sucht nur maximal EINE Abstraktion, aber geht nicht im Detail drauf ein
   - Nur eine Abstraktion selektieren (oder Finalisierung). Dann Pause mit Resume auf Basis dieser Abstraktion
   - Ziel: eigentliches Brainstorming immer in der gleichen Phase mit dem gleichen Prompt
-- [ ] Evtl. Architektur-Abstraktion aehnlich: nur EINEN generellen Use-Case ausfindig machen, dann wieder Resume
+
+- [ ] re-run brainstorming-vision: make it fully compliant to the new skill
+- [ ] nochmal "writing-great-skill" anwenden an alle Teile
+  - keine ai-Mail spezifischen Dinge etc.
+
 - [ ] Neuer use-case: Kommunikation mit Freund/Kunde/Lead ueber mehrere Kanaele (Mail, Pipedrive, Whatsapp, eingescannter Brief, ...)
   - Verlinkung, wie?
   - generisches Interface zum Kommunikationskanal?
     - Inbox, Outbox, Notizen, Ablage, ...
+
 - [ ] Test mit neuer Idee: brainstorm-Automat (vorher create-vision-companion skill review?)
 - [ ] manual review skill create-vision-companion (siehe auch neuer Skill von Pocock und das Video dazu)
 - [ ] Test mit neuer Idee: brainstorm-Automat
