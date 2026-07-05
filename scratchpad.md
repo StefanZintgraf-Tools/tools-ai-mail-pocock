@@ -36,10 +36,14 @@
   - Lens sucht nur maximal EINE Abstraktion, aber geht nicht im Detail drauf ein
   - Nur eine Abstraktion selektieren (oder Finalisierung). Dann Pause mit Resume auf Basis dieser Abstraktion
   - Ziel: eigentliches Brainstorming immer in der gleichen Phase mit dem gleichen Prompt
+- [x] enforce brainstorm pause after configurable number of additional UCs.
+- [x] scope_boundary.md was changed, must become generic so no change is needed!
+- [x] re-run brainstorming-vision: make it fully compliant to the new skill
 
-- [ ] re-run brainstorming-vision: make it fully compliant to the new skill
 - [ ] nochmal "writing-great-skill" anwenden an alle Teile
   - keine ai-Mail spezifischen Dinge etc.
+  - [ ] mit Sonnet 5 x Mal
+- [ ] create-vision-companion shall re-use the glossary.md?
 
 - [ ] Neuer use-case: Kommunikation mit Freund/Kunde/Lead ueber mehrere Kanaele (Mail, Pipedrive, Whatsapp, eingescannter Brief, ...)
   - Verlinkung, wie?

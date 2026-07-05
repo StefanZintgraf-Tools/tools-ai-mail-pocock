@@ -3,6 +3,10 @@
 brainstorm_scope_boundary_on.md
 brainstorm_scope_boundary_off.md
 
+# Use-case cap local state (baseline + per-sitting session lock), never committed.
+brainstorm_usecase_cap.state
+brainstorm_usecase_cap.lock
+
 # brainstorm-vision skill is canonically in ai-knowhow/skills-plugins; this is a
 # local junction into it, not files to track here.
 .claude/skills/brainstorm-vision/

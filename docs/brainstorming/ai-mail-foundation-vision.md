@@ -2,14 +2,29 @@
 
 ## Vision scope
 
-This vision commits to handling **every message that reaches you, whatever channel it
-arrives on** — not just your email inbox but chat apps, a photographed paper letter, a
-voicemail, a video or a recorded meeting, and the phone calls it makes on your behalf.
+This vision commits to keeping you on top of **everything that asks something of you** —
+not just your email inbox, and not just every message that reaches you on any channel, but
+the obligations and events that never arrived as a message at all: the bill sitting silently
+on a portal, the flight delay, the recall, the breach, the rate about to jump. Nothing gets a
+free pass to slip through just because nothing was ever sent.
 
 - **S1.** Handle your email inbox — the important things done or scheduled, the noise
   quieted, nothing lost, and nothing sent, paid, or deleted without your say-so.
 - **S2.** Handle every message that reaches you, on any channel — email, chat apps, paper,
-  voice, and video, under one calm roof or walled apart exactly as you choose. *(anchor)*
+  voice, and video, under one calm roof or walled apart exactly as you choose.
+- **S3.** Keep you on top of everything that asks something of you, whether or not anything
+  was ever sent — the silent obligation on a portal, the event out in the world that affects
+  your life — surfaced in time to act, never depending on a warning happening to land as a
+  message you noticed. *(anchor)*
+
+*Beyond the horizon:* an agent that acts on its own goals and its own account, not only on
+yours — an autonomous communication assistant. A deliberate **sibling vision**, not part of
+this one; to be brainstormed as a fork of this file (keep the capability substrate, lift the
+human-in-charge invariant, re-diverge only the delta). Explicitly out of scope here; binds
+nothing. Surfaced across three candidate rungs at the scope lens (chief-of-staff acting on
+your goals; a decentred interaction/communication layer; an agent with its own persona) —
+each of which strips out a different load-bearing invariant of this vision, which is why the
+anchor rests at S3.
 
 ## Vision points (press release)
 
@@ -70,8 +85,40 @@ work alike, while you stay firmly the one in charge.
   video, the recorded meeting — and even makes the dreaded phone call for you.
 - **V8.** Spans your chat apps too, by choice — WhatsApp, Telegram and the rest in one
   calm place.
+- **V43.** One customer, one picture — everything you have going with someone drawn together
+  across your mail, your sales system, and your support desk, so a relationship stops living
+  in fragments across the separate tools that each hold a piece of it.
+- **V44.** The channel goes invisible — one conversation no matter how many doors it came
+  through, and your answer finding its way back out the right one on its own, so *where* a
+  message happened to land stops being yours to track.
+- **V45.** The badges go quiet — one calm place gathers whatever actually wants you out of the
+  dozen apps that each nag alone, so you can trust you've seen everything and finally put the
+  phone down.
+- **V46.** The group-chat firehose read for you — the forty-parent class chat, the club and
+  staff threads — so the one message that's really for you surfaces and you can mute the rest
+  without fear of missing it.
+
+### S3 — Everything that asks something of you
+
 - **V18.** Nothing sent, decided, paid, or deleted without your nod — you're always in charge.
 - **V34.** Nothing sent, decided, paid, or deleted on its own — your people stay in charge.
+- **V35.** One place that finally sees *everything* asking something of you — not only what was
+  sent, but what silently came due out in the world.
+- **V36.** The deadline no one will ever remind you of, surfaced in time — the passport creeping
+  toward expiry, the filing with no letter, the cover that lapses if a payment quietly fails.
+- **V37.** The world watched on your behalf — the delay, the recall, the breach, the rate about
+  to jump — brought to you before it blindsides you.
+- **V38.** What's already yours, claimed in time — the rebate, the settlement, the refund, the
+  compensation you'd never have been told about, before the silent clock runs out.
+- **V39.** Carries the silent thing all the way to done, not just flags it — the claim filed, the
+  renewal cancelled, the rate switched — your say-so before it ever acts in your name.
+- **V40.** The dread of the unseen lifted — "no news" finally means "nothing's wrong," a peace no
+  cleared inbox could give, because it was never the arriving mail you feared but what never arrives.
+- **V41.** A watch you can actually see — the guarded corners shown, each catch proving itself — so
+  trust is earned by watching it work, never asked for on faith.
+- **V42.** The fine print built to profit from your silence, quietly defused — the auto-renewal
+  caught before its window shuts, the sneak price-jump refused — the traps that counted on you
+  not looking simply stop working.
 
 ## Use-cases
 
@@ -507,6 +554,139 @@ work alike, while you stay firmly the one in charge.
   exactly where I left it, by voice or on screen — so it never feels like separate copies that forget
   each other, and wherever I am is simply where my mail is.
 
+- **UC96.** As someone who gets quietly punished for missing the deadlines the world never
+  reminds me of, I can finally trust the assistant to hold my standing obligations as live
+  commitments in time — the passport creeping toward expiry before a trip, the tax filing with
+  no letter attached, the inspection that's the law, the cover that lapses if a payment quietly
+  fails — and surface each one in time to act, from the date itself drawing near rather than any
+  message arriving, so a deadline that was never announced stops being a trap I only discover
+  once it's already too late.
+- **UC97.** As someone drowning in accounts that no longer send me anything — the utility gone
+  paperless, the tax notice posted only to a government portal, the fine, the toll, the pension
+  statement, the "action required" waiting behind a login I'd half forgotten — I can finally have
+  the assistant keep watch over those silent portals for me and surface a bill or demand sitting
+  unread there as though it had actually landed in my inbox, so an obligation stops being
+  something I only discover by remembering to go log into dozens of separate accounts, and
+  nothing gets a free pass just because no one ever bothered to send it.
+- **UC98.** As someone who quietly loses the money and rights that are mine simply because no one
+  ever tells me they're there, I can finally have the assistant make sure the world's silence
+  never costs me what I'm owed — the settlement I'm eligible for, the rebate or benefit I never
+  claimed, the refund after a company collapsed, the repair or money-back on a product I own
+  that got recalled, the compensation after a cancelled flight, the window to switch before a
+  promo rate rolls me onto a worse one — each surfaced with my name on it and in time to actually
+  claim it, so an entitlement sitting there on a silent clock stops evaporating unnoticed.
+- **UC99.** As someone quietly bled by the fine print I agreed to and forgot, I can finally have
+  the assistant hold me to the commitments that were built to turn against me — the membership
+  that auto-renews for another year unless I cancel months ahead, the trial about to start
+  billing, the loyalty premium that jumps at renewal, the contract with a step-up baked in — and
+  surface the window to act while it's still open, before the notice date passes rather than
+  after the money's gone, so the traps designed to profit from my inattention simply stop
+  working on me.
+- **UC100.** As someone looking out for a parent or relative who can no longer stay on top of
+  their own affairs, I can finally have the assistant watch the obligations that would never
+  reach them as a message anyone saw — the unpaid demand sitting on a portal they've forgotten,
+  the insurance about to lapse, the deadline no letter will bring — and raise it to me in time
+  to step in within the authority I'm actually given, so the person I care for isn't quietly
+  failed by all the silent things that were never going to announce themselves.
+- **UC101.** As someone running a small business or working for myself, I can finally have the
+  assistant hold the obligations the law puts on me that no one will ever send a reminder for —
+  the license to renew, the tax or VAT filing due, the inspection or certificate that lapses on
+  a fixed date — and surface each one in time to act, so I never wake up unknowingly trading
+  illegally or facing a fine over a deadline the world simply expected me to remember on my own.
+- **UC102.** As someone who dreads the silent obligations precisely because acting on them is a
+  chore that never came with a reply button — the portal login, the claim form, the cancellation
+  buried three menus deep — I can finally have the assistant carry each one all the way to done,
+  not just wave a flag: it files the compensation claim after the cancelled flight, submits the
+  rebate I'm owed, cancels the auto-renewal before the window shuts, switches me off the promo
+  rate about to jump — so the thing the world hid from me stops being a task landed back on my
+  plate and becomes a result I'm handed, with my confirmation required before it ever acts in
+  my name.
+- **UC103.** As someone who lies awake with the nagging fear that something important is quietly
+  failing where I can't see it — a lapsed policy, a missed filing, a bounced payment that sends
+  no warning — I can finally let that background dread go, because I trust the assistant is
+  watching all the silent corners of my life, so "no news" finally means "nothing's wrong"
+  instead of "I just haven't found out yet," and I get a peace that no amount of clearing my
+  inbox could ever give me, because it was never the arriving mail I was afraid of — it was
+  the things that never arrive.
+- **UC104.** As someone who can't bring myself to trust a watch I can't see — because silence is
+  the very thing that scared me, so "trust me, I've got it" is worth nothing — I can finally have
+  the assistant show me the corners it's guarding: the standing list of silent things it's keeping
+  an eye on, each with where it stands ("passport fine till 2027," "insurance renews 12 March,
+  payment on file," "these portals checked, all clear"), so the fog of unknowns becomes a list I
+  can actually see is covered; and every time it catches a real one — "your payment bounced, here's
+  what I did" — the watch proves itself, so my trust is earned by seeing it work, not asked for on
+  faith.
+
+- **UC105.** As someone forced to be the unpaid clerk for every company that couldn't be
+  bothered to reach me, I can finally have the assistant close the gap at the source rather
+  than just heroically catch what falls through — switch the paperless account back to actually
+  emailing me, sign me up for the delay and recall alerts the service should have offered,
+  register my details so the demand lands where I'll see it — so instead of me forever checking
+  the silent corners by hand, the world is quietly made to reach me properly, and the obligation
+  I'd have had to hunt for comes to me the way it always should have.
+
+- **UC106.** As someone who owns a key business relationship, I can finally see everything
+  that's open with a customer or a promising lead in one honest picture — even though our
+  dealings with them are scattered across the email thread, the sales system where the deal is
+  tracked, and the support desk where their tickets live — so when I pick up the phone or walk
+  into a review I already know every activity still in flight over the last few months and where
+  each one stands, and I'm never blindsided by the half of the story that was sitting in a system
+  I didn't think to open.
+
+- **UC107.** As someone who keeps having the very same conversation spread across several
+  channels at once — the customer who emails, then opens a support ticket, then chases me in a
+  DM; the friend who half-says it by email and finishes it on WhatsApp — I can finally have the
+  assistant recognise that it's all one conversation rather than three unrelated ones, so nobody
+  on my side answers the same thing twice or contradicts what a colleague already said, and the
+  other person never has to re-explain themselves because "that was the other channel."
+- **UC108.** As someone who has to answer each message inside whatever system it happened to
+  arrive in — the marketplace or portal message that can only be replied to from inside that
+  portal, the support ticket that wants a ticket reply, the DM that expects a DM — I can finally
+  just respond and have it go back out through the right door on its own, so I never have to
+  remember which channel someone came in on, or log into the right tool to answer them.
+
+- **UC109.** As someone whose attention is shredded across a dozen apps that each nag on their
+  own schedule — a phone full of red badges and a permanent low hum that something important is
+  buried somewhere I haven't looked — I can finally have one calm place that gathers whatever
+  actually wants something from me out of all of them, so the badges go quiet, I can trust I've
+  genuinely seen everything that matters, and I can put the phone down instead of anxiously
+  checking twelve separate places.
+- **UC110.** As someone who learned to be wary of a dodgy email but never of the other channels,
+  I can finally be protected wherever a scam arrives — the "your parcel is held, pay a small fee"
+  text, the fake-delivery DM, the WhatsApp from a "relative" with a new number — so a con doesn't
+  get a free pass just because it came through a channel I never learned to distrust, and the same
+  watchful eye guards every door, not only my inbox.
+
+- **UC111.** As someone whose obligations increasingly arrive buried inside casual channels — a
+  WhatsApp voice note that's really "send me the invoice by Friday," a photo dropped in a chat
+  that's actually a receipt to keep, a portal message that's really a bill coming due — I can
+  finally have the assistant see the real ask hidden inside them and lift it out as a proper task
+  or filed document, exactly as it would from an email, so a commitment doesn't just scroll away
+  into a chat history simply because it never arrived looking like one.
+
+- **UC112.** As someone trapped in a pile of busy group chats where I still can't afford to miss
+  the one thing that matters — the teacher in a dozen parent and staff groups, the parent in the
+  40-strong class chat, anyone caught in club, building, and neighbourhood threads — I can finally
+  have the assistant read the firehose for me and surface only what genuinely concerns me: the ask
+  aimed at me, the date I'm now on the hook for, the decision I actually need to weigh in on — so I
+  can stop wading through hundreds of memes and "thanks!" just to stay safe, and mute the noise
+  without the fear that I'll miss the message that was really for me.
+
+- **UC113.** As someone wary of handing my logins to anything, I can finally let the assistant
+  into the accounts and portals it watches for me on my own terms — see exactly which ones it can
+  reach, scope or revoke any of them in a click, and know it can never wander beyond what I opened —
+  so letting it guard the silent corners of my life never means giving away my keys.
+- **UC114.** As someone with obligations that no document will ever mention — the handshake deal,
+  the promise made in person, the warranty scribbled on a receipt, the date I carry only in my head —
+  I can finally just tell the assistant to keep watch on those too, so my standing list of what's due
+  isn't limited to what it could deduce from my mail or the world's feeds, and nothing I care about is
+  left off the watch simply because it never arrived as paperwork.
+- **UC115.** As someone who has to re-type into the CRM everything that already happened in my email,
+  I can finally have the assistant keep the systems of record up to date for me — log the call, move
+  the deal to the next stage, note what was promised on the ticket — so the sales system and the
+  support desk reflect what's really going on without me doing the data-entry twice, with my nod
+  before anything that commits us.
+
 ## Beyond the vision (parking lot)
 
 - **BV1.** Provider/OS/format-agnostic + no-lock-in + clean exit as a user-visible promise —
@@ -521,33 +701,12 @@ work alike, while you stay firmly the one in charge.
 - **BV4.** Provider/OS/format-agnostic + open-source / no-vendor-lock-in as an explicit
   non-negotiable / differentiator vs. managed-service competitors. (Overlaps BV1 if that lands;
   open-source itself is a go-to-market call, not architecture.)
-
-## Resume notes
-
-**State: divergence saturated, wrap-up agreed, ladder open — resume runs the scope lens
-([`scope-lens.md`](../../../../../ai-knowhow/skills-plugins/brainstorm-vision/scope-lens.md)).**
-
-Old-format retrofit applied on re-open (2026-07-04): a `## Vision scope` section was derived
-from the evidence and existing vision points sorted into `### S1`/`### S2` groups — numbers
-untouched, original relative order preserved. The old "For individuals" / "For businesses"
-persona headings were dissolved (they are a *breadth axis*, not scope rungs); within S1 the
-individual points (V1–V17) still precede the business points (V19–V33) by original order.
-
-Derived ladder (two rungs the vision points already live on):
-- **S1** — your email inbox (nearly all points).
-- **S2 (anchor)** — every message that reaches you, on any channel (V6, V8) + the all-rung
-  "you're always in charge" invariants (V18, V34).
-
-**Next climb the scope lens should weigh (do NOT pre-record it):** *"everything that asks
-something of you"* — obligations and events that never arrived as a message at all: the bill
-via an official channel (UC76), the flight delay / recall / breach / rate-hike you'd never see
-coming (UC80). This altitude lives only in the **use-cases** today; **no vision point reaches
-it** — the point↔use-case altitude gap is the signal to climb. On a climb, focused divergence
-grows the missing S3 vision points and closes that gap.
-
-**Eventual horizon (declined rung, when the ladder closes):** a trusted chief-of-staff for
-your whole life — acting on your goals unprompted, not just handling what comes to you.
-
-At wrap-up, reconcile the existing sibling `ai-mail-foundation-vision-architecture-lens.md`
-(`S<n>` cross-references) rather than regenerating it.
-
+- **BV5.** Keep *human-in-charge* as a **relaxable policy layer**, not a core assumption — so the
+  autonomous sibling product on the horizon (see `## Vision scope` → *Beyond the horizon*) can
+  reuse this vision's whole capability substrate by lifting one invariant, rather than being
+  foreclosed by architecture. The future autonomous vision should **fork this file** (keep the
+  substrate, lift the invariant, re-diverge only the delta) rather than restart. This is the
+  anti-one-way-door mechanism: the vision itself is a two-way door (binds no architecture); the
+  irreversible risk lives at build time, and this note flags the exact seam — the human-in-charge
+  invariant — where the two products diverge. Build-facing strategy, deliberately not part of the
+  vision's use-cases.
