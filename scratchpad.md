@@ -39,22 +39,19 @@
 - [x] enforce brainstorm pause after configurable number of additional UCs.
 - [x] scope_boundary.md was changed, must become generic so no change is needed!
 - [x] re-run brainstorming-vision: make it fully compliant to the new skill
-
-- [ ] nochmal "writing-great-skill" anwenden an alle Teile
+- [x] output file very long, does it make sens to split into separate files?
+- [x] review/adjust create-vision-companion 
+  - [x] shall re-use the glossary.md?
+  - [x] enhance uc-index.md: vision index, scope index?
+- [x] nochmal "writing-great-skill" anwenden an alle Teile
   - keine ai-Mail spezifischen Dinge etc.
-  - [ ] mit Sonnet 5 x Mal
-- [ ] create-vision-companion shall re-use the glossary.md?
+  - glossary.md zu lange?
 
-- [ ] Neuer use-case: Kommunikation mit Freund/Kunde/Lead ueber mehrere Kanaele (Mail, Pipedrive, Whatsapp, eingescannter Brief, ...)
-  - Verlinkung, wie?
-  - generisches Interface zum Kommunikationskanal?
-    - Inbox, Outbox, Notizen, Ablage, ...
+- [ ] debug create-vision-companion skill
 
-- [ ] Test mit neuer Idee: brainstorm-Automat (vorher create-vision-companion skill review?)
-- [ ] manual review skill create-vision-companion (siehe auch neuer Skill von Pocock und das Video dazu)
+- [ ] Test mit neuer Idee: brainstorm-Automat nur fuer brainstorm-vision
 - [ ] Test mit neuer Idee: brainstorm-Automat
 - [ ] Test, ob man via claude -p oder sonst irgendwie die Skills automatisiert testen kann
-- [ ] Skill create-vision-companion Re-run and Test (shall stop after phase complete, Updated strategies.md considered?) 
 - [ ] Skill create-vision-companion Test und Ergebnis-Review (match mit pocock Rules Books). 
 - [ ] Neuer Use-case: Vision Enhancement (vor/nach companion erstellung)
   - [ ] Neuer Fall für brainstorm-vision Skill?
@@ -72,4 +69,10 @@
   - [ ] siehe auch C:\PROJ\github\pocock\agent-rules-books
   - [ ] sub-goal: find/detect one/multiple use-cases that cover the whole related architecture (tracer-bullet)
   - [ ] siehe C:\PROJ\ai-mail\ai-mail.pocock\docs\ideas
+  - [ ] tactical DDD (Aggregates, Entities, ports/adapters, consistency models), no tech/platform, no MVP/phasing 
 
+- [ ] possible technologies:
+  - OpenProse (https://github.com/openprose/prose/tree/main/skills/open-prose/examples/support-inbox-router)
+  - LangGraph, CrewAI, MASTRA, OpenAI Agent SDK
+  - what else?
+  

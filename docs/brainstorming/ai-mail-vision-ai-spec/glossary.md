@@ -7,6 +7,9 @@ treat those as synonyms of the canonical term, not distinct concepts.
 
 > No `CONTEXT.md` ubiquitous-language section exists yet; this glossary is the
 > seed for one. Where a term encodes an invariant, the relevant `INV` is cited.
+> Scope-ladder structural terms — *scope item, anchor, horizon, sibling vision* —
+> describe the vision's *boundary*, not the product's domain, and live in
+> [vision-index.md](vision-index.md), not here.
 
 ## Actors & core objects
 
@@ -14,28 +17,43 @@ treat those as synonyms of the canonical term, not distinct concepts.
 |----------------|------------|-----------------------------|
 | **Assistant** | The AI agent acting on the user's behalf. | "the assistant", "AI assistant", "a patient helper", "one calm assistant", "a doorkeeper" |
 | **Email** | A communication item in a mail Account. | "email", "mail", "a note", "a letter" |
-| **Chat message** | A communication item from a connected Chat channel. | "chats", "a message on WhatsApp/Telegram" |
-| **Message** | Umbrella term — used **only when behaviour spans both** Email and Chat message. Prefer the specific term; reach for this only when a need genuinely covers both. | used where the vision treats mail + chats alike (UC34, UC51, UC62) |
-| **Thread** | A connected exchange of messages on one matter, possibly spanning people and channels. | "thread", "conversation", "exchange", "correspondence", "the back-and-forth" |
+| **Chat message** | A communication item from a connected Chat channel. | "chats", "a message on WhatsApp/Telegram", "a DM" |
+| **Message** | Umbrella term — used **only when behaviour spans both** Email and Chat message. Prefer the specific term; reach for this only when a need genuinely covers both. | used where the vision treats mail + chats alike (UC34, UC51, UC62, UC107) |
+| **Thread** | A connected exchange of messages on one matter, possibly spanning people and channels (*the channel is invisible — INV13*). | "thread", "conversation", "exchange", "correspondence", "the back-and-forth", "one conversation no matter how many doors it came through" |
 | **Account** | One connected mailbox identity the user owns (personal, work, side-project). | "private inbox", "work inbox", "personal/work/side-project addresses" |
 | **Shared inbox** | A mailbox worked by several people on a team. | "shared inbox", "the same inbox", "shared mailboxes", "our shared inbox" |
 | **Chat channel** | A non-email messaging source the user opts to connect. | "chat apps", "WhatsApp, Telegram and the rest" |
 | **Document** | A file that travels with or is referenced by mail. | "attachment", "document", "file", "contract/invoice/photo" |
-| **Contact** | A real person the user corresponds with, unified across addresses and apps (*INV11 governs cross-context isolation*). | "people", "contacts", "a person", "it's all one person" |
-| **Relationship** | The ongoing history and context with a Contact. | "how we know each other", "the whole picture of a person", "context across years" |
+| **Contact** | A real person the user corresponds with, unified across addresses and apps (*INV11 governs cross-context isolation*). | "people", "contacts", "a person", "it's all one person", "one customer, one picture" |
+| **Relationship** | The ongoing history and context with a Contact. | "how we know each other", "the whole picture of a person", "context across years", "the story behind a file" |
+| **System of record** | An external business system (CRM / sales pipeline / support desk) the assistant draws a full picture from and keeps up to date (*INV1 gates any committing update*). | "the sales system", "the support desk", "the CRM", "systems of record", "where the deal is tracked" |
 
-## What the assistant produces
+## Obligations & the outside world
+
+*The S3 anchor: the assistant sees what asks something of the user even when no
+message ever arrived (*INV13, source-agnostic*).*
 
 | Canonical term | Definition | Vision phrasings it absorbs |
 |----------------|------------|-----------------------------|
-| **Briefing** | The curated "what needs you" summary; the assistant's primary surface. | "a short briefing", "morning briefing", "heads-up" |
+| **Obligation** | Something that asks something of the user and must be acted on in time — whether or not any message arrived: a bill on a portal, a looming deadline, a standing legal or contractual duty, a lapsing policy, an adverse auto-renewal window. | "everything that asks something of you", "silent obligation", "standing obligations", "what silently came due", "the deadline no one will ever remind you of", "the license to renew", "the obligations the law puts on me", "the auto-renewal caught before its window shuts", "a bill or demand" |
+| **Portal** | A silent external account or login the assistant watches on the user's behalf, surfacing what sits unread there as if it had actually arrived (*INV12 bounds what it may reach*). | "silent portal", "government portal", "the account gone paperless", "the accounts and portals it watches", "behind a login I'd half forgotten" |
+| **World event** | A happening out in the world, never sent to the user, that affects them and must be surfaced in time to act. | "the delay, the recall, the breach, the rate about to jump", "things I had no way to see coming" |
+| **Entitlement** | Money or a right already owed to the user *by the world*, claimable only within a closing window (*distinct from Waiting-on, which is owed by a known Contact*). | "the rebate, the settlement, the refund, the compensation", "what's already yours", "the money and rights that are mine", "on a silent clock" |
+| **Watch** | The assistant's standing, proactive monitoring of Obligations, Portals, and World events — and the *inspectable list of guarded corners* it exposes so trust is earned by being seen (*INV4, INV13*). | "stand watch", "the world watched on your behalf", "a watch you can actually see", "the corners it's guarding", "the standing list of silent things it's keeping an eye on", "watching all the silent corners of my life" |
+
+## What the assistant produces & does
+
+| Canonical term | Definition | Vision phrasings it absorbs |
+|----------------|------------|-----------------------------|
+| **Briefing** | The curated "what needs you" summary; the assistant's primary surface. | "a short briefing", "morning briefing", "here's the handful of things that actually need you today" |
 | **Draft** | A reply or message prepared in the user's voice, pending approval (*INV1, INV9*). | "the reply drafted", "a first draft", "drafted in my own voice" |
-| **Proposed action** | Any consequential action the assistant offers for the user's nod (*INV1*). | "shows me what it wants to cut and waits for my nod", "the decision laid out", "offer to…" |
-| **Approval** | The user's explicit confirmation that releases a Proposed action (*INV1*). | "my nod", "I've confirmed it", "one nod", "approves it" |
+| **Proposed action** | Any consequential action the assistant offers for the user's nod (*INV1*). | "shows me what it wants to cut and waits for my nod", "the decision laid out", "offer to unsubscribe/merge/chase…" |
+| **Approval** | The user's explicit confirmation that releases a Proposed action (*INV1*). | "my nod", "I've confirmed it", "one nod", "approves it", "my explicit go-ahead" |
 | **Nudge** | A proactive prompt about something needing attention (an owed reply, a cooling lead). | "nudge", "chase", "raise a flag", "tap you", "a timely heads-up" |
+| **Errand** | A multi-step task the assistant carries all the way to completion — chasing, negotiating, filing, booking, calling — pausing at the approval gate before any real commitment (*INV1*). | "carries a whole errand to the finish", "carry the silent thing all the way to done", "carry the whole exchange to its finish", "a result I'm handed", "makes the call" |
 | **Filing** | Sorting an Email/Document into its right place (*INV3 governs what to do when unsure*). | "filed", "sorted into sensible places", "neatly filed", "the right person's place" |
 | **No-action** | An item set aside as read-only because nothing is needed from the user — explicitly *not* spam. | "noise", "low-stakes noise", "for your information, nothing needed", "quiet, read-only corner" |
-| **Hand-off** | Transferring a Thread to a colleague *with* its full context (*INV1, INV4*). | "passing a conversation", "escalate", "point it to the right specialist", "fwd:" |
+| **Hand-off** | Transferring a Thread to a colleague *with* its full context (*INV1, INV4*). | "passing a conversation", "escalate", "point it to the right specialist", "handed over already understood", "fwd:" |
 
 ## Knowledge & history
 
@@ -48,21 +66,32 @@ treat those as synonyms of the canonical term, not distinct concepts.
 
 | Canonical term | Definition | Vision phrasings it absorbs |
 |----------------|------------|-----------------------------|
-| **Threat** | A fraud, scam, or social-engineering attempt the assistant detects. | "costly fakes and scams", "forged invoice", "changed bank details", "money traps", "boss-impersonation" |
+| **Threat** | A fraud, scam, or social-engineering attempt the assistant detects (across any channel — *INV13*). | "costly fakes and scams", "forged invoice", "changed bank details", "money traps", "boss-impersonation", "the fake-delivery DM" |
 | **Held-aside** | The non-destructive state for suspect or unwanted items — quarantined and flagged, never deleted (*INV2*). | "set aside and flagged", "held quietly at the door", "never quietly removed" |
+| **Provenance** | Proof that an incoming message genuinely is from who it claims, and that the user's own outbound messages are provably theirs (*INV9*). | "prove an incoming message genuinely came from my real bank", "prove… a message is really from me", "impersonation simply stops working" |
 
 ## Control & oversight
 
 | Canonical term | Definition | Vision phrasings it absorbs |
 |----------------|------------|-----------------------------|
 | **Autonomy level** | The per-scope, reversible setting for how far the assistant may go unaided (*INV8*). | "how far the assistant may go", "a longer leash", "how careful", "where it may go ahead" |
+| **Standing instruction** | A user-defined rule, given once in plain words, that the assistant follows thereafter — where it may act and where it must stop and ask (*composes with INV1, INV8*). | "teach the assistant my own rules", "tell it once where it may go ahead", "always file the receipts", "always treat mail from this client as urgent" |
 | **Action record** | The lasting, auditable log of the assistant's own actions (*INV5*). | "a complete, lasting record", "everything it did and why", "record of every decision" |
 | **Commitment** | Something the *user* promised to do or send (a loose end the user owes). | "loose ends", "you said you'd send…", "promised follow-ups", "the things I promised" |
-| **Waiting-on** | Something *owed to the user* by someone else. | "replies I'm owed", "things other people promised me", "the quote the supplier said he'd send" |
-| **Open item** | Any Thread or obligation not yet closed; carries a state and a whose-court. | "open thread", "balls in the air", "whose court they're in", "still in flight" |
+| **Waiting-on** | Something *owed to the user* by a known someone else. | "replies I'm owed", "things other people promised me", "the quote the supplier said he'd send" |
+| **Open item** | Any Thread, Commitment, Waiting-on, or Obligation not yet closed; carries a state and a whose-court. | "open thread", "balls in the air", "whose court they're in", "still in flight", "where every open thread stands" |
+| **Extension** | An opt-in specialist helper, built for a particular trade or task, added on top of the assistant (*INV12 governs what it may reach*). | "a specialist helper built for exactly my world", "the accountant's tax-document collector", "the lawyer's contract intake", "extra helpers I've chosen and trust" |
 
 > **Judgment calls (overridable):** **Email / Chat message / Message** are kept as
 > three terms so behaviour can differ per channel, with **Message** as the
-> both-channels umbrella. **Commitment / Waiting-on / Open item** are kept distinct
-> (I-owe vs. owed-to-me vs. status-tracking) rather than collapsed into one
-> directional concept.
+> both-channels umbrella. **Obligation / Commitment / Waiting-on / Open item** are
+> kept distinct (world-imposed-due-thing vs. I-owe vs. owed-to-me vs.
+> status-tracking) even though the vision loosely calls a standing Obligation a
+> "commitment" (UC96) — canonical **Commitment** stays the user's *own* promise.
+> **Obligation / World event / Entitlement** are kept as three outside-world
+> objects (a due thing to act on / a happening that affects you / money-or-rights
+> owed to you) rather than merged into one "silent thing". The adverse-fine-print
+> traps (auto-renewal, sneak price-jump) are folded into **Obligation** (a due
+> thing with a hostile window), not split out. **Delegated / guardianship
+> authority** (acting for another) is left to [actors.md](actors.md) as an actor
+> relationship, bounded by INV12, rather than named here as an object.

@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "ai-mail.pocock",
+			"path": "."
+		},
+		{
+			"name": "plan",
+			"path": "../plan"
+		},
+		{
+			"name": "pocock",
+			"path": "../../github/pocock"
+		},
+		{
+			"path": "../../ai-knowhow/skills-plugins"
+		},
+		{
+			"path": "../../github/GoogleCloudPlatform/knowledge-catalog"
+		}
+	],
+	"settings": {}
+}

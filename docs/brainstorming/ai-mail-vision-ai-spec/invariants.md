@@ -6,61 +6,99 @@ are stated **once** here; capability and UC descriptions reference them by ID
 instead of repeating them. **Every** architecture, design, and data-model
 decision must honour all of these.
 
-> Each invariant lists *representative* asserting UCs, not an exhaustive list.
-> See [uc-index.md](uc-index.md) for the per-UC mapping. Some invariants are also
-> asserted directly by the press-release ("PR") blocks, which are canonical too.
+They are stated as **tech-free business policy** — no framework, storage,
+transport, or platform commitment. That is the altitude fence: these are the
+strategic *rules*, not the mechanisms that satisfy them.
+
+> Each invariant lists *representative* asserting UCs (and the vision points /
+> scope items / parked `BV` items it derives from), not an exhaustive list. See
+> [uc-index.md](uc-index.md) for the per-UC mapping.
 
 ## Control & safety
 
-| ID | Invariant | What it means for the build | Asserting UCs (representative) |
-|----|-----------|-----------------------------|-------------------------------|
-| **INV1** | **Approval gate.** No outbound or consequential action — send, reply, commit, confirm a slot, unsubscribe, merge, file — happens without the user's explicit confirmation. | Everything funnels through a propose → review → apply pipeline; no auto-commit path exists. | UC1, UC2, UC9, UC21, UC37, UC38, UC43, UC53, UC60, UC63, UC64, UC66, UC65 + PR (both) |
-| **INV2** | **Non-destructive.** Never deletes or permanently discards a message or file on its own — *even at full confidence*. Suspect or unwanted items are *held aside & flagged*, never removed. | Soft-delete / quarantine only; no hard-delete in any autonomous path. | UC19, UC32, UC38, UC53, UC60 |
-| **INV3** | **Safe default under uncertainty.** When unsure, the assistant defers / holds / leaves-as-is rather than guessing — a wrong consequential action (mis-filing, mis-routing) is worse than no action. | Confidence thresholds gate every autonomous action; below the bar → route to a human or leave untouched. | UC44, UC60 |
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV1** | **Human stays in charge — approval gate.** No outbound or consequential action — send, reply, decide, pay, book, confirm a slot, unsubscribe, file a claim, cancel a contract, switch a rate, delete, merge — happens without the responsible person's explicit say-so. Money and legal commitments especially never move on a whim. | Everything funnels through a **propose → review → apply** pipeline; no auto-commit path exists. Money/commitment steps stay gated regardless of the autonomy level. Per **BV5**, build the gate as an *isolable, relaxable policy layer* — not baked into every path — so the horizon's autonomous sibling can lift it without re-architecture. | V18, V34; UC2, UC21, UC29, UC38, UC53, UC63, UC64, UC66, UC72, UC73, UC78, UC102, UC115; BV5 |
+| **INV2** | **Non-destructive.** Never deletes or permanently discards a message or file on its own — *even at full confidence*. Suspect, unwanted, or dead items are *held aside and flagged*, never removed. | Soft-delete / quarantine only; no hard-delete on any autonomous path. Safety never costs the user a message they might have wanted. | V3; UC19, UC32, UC38, UC53, UC60, UC90 |
+| **INV3** | **Safe default under uncertainty.** When unsure, the assistant defers / holds / leaves-as-is rather than guessing — a wrong consequential action (mis-filing, mis-routing, wrong recipient) is worse than no action. | Confidence gates every autonomous step; below the bar → leave in the common pile, route to a human, or leave untouched. | UC44, UC60, UC65 |
 
 ## Trust & transparency
 
-| ID | Invariant | What it means for the build | Asserting UCs (representative) |
-|----|-----------|-----------------------------|-------------------------------|
-| **INV4** | **Transparency.** Every action and judgment carries a plain-language reason the user can inspect; never a black box. | Each action emits a human-readable rationale; the UX surfaces it on demand. | UC12, UC31, UC39, UC41, UC47 |
-| **INV5** | **Auditable record.** A complete, lasting record of the assistant's *own* actions and decisions is kept and traceable long after the fact. | Append-only action log, retained long-term, queryable down to a single message. | UC47, UC48 |
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV4** | **Transparency — a watch you can see.** Every action and judgment carries a plain-language reason the user can inspect; never a black box. The *standing watch* is itself visible — the list of silent things it is guarding, each with where it stands — so trust is earned by seeing it work, never asked for on faith. | Each action emits a human-readable rationale, surfaced on demand; the set of things being watched (obligations, portals, guarded corners) is an inspectable list, not an opaque background process. | V41; UC12, UC31, UC41, UC47, UC104 |
+| **INV5** | **Auditable record.** A complete, lasting record of the assistant's *own* actions and decisions is kept and traceable long after the fact — ready for an audit, a legal hold, or a data-access request. | Append-only, long-retained decision log, queryable down to a single message; defensible on demand. | V30; UC48, UC82 |
 
 ## User sovereignty (over the user's own domain)
 
-| ID | Invariant | What it means for the build | Asserting UCs (representative) |
-|----|-----------|-----------------------------|-------------------------------|
-| **INV6** | **Ownership & exit.** What the assistant learns about the user belongs to the user; they can see it, correct it, switch it off, and walk away with their mail intact. | Data export + correction + off-switch are first-class; no lock-in of the learned model. | UC16, UC17, UC24 |
-| **INV7** | **Additive, never locked out.** The assistant never makes itself the sole interface to **the user's own mail**, and never locks the user out of it — they can always open and read everything themselves. | The assistant augments the existing mailbox; the underlying mail store stays directly usable without it. | UC12, UC24 |
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV6** | **Ownership & clean exit.** What the assistant learns about the user belongs to the user; they can see it, correct it, switch it off, and walk away with their mail and their data intact — no lock-in. | Data export + correction + off-switch are first-class; the learned model is portable, not a hostage. Leaving is a clean exit, not a migration. | V16; UC16, UC17, UC24; BV1 |
+| **INV7** | **Additive, never locked out.** The assistant sits *on top of* the user's existing mail and channels — it never migrates them, never makes itself the sole interface to the user's own mail, and never locks the user out; they can always open and read everything themselves, in the app they already live in. | Provider/OS/format-agnostic overlay on top of existing infrastructure; the underlying store stays directly usable without the assistant. Help comes to the user's existing inbox, not a new place they must move into. | UC12, UC24, UC27; BV1, BV2, BV4 |
+
+## Access & authority
+
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV8** | **Progressive, user-set autonomy.** Autonomy starts narrow and widens only as the user (or manager) grants it; how far the assistant may go is configurable per scope and reversible either way — and any nudging is itself dismissable / tunable, never forced. | Per-scope autonomy levels, default conservative, tunable in both directions; the dial (and the nudge volume) is the user's. | UC2, UC25, UC37, UC41, UC57, UC63 |
+| **INV12** | **Least-privilege, granted & revocable access.** The assistant reaches only the accounts, portals, and data the user has explicitly opened to it — each visibly listed and revocable in a click — and never wanders beyond what was granted. When acting for *another* person, it stays strictly within the authority actually conferred on it. | Explicit, enumerable, revocable grants; no ambient reach. Delegated / guardianship access is bounded by the conferred authority, not by capability. | V13; UC30, UC72, UC100, UC113 |
 
 ## Autonomy & identity
 
-| ID | Invariant | What it means for the build | Asserting UCs (representative) |
-|----|-----------|-----------------------------|-------------------------------|
-| **INV8** | **Progressive, user-set autonomy.** Autonomy starts narrow and widens only as the user (or manager) grants it; how far the assistant may go is configurable per scope and reversible either way. | Per-scope autonomy levels, default conservative, tunable in both directions; the dial is the user's. | UC2, UC25, UC41, UC57, UC63 |
-| **INV9** | **Acts in the user's real identity.** When acting **on the user's behalf** (in the user's mailbox), drafts and sends are attributed to the real person — never a hidden or surrogate AI persona — and the user always knows what was said in their name. | Outbound attribution = the human; name-acting actions are surfaced. *(If the assistant ever acts as its own principal, it would do so under its own identity — a different actor, out of current scope.)* | UC43, UC64 + PR (business) |
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV9** | **Acts in the user's real identity.** When acting **on the user's behalf**, drafts and sends go out attributed to the real person — never a hidden or surrogate AI persona — and the user always knows what was said in their name. Provenance is provable both ways: that an incoming message really is from who it claims, and that the user's own messages really are from them. | Outbound attribution = the human; name-acting actions are surfaced; authenticity is verifiable on the way in and out. *(If the assistant ever acts as its own principal it would do so under its own identity — a different actor, out of current scope. Per **BV5**, this identity seam is exactly where the autonomous sibling re-diverges.)* | V33; UC43, UC64, UC77; BV5 |
 
 ## Boundaries
 
-| ID | Invariant | What it means for the build | Asserting UCs (representative) |
-|----|-----------|-----------------------------|-------------------------------|
-| **INV10** | **Serves the principal, not surveillance.** The assistant works for the user / company; its records and oversight views are about the *work and the assistant's own actions*, never a means to monitor staff. | Manager/admin views expose work state, not employee behaviour; design actively against repurposing for surveillance. | UC24, UC30, UC48, UC59 + PR (business) |
-| **INV11** | **Context boundaries / no leakage.** Separate spheres — personal vs work, account vs account, a colleague pulled in for a moment — stay isolated unless the user joins them. | Hard isolation boundaries; cross-context surfacing is opt-in, never the default. | UC25, UC26, UC35, UC56 |
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV10** | **Serves the principal, not surveillance.** The assistant works for the user / company; its records and oversight views are about the *work and the assistant's own actions*, never a means to monitor staff. | Manager/admin views expose work state, not employee behaviour; design actively against repurposing for surveillance. | V32; UC24, UC30, UC48, UC59 |
+| **INV11** | **Context boundaries / no leakage.** Separate spheres — personal vs work, account vs account, household-shared vs private, a colleague pulled in for a moment — stay isolated unless the user joins them. Personal correspondence is separable from the employer's on exit; and any learning shared across users never exposes an individual's private mail. | Hard isolation boundaries; cross-context surfacing is opt-in, never the default. Fair personal-vs-company separation is a supported operation; crowd-learning is privacy-preserving by construction. | V9, V14; UC25, UC26, UC35, UC56, UC69, UC74, UC75 |
+
+## Scope & coverage
+
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV13** | **Source-agnostic — no free pass.** Nothing gets a free pass to slip through because of *how* it arrived — or because nothing arrived at all. The same handling, the same watchful eye, and the same safeguards apply across email, chat apps, paper, voice, video, and silent portals, and to obligations out in the world that were never sent as a message. No channel is privileged or exempt. | Every capability (triage, safety, obligation-tracking, drafting) is built channel-independent; email is not the privileged path. The unit of work is the message/obligation, not the inbox. | S2, S3 (anchor); UC76, UC80, UC87, UC97, UC110, UC111, UC112 |
+
+## Availability & data locality
+
+| ID | Invariant | What it means for the build | Asserting UCs / V / BV (representative) |
+|----|-----------|-----------------------------|-----------------------------------------|
+| **INV14** | **Offline-capable, one live picture.** Being disconnected never means being cut off from one's own correspondence — reading, triage, and drafting work offline and reconcile on reconnect — and the assistant presents one consistent, live state across every device and every way it is reached. | Local availability of core flows without connectivity; a single coherent state model across devices/modalities, not separate copies that forget each other. | V10; UC94, UC95 |
+| **INV15** | **Runs within the user's own walls.** The assistant can operate entirely inside the user's or organisation's perimeter, with nothing it reads or learns ever handed to an outside service, and no forced dependence on any single outside provider. | On-premise / self-hostable deployment is a supported mode where secrecy or regulation demands it; no mandatory dependence on any single external service or model provider. | V31; UC81; BV3 |
 
 ## Notes for downstream design
 
-- **INV1 + INV4** together imply a propose → review → apply pipeline where every
-  proposal carries an attached rationale.
+- **INV1 + INV4** together imply a propose → review → apply pipeline in which
+  every proposal carries an attached, plain-language rationale.
 - **INV2 + INV3** push every risky path toward *hold-and-surface* rather than act:
   INV2 forbids autonomous destruction outright; INV3 forbids autonomous *guessing*
   even for non-destructive actions.
-- **INV8** is the dial that the other invariants compose with: raising autonomy
-  moves the threshold in INV3 and the breadth of INV1's auto-allowed actions, but
-  never repeals INV2, INV9, INV10, or INV11.
-- **INV9, INV10** are the two "identity/oversight" guards rescoped to survive a
-  future where the assistant might act as its own principal — both are stated
-  relative to *the user's behalf* / *the principal it serves*, not absolutely.
+- **INV8 is the dial the others compose with.** Raising autonomy moves the INV3
+  threshold and widens INV1's auto-allowed set, but never repeals INV2, INV9,
+  INV10, INV11, or INV12. **INV12** bounds *what the assistant can reach*; INV8
+  bounds *how far it may act* — orthogonal axes.
+- **INV9, INV10** are the two "identity/oversight" guards deliberately rescoped to
+  survive a future where the assistant acts as its own principal — both stated
+  relative to *the user's behalf* / *the principal it serves*, not absolutely. This
+  is the **BV5** seam: INV1 and INV9 are the human-in-charge layer the autonomous
+  sibling vision would lift.
+- **INV13** is a coverage constraint, not a feature: it forbids building anything
+  as email-only. It is the anchor (S3) expressed as a rule every capability inherits.
+- **INV15** (within-walls) and **INV6/INV7** (ownership, additive) together are the
+  trust-and-portability spine folded from the parking lot: **BV1** (no-lock-in /
+  clean exit / add-on-top), **BV2** (additive layer, not a new client), **BV3**
+  (local-first / model-swappable). **BV4**'s *provider-agnostic* facet lives in
+  INV7; its *open-source-as-differentiator* facet is a go-to-market / scoping call,
+  not a build invariant, and belongs in `deferred-inputs.md` (Phase 8) — it is
+  **not** folded here.
 
 > **Judgment calls (overridable):** the exact set and granularity of invariants is
-> a *reading* of the vision. Notably — INV6/INV7 were split from one "sovereignty"
-> rule; INV9 and INV10 were deliberately rescoped to the on-behalf-of relationship;
-> INV2 and INV3 are kept separate (destructiveness axis vs. confidence axis).
+> a *reading* of the vision. Notably — **INV13** (source-agnostic) is read as a
+> cross-cutting *constraint* rather than a mere scope statement; **INV12** is split
+> out from INV8 (reach/authority vs. act-breadth); **INV14** and **INV15** are kept
+> separate (availability-when-offline vs. data-never-leaves) rather than merged into
+> one "deployment locality" rule; INV6/INV7 remain split (ownership/exit vs.
+> additive-shape); INV9/INV10 stay rescoped to the on-behalf-of relationship.

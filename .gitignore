@@ -10,7 +10,10 @@ brainstorm_usecase_cap.lock
 # brainstorm-vision skill is canonically in ai-knowhow/skills-plugins; this is a
 # local junction into it, not files to track here.
 .claude/skills/brainstorm-vision/
+.agents/skills/brainstorm-vision/
 
 # create-vision-companion skill is canonically in ai-knowhow/skills-plugins; this
 # is a local junction into it, not files to track here.
 .claude/skills/create-vision-companion/
+.agents/skills/create-vision-companion/
+/err.txt
