@@ -156,3 +156,127 @@ Unchanged from pass 1 — the same pre-existing, already-logged single-phase jud
 calls (decisions.md rows 27, 32; SYS-as-actor, 4-way S3-anchor split, Core-tier split,
 CAP16-Supporting, A2A boundary, etc.). None is a cross-phase inconsistency; nothing new
 surfaced. No fix applied this pass.
+
+---
+
+# Scoped Vision-diff re-run — Phase 10 whole-bundle critic (pass 1)
+
+**Verdict: CLEAN** — 1 cross-phase straggler found and fixed in place; 0 blocking
+residuals; 0 new human-judgment residuals to append. Another critic pass is **not
+warranted** (the fix is localized prose; every ID-level relationship already
+reconciles).
+
+Audit scope: the entire finished set re-audited against the **current 18-modified-UC
+vision** (the canonical vision for this run). What this re-run changed: 18 UC wordings
+modified; nothing added/removed/renumbered; S/V/BV byte-identical; 5 intra-cluster
+merges via the stub convention (UC4→UC3, UC21→UC64, UC29→UC28, UC82→UC48, UC101→UC96);
+cross-file deltas UC28+INV1 and UC64+CAP15 secondary; UC99/UC111 "commitment"→
+"obligation". Per-phase re-derivation logged as decisions.md rows 33–50. The vision was
+**not** touched.
+
+## FIXED — CAP6 intent still read "as live commitments" (Commitment→Obligation shift)
+`capability-map.md`'s **CAP6 — Deadlines, Obligations & the Silent Watch** intent line
+read *"Hold the user's standing Obligations as **live commitments**…"* — the exact
+phrasing the vision's **UC96** changed away from this run (*"live commitments"* →
+*"live obligations"*, decisions.md rows 39, 48). Two compounding problems the per-phase
+critics could not see from their own artifact:
+1. **Single-language collision.** "commitments" maps to canonical **Commitment** =
+   the *user's own* promise (glossary L80); using it to describe *Obligations*
+   (world-imposed due things) is the precise term-blur the Phase-2 glossary decision
+   (D4/row 39) reserves against.
+2. **Stale vs. the current vision.** UC96's own text now says "as live obligations,"
+   and the **uc-index UC96 one-liner already reads "as live obligations"** — so the
+   capability-map CAP6 intent was the lone straggler that the wording shift did not
+   reach.
+
+**Fix:** CAP6 intent now reads *"Hold the user's standing Obligations as **live
+obligations**…"*. No ID, membership, `Serves:`, or class change — CAP6 keeps its
+11-UC membership (incl. stubs UC4, UC101), Core—differentiating class, and V# set.
+This is a clear fix (unambiguous vision-wording + glossary alignment), so it is applied
+in place and recorded here; **no decisions.md row added.**
+
+## Merge integrity — all five targets cover their stub's promise, nothing invented
+- **UC4→UC3** (CAP6): UC3's widened one-liner ("deadlines/obligations inferred from the
+  email itself, no manual due dates") carries UC4's automatic due-date inference. ✓
+- **UC21→UC64** (CAP13): UC64's "set up a call … committing the slot" carries UC21's
+  scheduling negotiation; UC64 correctly gained the **CAP15** secondary UC21 used to
+  carry (uc-index Also = CAP4, CAP15; capability-map CAP13 secondary "UC64→CAP15"). ✓
+- **UC29→UC28** (CAP9): UC28's one-liner now names "boss-impersonation and pay-now/wire
+  pressure — warn before any money moves," and correctly gained **INV1** (uc-index +
+  invariants INV1 asserting list). ✓
+- **UC82→UC48** (CAP18): UC48's "answers a legal hold or data-access request" carries
+  UC82. ✓
+- **UC101→UC96** (CAP6): UC96's "VAT filing, licence, inspection" carries UC101's
+  small-business standing legal obligations; UC101 correctly retained as native **S3**
+  via the enumerated exception list. ✓
+
+No merge reshaped a cluster boundary, a Core/Supporting tag, or a promise's coverage.
+
+## Stub convention applied uniformly; no double-counting; coverage whole
+- **Kept as pointer rows** (ID + actor + primary CAP + native rung; one-liner = "Merged
+  into UCx"; INV = "see UCx") in uc-index for all five; UC21's stray CAP4/CAP15
+  secondaries cleared. ✓
+- **Kept in CAP `UCs:` lines and reverse-index counts** — CAP6 = 11 (UC4, UC101),
+  CAP9 = 9 (UC29), CAP13 = 6 (UC21), CAP18 = 4 (UC82); reverse-index total **115**,
+  each UC exactly one primary. ✓
+- **Dropped from V# realizing lists** — swept vision-index: no stub survives in any
+  "Realized by" list (V4/V7/V28/V30/V36 all cite the target only); UC101's sole
+  appearance is the native-S3 exception list, which is correct. ✓
+- **Dropped from redundant actor/INV rep-lists** — no stub {UC4, UC21, UC29, UC82,
+  UC101} remains in actors.md, invariants.md, or subdomains rows (rows 35, 41, 43). ✓
+- Scope-rung tally reconciles across uc-index and vision-index (S1/S2/S3 = 91/11/13 =
+  115). UC111 stays native S2 in both (the S2-vs-S3 reading is the open call, row 27).
+
+## Other bundle-wide checks — clean
+- **Altitude** — the re-run introduced no tactical DDD/tech/MVP/phasing language; the
+  edits are wording refinements and stub pointers only.
+- **Promises reconciled, not edited** — the thin/unrealized-promise (V32/V33/V34) and
+  unpromised-capability (CAP3/CAP15/CAP19; expected CAP7/CAP8) flags are unchanged and
+  surfaced identically in capability-map and vision-index. Vision byte-identical.
+- **Independently loadable** — unaffected by the re-run.
+
+### Residuals for the human (this re-run)
+No **new** human-judgment residual surfaced by the whole-bundle pass. The re-run's
+per-phase judgment calls are already logged as decisions.md rows 33–50 (unconfirmed),
+alongside the pre-existing rows 1–32, for the single Phase-11 review. Nothing appended
+here.
+
+## Scoped Vision-diff re-run — Phase 10 whole-bundle critic (pass 2, confirming)
+
+**Verdict: CLEAN** — 0 new defects; 0 edits applied; 0 new residuals. Pass-3 **not
+warranted.** Independent re-scan from disk of the whole finished set against the frozen
+vision; the pass-1 CAP6 fix is verified correct and complete.
+
+### Pass-1 CAP6 fix verified good
+`capability-map.md` CAP6 intent (L81) now reads *"Hold the user's standing *Obligations*
+as **live obligations**…"* — matching the frozen vision UC96 (L559: "hold my standing
+obligations as live obligations") and the uc-index UC96 one-liner (L112, "as live
+obligations"). The straggler is gone; no ID/membership/`Serves:`/class changed (CAP6
+still 11 UCs incl. stubs UC4/UC101, Core—differentiating).
+
+### Commitment≠Obligation collision — swept the whole bundle, none remain
+Every surviving occurrence of "commitment(s)" is legitimate, and falls in one of three
+sanctioned uses:
+- **Canonical Commitment = the user's OWN promise** — glossary L80 (the term def);
+  CAP5 intent + Key entities (L70/L77, "the user's own loose ends"); uc-index UC37
+  ("loose ends (Commitments)"); CAP20 UC87→CAP5 ("a voicemail promise becomes a tracked
+  commitment"); subdomains L35 ("the user's own *Commitments*"). All the user's promises.
+- **Generic English (not the domain term)** — INV1 "money and legal commitments never
+  move" (vision-sourced gate wording); glossary Errand "before any real commitment";
+  invariants L10 altitude-fence "platform commitment".
+- **Change-history meta-notes** — glossary L91 ("it earlier read 'live commitments'");
+  critic-report + decisions log rows. Documentary, not live description.
+No place describes a world-imposed **Obligation** as a "commitment." Collision closed.
+
+### Cross-phase checks re-confirmed
+- **Merge integrity** — all five targets cover their stub (UC4→UC3, UC21→UC64,
+  UC29→UC28, UC82→UC48, UC101→UC96); UC28+INV1 and UC64+CAP15 propagations intact; no
+  stub survives in a V# realizing / actor / INV / subdomains rep-list.
+- **Coverage / counts** — all 46 V# present; reverse-index sums to **115**, one primary
+  CAP each; S1/S2/S3 = 91/11/13 = 115 reconciles across uc-index and vision-index.
+- **Stub convention** — uniform pointer rows ("Merged into UCx" / "see UCx"); UC101
+  correctly retained in the native-S3 exception list (uc-index L168).
+- **Altitude** — no tactical DDD/tech/MVP/phasing leak; the re-run added only wording
+  refinements and stub pointers.
+
+Nothing still compounds across artifacts. No edit applied this pass.

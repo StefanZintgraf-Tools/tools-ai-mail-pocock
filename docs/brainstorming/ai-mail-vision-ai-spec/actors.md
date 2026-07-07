@@ -25,7 +25,7 @@ PROT, HH), **roles within the employer tenant** (STAFF, MGR, TM), and
 | Code | Actor | Relationship to the product (the boundary it draws) | Makes expressible | Representative UCs |
 |------|-------|------------------------------------------------------|-------------------|--------------------|
 | **IND** | Individual principal | Owns their own personal domain — one or more personal Accounts and (as a sole trader) their own business mail; full, unshared control. The default actor; most UCs are told from here. | INV11 (personal↔personal Account isolation), INV6/INV7 (ownership, additive), INV1 (own approval gate) | UC1–UC42 (most), UC51–UC53, UC58, UC61–UC67, UC84, UC86, UC88–UC99, UC102–UC104, UC109–UC114 |
-| **ORG** | Organisation / employer tenant | The company as a **distinct principal** — owns the company's Accounts, Memory, systems of record, and the Action record; the assistant works *for it*. The tenant boundary staff operate inside; the owner of what a leaver must leave behind. Introduced by the enterprise/B2B reach. | **INV10** (serves the company, never staff surveillance), INV5 (auditable record), INV15 (within-walls), INV11 (company mail is the firm's, separable from staff personal on exit) | V26, V32; UC48, UC79, UC81, UC82 |
+| **ORG** | Organisation / employer tenant | The company as a **distinct principal** — owns the company's Accounts, Memory, systems of record, and the Action record; the assistant works *for it*. The tenant boundary staff operate inside; the owner of what a leaver must leave behind. Introduced by the enterprise/B2B reach. | **INV10** (serves the company, never staff surveillance), INV5 (auditable record), INV15 (within-walls), INV11 (company mail is the firm's, separable from staff personal on exit) | V26, V32; UC48, UC79, UC81 |
 | **PROT** | Delegating principal / protected party | A person on whose behalf authority is exercised because they can't (fully) manage their own mail — a watched-over relative, someone slipping into illness, a deceased's estate, or anyone who has formally conferred authority. Their inbox is a *separate domain* acted in under consent/scope, never absorbed into the delegate's. | **INV12** (the conferred authority bounds what may be done for them), INV11 (their domain stays isolated from the delegate's own) | V13; UC30, UC72, UC100 |
 | **HH** | Household co-principal | One of two-or-more people sharing a **single assistant over a common personal domain** — the household's shared admin (bills, kids' school, renewals) handled between them, while each keeps their own private Account isolated and controls what is shared. A shared-domain tenancy pattern distinct from IND (sole owner) and from ORG (an employer, not a peer). | **INV11** (household-shared ↔ private isolation; joined only by opt-in), INV1 (each co-principal still gates their own) | V14; UC74 |
 
@@ -43,7 +43,7 @@ PROT, HH), **roles within the employer tenant** (STAFF, MGR, TM), and
 |------|-------|------------------------------------------------------|-------------------|--------------------|
 | **DLG** | Delegate / authorised agent | The person **exercising** delegated or guardianship authority over a PROT's domain — the guardian, executor, attorney, or watching relative — acting *strictly within the authority actually conferred*. Split out from IND (the old bundle folded the guardian into IND); the enterprise/delegated-authority scope makes the conferred-authority ceiling a real least-privilege boundary. | **INV12** (never wanders beyond the conferred authority), INV1 (still gated within that authority), INV11 (the delegate's own mail stays separate from the PROT's) | UC72, UC100 |
 | **PIC** | Pulled-in collaborator | A colleague granted **ephemeral, single-Thread** access — brought up to speed on only what they need, then dropped back out. A momentary scoped grant, not team membership. | INV11 (sees only this Thread, isolation restored on exit), INV12 (scoped, revocable reach) | UC56 |
-| **EXT** | External counterparty | Customers, suppliers, leads, strangers, and their own assistants that the product deals with *on the user's behalf* — **no Account, no access**. Shapes doorkeeper, scam, reply, and assistant-to-assistant behaviour; how they perceive the user is governed by INV9. | **INV9** (every reply goes out in the real person's name), INV12 (they get no reach into the user's domain) | UC15, UC21, UC43, UC60, UC64, UC71, UC92, UC108 |
+| **EXT** | External counterparty | Customers, suppliers, leads, strangers, and their own assistants that the product deals with *on the user's behalf* — **no Account, no access**. Shapes doorkeeper, scam, reply, and assistant-to-assistant behaviour; how they perceive the user is governed by INV9. | **INV9** (every reply goes out in the real person's name), INV12 (they get no reach into the user's domain) | UC15, UC43, UC60, UC64, UC71, UC92, UC108 |
 | **SYS** | Outside system / portal | A non-human external boundary the assistant **reaches into** under an explicit, revocable grant — a silent Portal, a system of record (CRM / sales pipeline / support desk), a world-events feed. Not a point-of-view actor; included because the enterprise reach makes it a first-class access/integration boundary the tenancy model must bound. | **INV12** (only what the user opened, revocable in a click, no ambient reach), INV1 (any committing write-back stays gated), INV4 (the watch over it is inspectable) | UC80, UC97, UC105, UC106, UC113, UC115 |
 
 > **Paired roles.** The *guardian/executor* (**DLG**) and the *protected/delegating
@@ -88,7 +88,7 @@ Flavours of **IND** unless noted; names only.
   systems of record). All three are INV12 territory.
 - **INV10 fences ORG/MGR:** oversight views expose work state and the assistant's own
   actions, never staff behaviour — the record is an account of the *assistant*, not a
-  way to watch employees (UC48, UC59, UC82).
+  way to watch employees (UC48, UC59).
 - **INV11 fences IND-with-multiple-Accounts** (personal↔work isolation by default),
   **the STAFF exit** (personal correspondence separable from the employer's,
   fairly to both sides — UC69), **and the HH shared domain** (household-shared
@@ -118,6 +118,6 @@ Flavours of **IND** unless noted; names only.
 >   attributes — they carry genuinely different permissions (MGR sets others' policy
 >   and sees oversight; TM has shared-inbox mechanics; STAFF is plain). **Confidence:
 >   medium.** Cites UC57, UC59, UC43–UC46.
-> - **The "accountable for audit/legal" role** (UC48, UC82) is folded into **MGR**
+> - **The "accountable for audit/legal" role** (UC48) is folded into **MGR**
 >   rather than a separate compliance actor; **new hire** and **specialist** (UC50)
 >   remain flavours/states of **STAFF**, not their own codes. **Confidence: medium.**

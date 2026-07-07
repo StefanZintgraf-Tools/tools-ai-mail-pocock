@@ -18,7 +18,7 @@ treat those as synonyms of the canonical term, not distinct concepts.
 | **Assistant** | The AI agent acting on the user's behalf. | "the assistant", "AI assistant", "a patient helper", "one calm assistant", "a doorkeeper" |
 | **Email** | A communication item in a mail Account. | "email", "mail", "a note", "a letter" |
 | **Chat message** | A communication item from a connected Chat channel. | "chats", "a message on WhatsApp/Telegram", "a DM" |
-| **Message** | Umbrella term — used **only when behaviour spans both** Email and Chat message. Prefer the specific term; reach for this only when a need genuinely covers both. | used where the vision treats mail + chats alike (UC34, UC51, UC62, UC107) |
+| **Message** | Umbrella term — used **only when behaviour spans both** Email and Chat message. Prefer the specific term; reach for this only when a need genuinely covers both. | used where the vision treats mail + chats alike |
 | **Thread** | A connected exchange of messages on one matter, possibly spanning people and channels (*the channel is invisible — INV13*). | "thread", "conversation", "exchange", "correspondence", "the back-and-forth", "one conversation no matter how many doors it came through" |
 | **Account** | One connected mailbox identity the user owns (personal, work, side-project). | "private inbox", "work inbox", "personal/work/side-project addresses" |
 | **Shared inbox** | A mailbox worked by several people on a team. | "shared inbox", "the same inbox", "shared mailboxes", "our shared inbox" |
@@ -84,10 +84,14 @@ message ever arrived (*INV13, source-agnostic*).*
 
 > **Judgment calls (overridable):** **Email / Chat message / Message** are kept as
 > three terms so behaviour can differ per channel, with **Message** as the
-> both-channels umbrella. **Obligation / Commitment / Waiting-on / Open item** are
+> both-channels umbrella — reached for where the vision treats mail + chats alike
+> (UC34, UC51, UC62, UC107). **Obligation / Commitment / Waiting-on / Open item** are
 > kept distinct (world-imposed-due-thing vs. I-owe vs. owed-to-me vs.
-> status-tracking) even though the vision loosely calls a standing Obligation a
-> "commitment" (UC96) — canonical **Commitment** stays the user's *own* promise.
+> status-tracking). The vision now names the world-imposed due thing an
+> "obligation" consistently — UC96 holds "standing obligations as live
+> **obligations**" (it earlier read "live commitments"), and UC99/UC111 likewise
+> say "obligation" — which *reinforces* the split rather than blurring it;
+> canonical **Commitment** stays the user's *own* promise.
 > **Obligation / World event / Entitlement** are kept as three outside-world
 > objects (a due thing to act on / a happening that affects you / money-or-rights
 > owed to you) rather than merged into one "silent thing". The adverse-fine-print

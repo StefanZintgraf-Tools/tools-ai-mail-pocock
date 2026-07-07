@@ -78,7 +78,7 @@ with tenderness rather than nagging chases.
 - **Leans on:** INV1, INV7, INV8
 
 ### CAP6 — Deadlines, Obligations & the Silent Watch
-Hold the user's standing *Obligations* as live commitments and surface each in time to
+Hold the user's standing *Obligations* as live obligations and surface each in time to
 act — the due date drawing near, the deadline the world never announces, the lapsing
 cover, the adverse auto-renewal window, the obligation lifted out of a casual channel —
 whether or not any message ever arrived; understand due dates *from the item itself*;
@@ -173,8 +173,9 @@ between them, make the dreaded phone call, act with real money once okayed (pay,
 dispute, book), and carry a silent obligation all the way to done — keeping the user
 posted and coming back for any real decision or *Approval* before committing.
 - **UCs:** UC21, UC64, UC71, UC73, UC78, UC102
-- **Secondary touches:** UC73→CAP15 (act in an external system); UC102→CAP6 (the
-  silent thing it finishes); UC71→CAP9 (provenance of the other assistant)
+- **Secondary touches:** UC64→CAP15 (the negotiated slot onto the calendar);
+  UC73→CAP15 (act in an external system); UC102→CAP6 (the silent thing it
+  finishes); UC71→CAP9 (provenance of the other assistant)
 - **Serves:** V7, V39 (and V6 "makes the phone call" via UC78)
 - **Key entities:** *Errand*, *Proposed action*, *Approval*, *Thread*
 - **Leans on:** INV1, INV9

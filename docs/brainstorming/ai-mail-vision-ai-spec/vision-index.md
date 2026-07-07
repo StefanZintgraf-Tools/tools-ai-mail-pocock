@@ -47,9 +47,9 @@ source; grouping is by scope.
 | V1 | S1 | Important things handled or scheduled — stop carrying email in your head | UC1, UC11, UC88 | CAP1 | ok |
 | V2 | S1 | Noise shrinks itself instead of piling up | UC13, UC38 | CAP1 | ok *(CAP1 set-aside + CAP2 shrink-at-source)* |
 | V3 | S1 | Nothing you needed gets silently lost | UC3, UC19, UC32 | CAP1 | ok *(INV3; cross-cutting — no single clean home)* |
-| V4 | S1 | Costly fakes and scams caught before they cost you | UC28, UC29, UC75, UC110 | CAP9 | ok |
+| V4 | S1 | Costly fakes and scams caught before they cost you | UC28, UC75, UC110 | CAP9 | ok |
 | V5 | S1 | Reads everything, does the legwork, taps you only when it matters | UC1, UC10, UC11 | CAP1 | ok |
-| V7 | S1 | Carries a whole errand to the finish — money only on explicit say-so | UC21, UC64, UC73 | CAP13 | ok *(UC102's silent-obligation finish realizes V39 (S3), not this S1 errand — keeps UC102 native-S3)* |
+| V7 | S1 | Carries a whole errand to the finish — money only on explicit say-so | UC64, UC73 | CAP13 | ok *(UC102's silent-obligation finish realizes V39 (S3), not this S1 errand — keeps UC102 native-S3)* |
 | V9 | S1 | Spans all your inboxes under one roof, or walled apart, as you choose | UC25, UC26 | CAP11 | ok |
 | V10 | S1 | Comes offline with you, one live picture across every device | UC94, UC95 | CAP11 | ok |
 | V11 | S1 | Makes you warmer to people — not just less behind on them | UC14, UC33, UC34 | CAP5 | ok |
@@ -68,9 +68,9 @@ source; grouping is by scope.
 | V25 | S1 | Managers see the whole picture and set how far the assistant may go, per person/account | UC57, UC59 | CAP14 | ok |
 | V26 | S1 | Years of email stay the company's — not gone when someone leaves | UC68, UC69 | CAP16 | ok |
 | V27 | S1 | New hires brought up to speed; a leaver hands over cleanly, personal separated fairly | UC68, UC69, UC70 | CAP16 | ok |
-| V28 | S1 | Money traps caught and questioned — forged invoice, changed bank details, urgent wire | UC28, UC29 | CAP9 | ok |
+| V28 | S1 | Money traps caught and questioned — forged invoice, changed bank details, urgent wire | UC28 | CAP9 | ok |
 | V29 | S1 | Produces the paperwork itself — contract, invoice, filled-in form | UC85 | CAP4 | ok |
-| V30 | S1 | A complete, lasting record of the assistant's own decisions — audit, legal hold, DSAR | UC48, UC82 | CAP18 | ok |
+| V30 | S1 | A complete, lasting record of the assistant's own decisions — audit, legal hold, DSAR | UC48 | CAP18 | ok |
 | V31 | S1 | Can run entirely within your own walls | UC81 | CAP18 | ok |
 | V32 | S1 | Works *for* the company, never spying on staff | UC48, UC59 | CAP14 | ⚠ invariant-promise — INV10; no dedicated UC, leans on UC48/UC59 |
 | V33 | S1 | Every reply goes out in a real person's name | UC43 *(partial)* | CAP4 | ⚠ **thin / near-unrealized** — no dedicated UC; leans on UC43 + INV1 |
@@ -93,7 +93,7 @@ source; grouping is by scope.
 | V18 | S3 | Nothing sent, decided, paid, or deleted without your nod — you're always in charge | UC2, UC63, UC65, UC73, UC102 | CAP12 | ok *(INV1; realized via every gated UC)* |
 | V34 | S3 | Nothing sent, decided, paid, or deleted on its own — your people stay in charge | UC57, UC63 | CAP14 | ⚠ invariant-promise — INV1 at team scope; near-duplicate of V18 (personal, CAP12), lands on CAP14 as the team control/oversight surface; leans on shared UCs |
 | V35 | S3 | One place that finally sees *everything* asking of you — sent or silently come due | UC76, UC96, UC97, UC103 | CAP6 | ok |
-| V36 | S3 | The deadline no one will ever remind you of, surfaced in time | UC96, UC99, UC101 | CAP6 | ok |
+| V36 | S3 | The deadline no one will ever remind you of, surfaced in time | UC96, UC99 | CAP6 | ok |
 | V37 | S3 | The world watched on your behalf — delay, recall, breach, rate about to jump | UC80 | CAP22 | ok |
 | V38 | S3 | What's already yours, claimed in time — rebate, settlement, refund, compensation | UC98 | CAP22 | ok |
 | V39 | S3 | Carries the silent thing all the way to done — your say-so before it acts | UC102 | CAP13 | ok |

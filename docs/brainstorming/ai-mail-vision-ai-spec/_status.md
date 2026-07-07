@@ -1,6 +1,6 @@
 # Build status — ai-mail vision AI-spec companion
 
-status: finalized
+status: in-progress
 debug: off
 built-with-hash: 984bcc7e2d412fea8d1de078f3268927af002e27
 vision: ../ai-mail-foundation-vision.md
@@ -9,7 +9,72 @@ vision-manifest: vision-manifest.md (per-ID fingerprint of the vision @ tag `tem
 
 ## Run kind
 
-Upgrade re-run (2026-07-06). Prior bundle (Jun 29) had no `_status.md` and no
+**Vision-diff (scoped) review re-run (2026-07-07, in progress).** `_status.md` was
+`finalized`; user explicitly re-opened for a scoped vision-diff pass, **deferring the
+skill-Upgrade sub-mode** (skill hash drifted c985a30b… ≠ 984bcc7e… but the user chose to
+scope only to changed vision items this pass). Phase 0 manifest diff vs `temp1-reference`
+confirmed the changeset: **18 UCs modified, nothing added/removed/renumbered, S/V/BV
+byte-identical** — UC3, UC4, UC15, UC21, UC28, UC29, UC48, UC50, UC58, UC59, UC64, UC68,
+UC82, UC88, UC96, UC99, UC101, UC111. Method reproduced 169/169 non-UC + 97 unchanged UC
+hashes on first try; git-diff cross-check agrees. Several changed UCs are merge stubs
+(UC4→UC3, UC21→UC64, UC29→UC28, UC82→UC48, UC101→UC96) → their closure re-opens cluster
+siblings. Re-derive only the changed UCs' closure under the spine; keep untouched artifacts;
+global Phase 9 gate + Phase 10 critic; **full** Phase 11 review of all 29 open rows (D4/D5/D7
+stand); Phase 12 fresh manifest + re-finalize.
+
+### Vision-diff re-run progress (2026-07-07)
+
+Scoped builder+critic loops COMPLETE, all critics clean:
+- [x] P1 invariants — UC28 gains INV1; INV1/INV5 stub-lists tidied; UC28/INV3 declined (row 34). Rows 33–35.
+- [x] P2 glossary — stale UC96 "commitment" citation rewritten; no term add/drop; D4 verdict intact. Row 39.
+- [x] P3 actors — no actor add/drop; ORG/EXT rep-lists + 2 UC82 prose cites tidied. Rows 40–41.
+- [x] P4 capability-map — CAP6/9/13/18 stable; UC64→CAP15 secondary added (med, row 37); count 115. Rows 36–38.
+- [x] P5 subdomains — byte-unchanged; tiers stable; no stub in relationships. Rows 42–43.
+- [x] P6 vision-index — V4/V7/V28/V30/V36 drop stubs; every V still ≥1 UC (no gap). Rows 44–46.
+- [x] P7 uc-index spine — 17 rows re-derived; 115/zero-orphan; INV1 & CAP15 reflected; UC68/CAP6 declined (low, row 50). Rows 47–50.
+- decisions.md now 50 rows (orig 1–32 + re-run 33–50). Open for Phase 11: 29 pre-existing open (D4/D5/D7 confirmed) + 18 new = **47 rows** to confirm (+ any Phase 10 residuals).
+- [x] Phase 9 global mechanical gate — GREEN, all 8 gates, zero fixes, no blocker.
+- [x] Phase 10 whole-bundle critic — CLEAN. Pass 1 fixed 1 straggler (CAP6 intent "live commitments"→"live obligations"); pass 2 clean, no edit. critic-report.md updated. No new residuals.
+
+### ⏸️ RESUME HERE — Phase 11 full human review (NOT started; 0 of 47 adjudicated)
+
+All builder/critic work (Phases 0–10) for this Vision-diff re-run is DONE and on disk;
+no sub-agents in flight. The ONLY remaining work is the human review + Phase 12 finalize.
+
+- **Scope:** walk ALL 47 open rows in `decisions.md`, one at a time, per the user's directive
+  (a FULL review, not just changeset-reopened rows). Rows **D4, D5, D7 (rows 4,5,7) are already
+  `confirmed` and STAND** — do not reopen. Every other row (1,2,3,6,8–50) must reach `confirmed`
+  before Phase 12 (which requires every row confirmed).
+- **Confidence split of the 47:** 12 low (3,8,13,14,15,21,22,23,28,32,34,50), 18 medium
+  (1,2,6,9,10,11,16,17,18,19,20,24,25,26,27,31,37,45), 17 high (12,29,30 + re-run conventions
+  33,35,36,38,39,40,41,42,43,44,46,47,48,49). Recommended cadence: batch by confidence,
+  low-confidence first; high-confidence rows are mostly the mechanical merge-stub conventions
+  (bulk-confirmable). Update `_status.md` + set each row's Confidence cell to `confirmed` after
+  each adjudication so the review itself stays resumable.
+- **Live judgment calls worth the human's eye:** rows **34** (UC28 not given INV3) and **50**
+  (UC68 not given CAP6) are the only NEW calls the merge created; **13** (UC90→CAP5 resister),
+  **21** (CAP16 Supporting vs Core). **Interacting pair: rows 15 + 27** — UC111's primary is
+  CAP6/S3 (row 15) but its native rung was set S2 (row 27); if the user wants UC111 S3 end-to-end,
+  align row 27 to S3 (edit vision-index.md + uc-index.md via a sub-agent).
+- **How to apply any directed change:** per the skill, the orchestrator does NOT edit artifacts
+  itself — spawn a sub-agent to apply a cut/merge/reword to the affected companion file and reflect
+  it back into the row.
+- **After all 47 confirmed → Phase 12:** re-spawn whole-bundle critic to reconcile any Phase-11
+  edits (loop back to 11 if it surfaces a new residual), then finalize: flip `status: finalized`,
+  record date + what this pass changed, re-stamp `built-with-hash`, and **overwrite
+  `vision-manifest.md`** with a fresh per-ID fingerprint of the NOW-CURRENT vision (the 18 changed
+  UCs) so the next re-run diffs against this state. NOTE: the skill Upgrade sub-mode was
+  deliberately DEFERRED this pass (skill hash still drifts c985a30b… ≠ 984bcc7e…) — that is a
+  separate future re-run, not part of finalizing this one.
+
+### To resume in a fresh session
+Re-invoke the `create-vision-companion` skill (read its SKILL.md → Phase 0 detects this bundle,
+sees `status: in-progress`, resumes). Point it at this bundle and say: continue the Vision-diff
+re-run at Phase 11 — full human review of all 47 open decisions.md rows.
+
+---
+
+Prior run — Upgrade re-run (2026-07-06). Prior bundle (Jun 29) had no `_status.md` and no
 `built-with-hash`, predating both mechanisms. Skill drifted since (added
 `vision-index.md`, `deferred-inputs.md`, review artifacts, new ID layers) AND the
 vision content moved (commits "Extend vision" / "made vision sharper" / "enhanced
