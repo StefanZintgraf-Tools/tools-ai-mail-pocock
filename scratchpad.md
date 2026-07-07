@@ -47,7 +47,61 @@
   - keine ai-Mail spezifischen Dinge etc.
   - glossary.md zu lange?
 
-- [ ] debug create-vision-companion skill
+- [~] debug create-vision-companion skill
+  - [ ] review decisions.md: 1,2,4,5,6
+    - [ ] changes:
+      - decision 3: UC65 shall be part in both INV1 and INV3
+      - rethink: all low
+
+
+The five decisions I would reopen are therefore #11, #16, #20, #24, and #26.
+The most important correction is #26: record UC102 as extending V7 while realizing V39, and determine native scope from the complete UC requirement. Semantic traceability should drive the rule, not be altered to satisfy it.
+
+| Decision | Verdict | Reason |
+|---|---|---|
+| #9 TM actor | Agree, clarify | Keep `TM` as a distinct contextual role, but state explicitly that it is assigned to a `STAFF` identity—not a different kind of person. |
+| #10 DLG/PROT | Fully agree | They represent opposite ends of delegated authority with different ownership and permission constraints. |
+| #11 HH actor | **Rethink** | The missing concept is a shared household domain with IND co-owners, not necessarily a new human actor type. |
+| #12 UC coverage | Fully agree | Independently verified: 115 assignments, 115 unique UCs, no missing, duplicate, phantom, or out-of-range IDs. |
+| #16 UC85 → CAP4 | **Rethink** | Finished documents involve templates, structured data, validation, and document lifecycle—not merely message composition. At minimum, model Document Production as a CAP4 sub-capability. |
+| #17 UC106/CAP10 vs UC115/CAP15 | Fully agree | Reading and presenting a unified picture is distinct from committing write-backs to external systems. |
+| #18 four-way S3 split | Agree, clarify | The mechanisms are genuinely different. However, CAP13 is a shared execution capability used by S3, not an S3-native quarter of the Watch. |
+| #19 no wholly Generic capability | Fully agree | The business capabilities add product-specific behavior, while generic OCR, connectors, storage, and audit mechanics live inside them. |
+| #20 two-tier Core | **Rethink** | “Core because important” and “Core because differentiating” are different axes. Calling table-stakes surfaces `Core—surface` weakens the normal strategic meaning of Core. |
+| #24 Conformist + ACL | **Rethink** | These labels conflict: Conformist adopts the upstream model; ACL translates it. The rows explicitly require translation, so they should use ACL, potentially paired with upstream Open Host Service/Published Language. |
+| #25 V34 → CAP14 | Fully agree | V34 is the team-scoped control promise, so CAP14 is a better primary home than the personal control surface CAP12. |
+| #26 remove UC102 from V7 | **Rethink** | The mapping was changed to protect the native-rung rule rather than reflect meaning. UC102 does satisfy V7, while specializing it at S3. |
+| #27 UC111 native S2 | Agree, strengthen | Keep S2. Every example arrives through a channel; extracting an Obligation does not make the UC S3. CAP ownership should not determine scope rung. |
+| #29 stray UC13 | Fully agree | UC13 is unrelated to delegated authority; the intended reference was V13. |
+| #30 UC2 INV7 → INV8 | Fully agree | UC2 concerns configurable autonomy and approval, not additive deployment or lock-in. |
+| #31 UC30 + INV10 | Fully agree | Watching another principal’s inbox must serve that protected party and must not become surveillance. |
+
+
+Recommended changes:
+#15: Make CAP1 the least-bad primary—recognize and route the real ask—with CAP2/CAP5/CAP6/CAP11/CAP20 secondary. Alternatively, record a latent “semantic intake and routing” capability.
+#21: Split CAP16 before classifying it: delegated authority/shared stewardship may be Core; organisational handover may be Supporting.
+#22: Define Published Language as the intended A2A target, with ordinary email/chat as fallback. Reserve Partnership for assistants whose owners jointly coordinate the protocol.
+#23: Treat fair separation as an INV11-governed ownership/export workflow, not a DDD context relationship. “Separate Ways” can describe the desired steady state only.
+#32: Add a deferred vision-governance row consumed when creating the autonomous sibling vision: fork the foundation vision and re-derive only the changed invariants.
+The five low-confidence decisions I would reopen are #15, #21, #22, #23, and #32. No files were changed.
+
+
+| Decision | Verdict | Assessment |
+|---|---|---|
+| #8 SYS actor | Agree, clarify | Keep `SYS` as a non-human secondary actor marking external participation. It is not a principal or POV actor; detailed system types belong in the context map. |
+| #13 UC90 → CAP5 | Agree, provisional | CAP5 is the least-bad current home because stopping relationship nudges is central. Treat this as indexing, not proof that CAP5 owns all grief-sensitive behavior. |
+| #14 UC112 → CAP1 | Fully agree | The primary behavior is triage—finding the one relevant message. Group chat is merely its source, so CAP11 remains secondary. |
+| #15 UC111 → CAP6 | **Rethink** | Its examples span commitments, filing, obligations, voice, photos, and portals. CAP6 cannot coherently own all of them. |
+| #21 CAP16 Supporting | **Rethink** | Delegated authority and multi-principal stewardship may be differentiating domain logic, while role handover may be Supporting. CAP16 is too broad to classify uniformly. |
+| #22 A2A boundary | **Rethink** | “Conformist today” describes an implementation fallback, but does not fully realize UC71’s assistant-to-assistant negotiation. |
+| #23 Separate Ways | **Rethink** | Fair separation is an explicit transition operation, whereas Separate Ways normally describes contexts avoiding integration. Customer/Supplier is also unsuitable. |
+| #28 native scope exceptions | Fully agree | UC100/105/114 require S3; UC115 remains S1. Content-based classification is necessary because these UCs realize no explicit V-point. |
+| #32 BV5 unrouted | **Rethink** | The fork instruction is neither INV1 nor INV9. Leaving it unrouted risks losing an explicit vision-governance requirement. |
+
+
+
+  - [ ] review critic-report.md
+  - [ ] finalize
 
 - [ ] Test mit neuer Idee: brainstorm-Automat nur fuer brainstorm-vision
 - [ ] Test mit neuer Idee: brainstorm-Automat
@@ -75,4 +129,3 @@
   - OpenProse (https://github.com/openprose/prose/tree/main/skills/open-prose/examples/support-inbox-router)
   - LangGraph, CrewAI, MASTRA, OpenAI Agent SDK
   - what else?
-  

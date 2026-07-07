@@ -554,13 +554,16 @@ work alike, while you stay firmly the one in charge.
   exactly where I left it, by voice or on screen — so it never feels like separate copies that forget
   each other, and wherever I am is simply where my mail is.
 
-- **UC96.** As someone who gets quietly punished for missing the deadlines the world never
-  reminds me of, I can finally trust the assistant to hold my standing obligations as live
-  commitments in time — the passport creeping toward expiry before a trip, the tax filing with
-  no letter attached, the inspection that's the law, the cover that lapses if a payment quietly
-  fails — and surface each one in time to act, from the date itself drawing near rather than any
-  message arriving, so a deadline that was never announced stops being a trap I only discover
-  once it's already too late.
+- **UC96.** As someone — whether managing my own life or running a small business or working
+  for myself — who gets quietly punished for missing the deadlines the world never reminds me
+  of, I can finally trust the assistant to hold my standing obligations as live commitments in
+  time — the passport creeping toward expiry before a trip, the tax or VAT filing with no letter
+  attached, the inspection or certificate that's the law, the licence that lapses on a fixed
+  date, the cover that lapses if a payment quietly fails — and surface each one in time to act,
+  from the date itself drawing near rather than any message arriving, so a deadline that was
+  never announced stops being a trap I only discover once it's already too late, and I never
+  wake up unknowingly trading illegally or facing a fine over something the world simply
+  expected me to remember on my own.
 - **UC97.** As someone drowning in accounts that no longer send me anything — the utility gone
   paperless, the tax notice posted only to a government portal, the fine, the toll, the pension
   statement, the "action required" waiting behind a login I'd half forgotten — I can finally have
@@ -588,11 +591,9 @@ work alike, while you stay firmly the one in charge.
   the insurance about to lapse, the deadline no letter will bring — and raise it to me in time
   to step in within the authority I'm actually given, so the person I care for isn't quietly
   failed by all the silent things that were never going to announce themselves.
-- **UC101.** As someone running a small business or working for myself, I can finally have the
-  assistant hold the obligations the law puts on me that no one will ever send a reminder for —
-  the license to renew, the tax or VAT filing due, the inspection or certificate that lapses on
-  a fixed date — and surface each one in time to act, so I never wake up unknowingly trading
-  illegally or facing a fine over a deadline the world simply expected me to remember on my own.
+- **UC101.** *(Merged into UC96 — a small business's standing legal obligations, and the stake
+  of unknowingly trading illegally or facing a fine, are now folded into UC96's obligation
+  watch. Number retained so existing cross-references don't break.)*
 - **UC102.** As someone who dreads the silent obligations precisely because acting on them is a
   chore that never came with a reply button — the portal login, the claim form, the cancellation
   buried three menus deep — I can finally have the assistant carry each one all the way to done,
