@@ -131,11 +131,12 @@ work alike, while you stay firmly the one in charge.
   nothing's sent or settled until I've confirmed it.
 - **UC3.** As someone who mostly uses email for life-admin (bills, the kids' school,
   renewals, appointments, parcels), I can finally stop fearing the one dropped
-  ball that costs money or time — the assistant catches the costly miss before it
-  happens and asks me what to do.
-- **UC4.** As someone who can never remember when things are due, I can finally rely on the
-  assistant to know my deadlines and obligations on its own — I never have to
-  enter a due date or tell it anything; it understood it from the email itself.
+  ball that costs money or time — the assistant understands deadlines and
+  obligations from the email itself, without me entering due dates by hand,
+  catches the costly miss before it happens, and asks me what to do.
+- **UC4.** *(Merged into UC3 — automatic due-date/obligation inference supports
+  the same costly-miss promise. Number retained so existing cross-references don't
+  break.)*
 - **UC5.** As someone who treats my inbox like a junk drawer and knows the answer is buried
   somewhere, I can finally just ask in plain words and get it back — a quick fact
   ("what's my policy number?", "did I ever reply to the landlord?") or the exact
@@ -175,10 +176,10 @@ work alike, while you stay firmly the one in charge.
   have the assistant notice when a thread with someone I care about is going cold —
   "you haven't replied to Anna in three weeks, want me to draft something?" — so I
   stay a good correspondent even when I don't have the time to be.
-- **UC15.** As someone juggling important customers, I can finally be nudged before a key
-  account or a promising new lead slips through the cracks — the follow-up that
-  needed sending, the reply that's overdue — so relationships and revenue don't
-  quietly cool off because I got busy.
+- **UC15.** As someone juggling important customers and new opportunities, I can finally
+  be nudged before a key account, client request, or promising lead slips through the
+  cracks — the follow-up that needed sending, the reply that's overdue, the lead
+  that's cooling — so revenue-bearing work keeps moving even when I get busy.
 - **UC16.** As someone who can't hold every detail of every relationship in my head, I can
   finally have the assistant remember the context across years — how we know each
   other, what we last spoke about, that their kid was sick — and draw on the full
@@ -201,10 +202,9 @@ work alike, while you stay firmly the one in charge.
   £8k", "you promised the board a report and there's no draft" — catching things I
   never knew to ask about, and bringing them to me proactively in my briefing or a
   timely heads-up.
-- **UC21.** As someone who loses days to scheduling back-and-forth, I can finally just say
-  "set up a call with the Müllers next week" and have the whole negotiation happen
-  in the background until there's a time everyone agreed — I only see the finished
-  result to confirm, and the endless thread evaporates.
+- **UC21.** *(Merged into UC64 — scheduling negotiation is a specific instance of
+  the broader carry-the-exchange-to-finish promise. Number retained so existing
+  cross-references don't break.)*
 - **UC22.** As someone looking at a document I filed away, I can finally trace it back to the
   email it came from and see the whole correspondence around it — so I always know
   the story behind a file, not just the file.
@@ -227,14 +227,15 @@ work alike, while you stay firmly the one in charge.
 - **UC27.** As someone who doesn't want to abandon the mail app I already live in, I can
   finally have the assistant come to me right where I work — help is one click away
   inside my existing inbox, not a whole new place I have to learn and move into.
-- **UC28.** As someone who can't tell a clever fake from the real thing, I can finally have
-  the assistant know what my normal looks like — my actual suppliers, contacts, and
-  patterns — so it catches the forged invoice or the "we've changed our bank
-  details" note that a plain spam filter would wave straight through.
-- **UC29.** As someone who could be panicked into a costly mistake, I can finally have the
-  assistant slow down the urgent-money traps — the boss-impersonation, the "pay this
-  now" pressure, the wire-transfer scam — and warn me before any money moves, not
-  after it's gone.
+- **UC28.** As someone who can't tell a clever fake from the real thing or could be panicked
+  into a costly mistake, I can finally have the assistant know what my normal looks
+  like — my actual suppliers, contacts, and patterns — so it catches forged
+  invoices, changed bank details, boss-impersonation, "pay this now" pressure, and
+  wire-transfer scams, slows the moment down, and warns me before any money moves,
+  not after it's gone.
+- **UC29.** *(Merged into UC28 — urgent-money-pressure intervention is part of the same
+  money-fraud guard promise. Number retained so existing cross-references don't
+  break.)*
 - **UC30.** As someone who worries about a less tech-savvy parent or relative, I can finally
   have the assistant quietly watch over their inbox too and raise a flag before they
   fall for something — protection that reaches the people I look out for.
@@ -315,19 +316,19 @@ work alike, while you stay firmly the one in charge.
   never a black box: I trust it precisely because nothing it does is hidden from me.
 - **UC48.** As someone answerable for how our company's inbox is handled, I can finally rely on a
   complete, lasting record of every decision the assistant made — so any single message can be
-  traced back and accounted for long after the fact, and an audit holds no fear — while that
-  record stays an account of the *assistant's own* actions, never a way to watch over what my
-  staff were doing.
+  traced back and accounted for long after the fact, an audit holds no fear, and a legal hold or
+  data-access request can be answered fully and defensibly — while that record stays an account
+  of the *assistant's own* actions, never a way to watch over what my staff were doing.
 - **UC49.** As someone passing a conversation to a colleague — or inheriting one — I can finally
   have it arrive already understood: the whole story in plain words (what they want, what's
   been promised, what's still open, and why it's landing with me) travels *with* the message,
   so nothing falls through the crack between us and whoever picks it up loses no time
   reconstructing a cold "fwd:" from the bottom up.
 - **UC50.** As someone who hits a message that's beyond me — a technical question, a legal nuance,
-  the thing that really needs the boss — I can finally have the assistant point it to the right
-  specialist and hand it over with the full picture, so the customer reaches the person who can
-  actually answer instead of being bounced around, and escalating is one nod rather than a hunt
-  for who deals with this.
+  the thing that really needs the boss — I can finally have the assistant identify the right
+  specialist and escalate the conversation with the full picture, so the customer reaches the
+  person who can actually answer instead of being bounced around, and escalation is one nod
+  rather than a hunt for who deals with this.
 - **UC51.** As someone whose conversations live in my chat apps as much as my email, I can finally
   just ask in plain words and have the assistant find it wherever it actually happened — "when did
   Anna send me the address?", "what did the plumber quote?" — reaching into WhatsApp, Telegram and
@@ -363,10 +364,11 @@ work alike, while you stay firmly the one in charge.
 - **UC58.** As someone who loses track of what's still in flight, I can finally see at a glance where
   every open thread actually stands — what's waiting on me, what I'm waiting on someone else to come
   back on, and what's truly done and closed — so a conversation never stalls in the limbo of "did I
-  ever hear back?" and I always know, at any moment, which balls are still in the air and whose court
-  they're in.
+  ever hear back?" and I always know, at any moment, which balls are still in the air and whether
+  the next move is mine or someone else's.
 - **UC59.** As the manager answerable for a shared inbox, I can finally see the whole team's work in
-  one honest picture — every open request and the stage it's at, who the ball is with, and what's
+  one honest picture — every open request and the stage it's at, which role or teammate currently
+  owns the next move, and what's
   quietly aged past where it should be — so nothing rots unnoticed in a corner and I can tell at a
   glance whether we're on top of things, without having to interrogate anyone or treat the view as a
   way of clocking my people rather than minding the work.
@@ -394,12 +396,13 @@ work alike, while you stay firmly the one in charge.
   first, so the routine stops needing my nod every single time while the things that matter still
   never happen without it; and the line is mine to move either way as my trust grows or a mistake
   teaches me to pull it back, never a setting forced on me.
-- **UC64.** As someone who loses days to back-and-forth I wish I could just hand off, I can finally
-  let the assistant carry a whole exchange to its finish — chase the supplier across the three rounds
-  it takes to pin down the quote, sort out the delivery mix-up, settle a date with a group — keeping me
-  posted and bringing me in whenever it needs a real decision or my approval to commit, so what used to
-  be a week of ping-pong I babysat becomes a result I'm handed, without giving up the final say or being
-  kept in the dark.
+- **UC64.** As someone who loses days to back-and-forth I wish I could just hand off,
+  I can finally let the assistant carry a whole exchange to its finish — set up a
+  call with the Müllers next week, chase the supplier across the three rounds it
+  takes to pin down the quote, sort out the delivery mix-up — keeping me posted and
+  bringing me in whenever it needs a real decision or my approval to commit, so
+  what used to be a week of ping-pong I babysat becomes a result I'm handed, without
+  giving up the final say or being kept in the dark.
 - **UC65.** As someone always one slip from a reply-all disaster, the wrong attachment, or firing off
   something I'll regret, I can finally have the assistant catch me in the very moment before I send —
   "this is going to two hundred people, sure?", "you've picked the other Anna", "the contract you
@@ -417,10 +420,9 @@ work alike, while you stay firmly the one in charge.
   months, and the years I've already piled up become an asset on day one instead of a void it has to
   fill from scratch.
 - **UC68.** As someone leaving a job, I can finally hand over my whole role's worth of mail cleanly
-  instead of dumping a chaotic inbox on whoever's next — the assistant lays out everything still in
-  flight, who each open thread is with, what I promised and what's owed to me, and the standing
-  relationships behind it all, and passes it on already understood, so I leave with a clear conscience
-  and nothing rots in the gap after I'm gone.
+  instead of dumping a chaotic inbox on whoever's next — the assistant preserves the company's open
+  threads, promises, obligations, and relationship context as a structured handover, so I leave with a
+  clear conscience and nothing rots in the gap after I'm gone.
 - **UC69.** As someone leaving a job with years of my own life tangled into my work inbox, I can finally
   separate what's genuinely mine from what belongs to the company — cleanly and fairly to both sides —
   so I walk away with my personal correspondence, my own records and the private threads that were never
@@ -484,10 +486,8 @@ work alike, while you stay firmly the one in charge.
   finally have all this help without any of it going outside: the assistant works entirely within our own
   perimeter, and nothing it reads or learns is ever handed to an outside service, so the places bound by
   secrecy, regulation or plain caution can finally have an assistant they're actually allowed to use.
-- **UC82.** As the person answerable when the law comes asking, I can finally meet those demands without dread
-  — produce everything a data-access request or a legal hold requires, show what we kept and why, and hand
-  over a complete, trustworthy record on demand — so what used to be weeks of frantic digging becomes a
-  question the assistant simply answers, fully and defensibly.
+- **UC82.** *(Merged into UC48 — legal hold/data-access response is a use of the same complete
+  assistant-decision record promise. Number retained so existing cross-references don't break.)*
 - **UC83.** As someone whose needs are too particular for any preset, I can finally teach the assistant my own
   rules in plain words and have it follow them faithfully — "when an enquiry comes from a new region, gather
   X and route it to Y," "always treat mail from this client as urgent" — so the handling bends to how I
@@ -511,10 +511,10 @@ work alike, while you stay firmly the one in charge.
   tracked task and a two-hour recording becomes something I can search and ask about, instead of media that
   just sits there demanding my time before I even know if it matters.
 - **UC88.** As someone who has never once seen the bottom of my inbox, I can finally reach a real,
-  earned *done* — the assistant gets me to a genuine end of the day where everything that wanted
-  something from me is handled or set for later and I can see it's true, so instead of inbox-zero
-  theatre or the low background hum that there's always more, I get to actually close the day,
-  put it down, and rest — and pick it up clean tomorrow rather than carrying today's tail into it.
+  earned *done* — not just important messages handled or scheduled, but a visible end-of-day
+  state I can trust, where everything that wanted something from me is either finished or
+  deliberately set for later, so instead of inbox-zero theatre or the low background hum that
+  there's always more, I can close the day, put it down, rest, and pick it up clean tomorrow.
 - **UC89.** As someone for whom the good things drown in the pile just as easily as the bad, I can
   finally have the assistant make sure the genuinely warm message isn't lost with the noise — the old
   friend resurfacing, the heartfelt thank-you three screens down, the photo from someone I love
@@ -556,7 +556,7 @@ work alike, while you stay firmly the one in charge.
 
 - **UC96.** As someone — whether managing my own life or running a small business or working
   for myself — who gets quietly punished for missing the deadlines the world never reminds me
-  of, I can finally trust the assistant to hold my standing obligations as live commitments in
+  of, I can finally trust the assistant to hold my standing obligations as live obligations in
   time — the passport creeping toward expiry before a trip, the tax or VAT filing with no letter
   attached, the inspection or certificate that's the law, the licence that lapses on a fixed
   date, the cover that lapses if a payment quietly fails — and surface each one in time to act,
@@ -579,7 +579,7 @@ work alike, while you stay firmly the one in charge.
   promo rate rolls me onto a worse one — each surfaced with my name on it and in time to actually
   claim it, so an entitlement sitting there on a silent clock stops evaporating unnoticed.
 - **UC99.** As someone quietly bled by the fine print I agreed to and forgot, I can finally have
-  the assistant hold me to the commitments that were built to turn against me — the membership
+  the assistant hold me to the obligations that were built to turn against me — the membership
   that auto-renews for another year unless I cancel months ahead, the trial about to start
   billing, the loyalty premium that jumps at renewal, the contract with a step-up baked in — and
   surface the window to act while it's still open, before the notice date passes rather than
@@ -662,7 +662,7 @@ work alike, while you stay firmly the one in charge.
   WhatsApp voice note that's really "send me the invoice by Friday," a photo dropped in a chat
   that's actually a receipt to keep, a portal message that's really a bill coming due — I can
   finally have the assistant see the real ask hidden inside them and lift it out as a proper task
-  or filed document, exactly as it would from an email, so a commitment doesn't just scroll away
+  or filed document, exactly as it would from an email, so the real ask doesn't just scroll away
   into a chat history simply because it never arrived looking like one.
 
 - **UC112.** As someone trapped in a pile of busy group chats where I still can't afford to miss
