@@ -1,10 +1,11 @@
 # Build status — ai-mail vision AI-spec companion
 
-status: in-progress
+status: finalized
 debug: off
-built-with-hash: (pending — stamped at finalize; skill fingerprint this run = 984bcc7e2d412fea8d1de078f3268927af002e27)
+built-with-hash: 984bcc7e2d412fea8d1de078f3268927af002e27
 vision: ../ai-mail-foundation-vision.md
 architecture-lens sibling: ../ai-mail-foundation-vision-architecture-lens.md
+vision-manifest: vision-manifest.md (per-ID fingerprint of the vision @ tag `temp1-reference`)
 
 ## Run kind
 
@@ -33,21 +34,41 @@ frozen vision; still-correct artifacts kept, stale ones replaced; missing files 
 - [x] Phase 7 — uc-index.md (115 rows; coverage+links clean; UC13/V13 fixed at source; rows 29–31)
 - [x] Phase 8 — deferred-inputs.md (5 BVs homed once; BV4 GTM routed; row 32)
 - [x] Phase 9 — README.md + mechanical gate pass (GREEN, all 6 gates; vision byte-unchanged)
-- [ ] Phase 10 — whole-bundle critic → human review → finalize
+- [x] Phase 10 — whole-bundle critic CLEAN (both passes)
+- [~] Phase 11 — decisions.md human review INCOMPLETE (3/32 confirmed: D4, D5, D7; 29 still `open`, see caveat below)
+- [x] Phase 12 — finalize (retroactive, 2026-07-07): built-with-hash stamped, vision-manifest.md written
 
 ## Open threads
 
-- (none yet)
+- **Phase 11 human review is incomplete.** 3 of 32 rows are `confirmed` (D4, D5, D7); the
+  other 29 remain `open` — the build was finalized retroactively to enable the vision-diff
+  re-run machinery, not because the human adjudicated the readings. The Phase 11 leg of the
+  vision-diff re-run below (and the Phase 12 finalize gate, which requires every row
+  confirmed) should still walk the 29 open rows. Vision-diff mode only auto-reopens rows the
+  changeset touches, so direct the re-run to finish the full review.
 
 ## Open low-confidence decisions
 
-32 (rows 1–32)
+29 open of 32 (D4, D5, D7 confirmed)
 
-## Next phase to run
+## Run log
 
-Phase 10 — FINALIZE PENDING. Bundle built; both whole-bundle critic passes CLEAN;
-all 6 mechanical gates GREEN; vision byte-unchanged. Held at the human-review gate:
-user is reading decisions.md (32 rows) + critic-report.md before adjudicating.
-On return: either finalize as-is (flip status→finalized, stamp
-built-with-hash = 984bcc7e2d412fea8d1de078f3268927af002e27, record re-run date 2026-07-06),
-or spawn a final sub-agent to apply the user's row changes first, then finalize.
+- 2026-07-06 — Upgrade re-run built phases 0–10; whole-bundle critic clean, mechanical gates
+  green; held at the Phase 11 human-review gate.
+- 2026-07-07 — Retroactive finalize to seed the re-run machinery: wrote `vision-manifest.md`
+  (per-ID fingerprint of the vision @ git tag `temp1-reference` = commit c7ce833, the frozen
+  vision this bundle was derived from) and stamped `built-with-hash`. Status flipped to
+  `finalized` so the next skill invocation is treated as a re-run, not an in-progress resume.
+  Phase 11 human review left incomplete (see Open threads).
+
+## Next run (what Phase 0 will detect)
+
+`status: finalized` → this is now a **re-run**. Phase 0's two drift checks:
+
+- **Vision drift (manifest):** the working vision has moved since `temp1-reference` —
+  **18 UCs modified, nothing added/removed/renumbered**: UC3, UC4, UC15, UC21, UC28, UC29,
+  UC48, UC50, UC58, UC59, UC64, UC68, UC82, UC88, UC96, UC99, UC101, UC111. S/V/BV all
+  byte-identical. A handful of IDs → the economical path is a **Vision-diff (scoped) re-run**.
+- **Skill drift (hash):** current skill fingerprint c985a30b… ≠ build-time 984bcc7e… → the
+  skill also drifted since this bundle was built, so an Upgrade sub-mode is also on the table.
+  The Phase 0 fork lets the human pick; Vision-diff is the sub-mode that matches the ask.
