@@ -36,7 +36,31 @@ Scoped builder+critic loops COMPLETE, all critics clean:
 - [x] Phase 9 global mechanical gate — GREEN, all 8 gates, zero fixes, no blocker.
 - [x] Phase 10 whole-bundle critic — CLEAN. Pass 1 fixed 1 straggler (CAP6 intent "live commitments"→"live obligations"); pass 2 clean, no edit. critic-report.md updated. No new residuals.
 
-### ⏸️ RESUME HERE — Phase 11 full human review (NOT started; 0 of 47 adjudicated)
+### ⏸️ RESUME HERE — Phase 11 full human review (PAUSED mid-review; 12 of 47 adjudicated)
+
+Paused 2026-07-08 at the user's request for a fresh session. No sub-agents in flight.
+
+**Done — all 12 low-confidence rows CONFIRMED** (3, 8, 13, 14, 15, 21, 22, 23, 28, 32, 34, 50).
+All upheld the builder's reading; the only directed change was on **row 32**:
+- Row 32 confirmed unrouted, WITH a strengthening edit applied by a sub-agent to
+  `invariants.md`: INV9's divergence-seam note now reads "must keep it an explicit boundary,
+  never blurred into the on-behalf-of paths"; INV1's relaxable-layer build note was already
+  present (L21), so it was left as-is. Row 32's decisions.md cell records this.
+- **Consequence for Phase 12:** `invariants.md` was edited during Phase 11 → the Phase-12
+  whole-bundle critic MUST reconcile it (and re-check INV9's asserting-list/consumers).
+
+**Still open — 35 rows to confirm:**
+- **18 medium** (next up): 1, 2, 6, 9, 10, 11, 16, 17, 18, 19, 20, 24, 25, 26, 27, 31, 37, 45.
+  Watch the interacting pair **15 + 27**: row 15 already CONFIRMED UC111 primary = CAP6/S3;
+  if the user wants UC111 S3 end-to-end, row 27 (native rung S2) must be aligned to S3
+  (edit vision-index.md + uc-index.md via sub-agent) when it comes up.
+- **17 high** (bulk, mostly mechanical merge-stub conventions): 12, 29, 30, 33, 35, 36, 38,
+  39, 40, 41, 42, 43, 44, 46, 47, 48, 49.
+
+**To resume:** re-invoke create-vision-companion, point at this bundle, say "continue the
+Vision-diff re-run at Phase 11 — resume the human review, 12/47 done, start at the 18 medium
+rows." Confirm each row's Confidence cell → `confirmed` as you go. After all 47 → Phase 12
+(re-spawn whole-bundle critic to reconcile the invariants.md edit, then finalize).
 
 All builder/critic work (Phases 0–10) for this Vision-diff re-run is DONE and on disk;
 no sub-agents in flight. The ONLY remaining work is the human review + Phase 12 finalize.

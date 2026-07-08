@@ -47,12 +47,9 @@
   - keine ai-Mail spezifischen Dinge etc.
   - glossary.md zu lange?
 
-- [~] debug create-vision-companion skill
-  - [ ] review decisions.md: 1,2,4,5,6
-    - [ ] changes:
-      - decision 3: UC65 shall be part in both INV1 and INV3
-      - rethink: all low
+- [~] finish create-vision-companion skill run for ai-mail
 
+- [ ] UCs without related V# (Vision) are allowed, OK or NOK?
 
 The five decisions I would reopen are therefore #11, #16, #20, #24, and #26.
 The most important correction is #26: record UC102 as extending V7 while realizing V39, and determine native scope from the complete UC requirement. Semantic traceability should drive the rule, not be altered to satisfy it.
@@ -101,6 +98,16 @@ The five low-confidence decisions I would reopen are #15, #21, #22, #23, and #32
 
 
   - [ ] review critic-report.md
+        The main open judgment calls are:
+        UC111: S2 or S3?
+        It arrives through a casual communication channel, suggesting S2, but concerns detecting a hidden obligation, suggesting S3. The bundle consistently says S2, but a human should confirm that interpretation.
+
+        BV5 routing:
+        The future autonomous-assistant “fork this vision” instruction was treated as contextual information rather than a deferred build input. A human may decide it should be routed into later scoping work.
+
+        Other lower-confidence decisions include treating SYS as an actor, splitting the S3 behavior across four capabilities, the two-level Core classification, treating CAP16 as Supporting, and the assistant-to-assistant boundary classification.
+
+
   - [ ] finalize
 
 - [ ] Test mit neuer Idee: brainstorm-Automat nur fuer brainstorm-vision
