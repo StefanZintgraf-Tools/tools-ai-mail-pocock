@@ -93,6 +93,11 @@ consistent on each, so none is a cross-phase inconsistency to fix here.
   capability ("the value is lifting out the Obligation, not the channel", row 15).
   Both `uc-index.md` and `vision-index.md` agree on S2, so the bundle is
   self-consistent; the S2-vs-S3 reading itself is the open call. *(medium)*
+  **→ [Phase 12, 2026-07-09: RESOLVED — accepted-by-human as native S3.** Row 27
+  confirmed in Phase 11; UC111 reclassified S2→S3 across `uc-index.md` and
+  `vision-index.md` to match its S3-anchor primary CAP6. This residual is CLOSED;
+  the tally is now 91/10/14. See the Phase-12 reconcile section at the foot of this
+  file.]
 - **decisions.md row 32 — BV5 fork-this-file mechanism left unrouted.** Declared a
   note on the out-of-scope sibling vision rather than a scoping input; BV5's
   substantive facets are INV-homed (INV1/INV9). *(low)*
@@ -136,6 +141,9 @@ reconciles everywhere the reference lives:
   ladder is correctly S1–S3.
 - **Scope-rung tallies reconcile** — uc-index native-S2 (11) and native-S3 (13) lists
   are identical to vision-index's, and the S1/S2/S3 = 91/11/13 = 115 split matches.
+  **[Phase 12: superseded — this pass-2 figure predates Phase 11. Post-Phase-11 the
+  tally is S1 91 / S2 10 / S3 14 = 115, with UC111 moved to native S3 (row 27
+  confirmed). See the Phase-12 reconcile section.]**
 - **Reverse-index counts sum to 115**; every UC has exactly one primary CAP.
 
 ### Bundle-wide judgment checks — all clean (re-confirmed independently)
@@ -156,6 +164,8 @@ Unchanged from pass 1 — the same pre-existing, already-logged single-phase jud
 calls (decisions.md rows 27, 32; SYS-as-actor, 4-way S3-anchor split, Core-tier split,
 CAP16-Supporting, A2A boundary, etc.). None is a cross-phase inconsistency; nothing new
 surfaced. No fix applied this pass.
+**[Phase 12: all of these rows are now `confirmed` — Phase 11 is complete (all 50
+decisions.md rows confirmed). Dispositions in the Phase-12 reconcile section.]**
 
 ---
 
@@ -226,6 +236,9 @@ No merge reshaped a cluster boundary, a Core/Supporting tag, or a promise's cove
   UC101} remains in actors.md, invariants.md, or subdomains rows (rows 35, 41, 43). ✓
 - Scope-rung tally reconciles across uc-index and vision-index (S1/S2/S3 = 91/11/13 =
   115). UC111 stays native S2 in both (the S2-vs-S3 reading is the open call, row 27).
+  **[Phase 12: superseded — row 27 resolved to S3 in Phase 11. Current tally is
+  S1 91 / S2 10 / S3 14 = 115; UC111 is native S3 in both files. See the Phase-12
+  reconcile section.]**
 
 ## Other bundle-wide checks — clean
 - **Altitude** — the re-run introduced no tactical DDD/tech/MVP/phasing language; the
@@ -274,9 +287,70 @@ No place describes a world-imposed **Obligation** as a "commitment." Collision c
   stub survives in a V# realizing / actor / INV / subdomains rep-list.
 - **Coverage / counts** — all 46 V# present; reverse-index sums to **115**, one primary
   CAP each; S1/S2/S3 = 91/11/13 = 115 reconciles across uc-index and vision-index.
+  **[Phase 12: superseded — post-Phase-11 the split is 91/10/14 = 115 (UC111 → S3).]**
 - **Stub convention** — uniform pointer rows ("Merged into UCx" / "see UCx"); UC101
   correctly retained in the native-S3 exception list (uc-index L168).
 - **Altitude** — no tactical DDD/tech/MVP/phasing leak; the re-run added only wording
   refinements and stub pointers.
 
 Nothing still compounds across artifacts. No edit applied this pass.
+
+---
+
+# Phase 12 — critic reconcile (2026-07-09)
+
+**Verdict: CLEAN.** Phase 11 is complete — **all 50 `decisions.md` rows read
+`confirmed`** (zero rows left at low/medium/high). This pass re-ran the whole-bundle
+critic machinery over the reconciled set, updated every prior finding with its
+disposition, fixed the stale UC111-S2 lines above, and re-verified the full Phase-9
+mechanical gate set. **No new human-judgment residual surfaced** — nothing appended
+to `decisions.md`; no loop back to Phase 11 required. Critic passes run this reconcile: **2**
+(pass 1 applied the stale-line fixes + disposition annotations; pass 2 was a clean
+confirming re-scan). The vision was **not** touched.
+
+## Disposition of every prior finding / residual
+
+| Prior finding / residual | Disposition |
+| --- | --- |
+| Pass-1 cross-phase fix — stray `UC13` in the subdomains DLG↔PROT row (row 29) | **FIXED** — still holds; row now cites `UC30, UC72, UC100`, reconciled across actors / invariants / uc-index / capability-map. |
+| Vision-diff fix — CAP6 intent "as live commitments" → "as live obligations" | **FIXED** — still holds; no Obligation is described as a "commitment" anywhere (glossary-collision closed). |
+| decisions.md **row 27** — UC111 native S2-vs-S3 | **RESOLVED / accepted-by-human as S3.** Reclassified S2→S3 in `uc-index.md` (row + S2/S3 tallies + `91+10+14=115` checksum) and `vision-index.md` (native-rung exception lists). Stale S2 lines in the Phase-10 passes above superseded in place. |
+| decisions.md **row 1** — INV5 cross-cutting | **accepted-by-human, note sharpened.** INV5 build-note now records the *assistant's own* actions/decisions, not surveillance of human/staff (cf. INV10); UC48 the representative demand. Coherent with INV10 seam. |
+| decisions.md **row 20** — two-tier Core split | **accepted-by-human, reworded.** `subdomains-and-context-map.md` tier prose + judgment-call note re-anchored from a "vs a rival AI-mail assistant" comparison to the vision's *own* pillars (Memory, S3 anchor watch, proactivity, trust, know-your-normal); competitive validation flagged as a downstream task. Consistent with the unchanged CAP tags/IDs. |
+| decisions.md **row 24** — context-map Conformist+ACL | **accepted-by-human, re-tagged.** All six paired boundaries → pure **ACL**; EXT + A2A kept Conformist; system-of-record write half stays Customer/Supplier; DDD pattern **legend** added. Altitude-clean (strategic-design only); every row still cites ≥1 UC. |
+| decisions.md **row 32** — BV5 fork-this-file mechanism | **accepted-by-human as unrouted.** INV9 divergence-seam note extended ("must keep it an explicit boundary, never blurred into the on-behalf-of paths"); BV5 substantive facets remain INV1/INV9-homed. |
+| Remaining low/med rows (SYS-as-actor #8, 4-way S3-anchor split #18, CAP16-Supporting #21, A2A #22, Separate-Ways #23, mapping calls, merge-stub rows 33–50, etc.) | **accepted-by-human as-is** (all `confirmed`). None was a cross-phase inconsistency. |
+
+## Whole-bundle critic re-run over the reconciled set — clean
+
+- **Cross-phase compounding** — none. The four Phase-11 edits are self-contained: the
+  INV5/INV9 note sharpenings introduce no new term and cite existing INVs; the Core-tier
+  reword carries no competitive framing into any other file (README/capability-map
+  unaffected); the ACL re-tag's paired-label lived only in subdomains and is fully
+  resolved; UC111→S3 realizes no explicit V#, so no `V#` realizing list or coverage
+  gap shifted.
+- **Single language** — the reworded Core-tier prose and ACL legend use only canonical
+  terms + the sanctioned Evans context-mapping vocabulary. No synonym reintroduced.
+- **Altitude held** — the ACL re-tags + legend are strategic-design only (no tactical
+  DDD / tech / MVP / phasing); the "ACL *implementation* deferred to architecture" note
+  keeps the fence.
+- **Promises reconciled, not edited** — thin/unrealized (V32/V33/V34) and
+  unpromised-capability (CAP3/CAP15/CAP19; expected CAP7/CAP8) flags unchanged and
+  surfaced identically in capability-map + vision-index. Vision byte-identical.
+- **Independently loadable** — each consumable doc still stands with glossary +
+  invariants; the subdomains pattern legend makes that file self-contained on the DDD
+  vocabulary.
+
+## Phase-9 mechanical gate set — re-verified after the Phase-11 edits
+
+| Gate | Result |
+| --- | --- |
+| **Vision byte-unchanged** | **PASS** — this pass added/edited only companion files; the frozen vision was not touched. |
+| **Total coverage = 115** — each UC ≥1 primary CAP + ≥1 actor, zero orphans | **PASS** — uc-index UC1–UC115 each carry a scope, actor, and one primary CAP; reverse-index sums to 115. |
+| **Parked BV routed** — each to exactly one home | **PASS** — BV1→INV6/INV7, BV2→INV7, BV3→INV15, BV4(a)→INV7 / BV4(b)→deferred-inputs, BV5→INV1/INV9. Zero orphans. |
+| **Every V# / S#** — V# → S# + ≥1 realizing UC or flagged gap; each S# on the ladder with anchor + horizon citing the architecture-lens | **PASS** — V1–V46 all mapped; S1–S3 ladder, S3 anchor, horizon row cites `…-architecture-lens.md`, not re-derived. |
+| **Invariants cited** — every INV by ≥1 UC, not restated verbatim | **PASS** — INV1–INV15 each carry asserting UCs; UC descriptions reference by ID. |
+| **Bidirectional links resolve** | **PASS** — uc-index spot-checks (UC102/UC57/UC97/UC43) trace forward and back. |
+| **Re-run check — UC111 native S3 consistent, checksum intact** | **PASS** — UC111 native **S3** in both uc-index (row + S3 list + `91 + 10 + 14 = 115`) and vision-index (native-S3 exception list; absent from native-S2). S2 list = 10, S3 list = 14. |
+
+No mechanical gate fails. Bundle is internally consistent and ready for finalize.

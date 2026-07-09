@@ -124,7 +124,7 @@ invariants it leans on, and a **normalized intent** one-liner. The one-liner is 
 | UC108 | [L642](../ai-mail-foundation-vision.md#L642) | S2    | IND (→EXT)      | CAP11   | —            | INV13              | Just respond and have it go back out the right door on its own — never track which channel someone came in on.                                       |
 | UC109 | [L648](../ai-mail-foundation-vision.md#L648) | S2    | IND             | CAP11   | —            | INV13              | One calm place gathers whatever actually wants the user out of a dozen apps — the badges go quiet, everything seen, phone down.                      |
 | UC110 | [L654](../ai-mail-foundation-vision.md#L654) | S1    | IND             | CAP9    | CAP11        | INV2, INV13        | Protected wherever a scam arrives — the fake-delivery text, the "relative" on a new number — every door guarded, held not deleted.                   |
-| UC111 | [L661](../ai-mail-foundation-vision.md#L661) | S2    | IND             | CAP6    | CAP11, CAP1  | INV13              | Lift the obligation buried in a casual channel — a voice note meaning "invoice by Friday," a photo that's a receipt — out as a task or filed doc.    |
+| UC111 | [L661](../ai-mail-foundation-vision.md#L661) | S3    | IND             | CAP6    | CAP11, CAP1  | INV13              | Lift the obligation buried in a casual channel — a voice note meaning "invoice by Friday," a photo that's a receipt — out as a task or filed doc.    |
 | UC112 | [L667](../ai-mail-foundation-vision.md#L667) | S2    | IND             | CAP1    | CAP11        | INV13              | Read the group-chat firehose and surface only what genuinely concerns the user — the ask, the date, the decision — mute the rest without fear.       |
 | UC113 | [L675](../ai-mail-foundation-vision.md#L675) | S3    | IND · SYS       | CAP21   | CAP12        | INV12              | Grant, scope, and revoke exactly which accounts and portals it may reach, in a click — guard the silent corners without handing over the keys.       |
 | UC114 | [L679](../ai-mail-foundation-vision.md#L679) | S3    | IND             | CAP6    | —            | INV13              | Watch obligations no document will ever mention — the handshake deal, the in-head date, the receipt-scribbled warranty — told to it directly.        |
@@ -164,10 +164,10 @@ Every UC appears under exactly one primary capability; the count sums to 115.
 ## Scope-rung tally (cross-check with vision-index.md)
 
 - **S1** (native): 91 UCs — all not listed under S2/S3 below.
-- **S2** (channel/format promise, no S1 email promise): UC35, UC51, UC76, UC78, UC87, UC106, UC107, UC108, UC109, UC111, UC112 — 11 UCs.
-- **S3** (silent-watch / world-watch / portals only): UC80, UC96, UC97, UC98, UC99, UC100, UC101, UC102, UC103, UC104, UC105, UC113, UC114 — 13 UCs.
+- **S2** (channel/format promise, no S1 email promise): UC35, UC51, UC76, UC78, UC87, UC106, UC107, UC108, UC109, UC112 — 10 UCs.
+- **S3** (silent-watch / world-watch / portals only): UC80, UC96, UC97, UC98, UC99, UC100, UC101, UC102, UC103, UC104, UC105, UC111, UC113, UC114 — 14 UCs.
 
-91 + 11 + 13 = 115. Matches the UC→native-rung mapping in [vision-index.md](vision-index.md).
+91 + 10 + 14 = 115. Matches the UC→native-rung mapping in [vision-index.md](vision-index.md).
 
 ## Notes / reconciliation flags
 

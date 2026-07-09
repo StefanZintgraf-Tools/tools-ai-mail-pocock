@@ -111,9 +111,9 @@ exception lists below fully determine all 115 UCs.
 
 - **Native S3** (serve only S3 promises — the silent watch, world-watch, portals; no
   S1/S2 promise): **UC80, UC96, UC97, UC98, UC99, UC100, UC101, UC102, UC103, UC104,
-  UC105, UC113, UC114.**
+  UC105, UC111, UC113, UC114.**
 - **Native S2** (serve a channel/format promise but no S1 email promise): **UC35,
-  UC51, UC76, UC78, UC87, UC106, UC107, UC108, UC109, UC111, UC112.**
+  UC51, UC76, UC78, UC87, UC106, UC107, UC108, UC109, UC112.**
 - **Native S1** — **all remaining UCs** (UC1–UC95 and UC110, UC115 not listed above).
   These realize at least one S1 press-release promise; the silent-watch/channel UCs
   that *extend* an S1 promise (e.g. UC110 cross-channel scam → V4) stay S1 by the

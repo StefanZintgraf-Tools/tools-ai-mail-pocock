@@ -16,11 +16,13 @@ derived *attention/investment* ordering — where the product's differentiating
 value concentrates — **not** MVP scoping or a build order; the vision stays
 priority-free.
 
-Core is read in two tiers: **Core — differentiating** (where the novel domain
-modelling lives, and where design effort concentrates first) and **Core —
-surface** (Core in *importance* and headline value, but table-stakes for any
-AI-mail tool — differentiating only *because* they ride on Memory and the
-source-agnostic watch, not because the mechanism is original). No *whole*
+Core is read in two tiers: **Core — differentiating** (the caps the vision
+*itself* names as its pillars and heart — the Memory keystone, the S3 anchor
+watch, proactivity, trust, and know-your-normal safety — where the novel domain
+modelling lives and where design effort concentrates first) and **Core —
+surface** (the headline caps the vision treats as table stakes — Core in
+*importance* and headline value, but differentiating only *because* they ride on
+Memory and the source-agnostic watch, not because the mechanism is original). No *whole*
 capability lands as Generic — the vision never enumerates auth/storage/OCR as
 capabilities; Generic concerns live *inside* several capabilities (see "Where
 Generic lives" below).
@@ -70,6 +72,19 @@ fixed vocabulary — **Partnership, Shared Kernel, Customer/Supplier, Conformist
 Anticorruption Layer (ACL), Open Host Service, Published Language, Separate
 Ways** — with who owns the language and whether translation is needed.
 
+**Pattern legend** (DDD context-mapping vocabulary, Evans, *Domain-Driven
+Design* Part IV / Ch. 14) — one line per relationship pattern used as a tag
+above:
+
+- **Partnership** — two contexts rise or fall together, coordinating planning and evolving their models jointly.
+- **Shared Kernel** — an explicitly shared subset of the model both contexts co-own and change only by mutual consent.
+- **Customer/Supplier** — upstream owns the language but commits to the downstream's needs in its planning; downstream negotiates, not dictates.
+- **Conformist** — the downstream adopts the upstream's model wholesale, with no translation layer.
+- **Anticorruption Layer (ACL)** — the downstream builds a translation layer so the upstream's model never enters its own.
+- **Open Host Service** — a context publishes a stable, documented protocol that many consumers integrate against on equal terms.
+- **Published Language** — a shared, well-documented interchange language both sides translate to and from.
+- **Separate Ways** — the contexts are deliberately left unintegrated, with no model connection between them.
+
 | Boundary                                                          | Relationship                                                      | Who owns the language                                                                                 | Translation needed?                                                                                                        | UCs                                      |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | Personal (IND) ↔ Team/employer context (ORG · STAFF/MGR/TM)       | **Shared Kernel**                                                 | Shared core model (Message/Thread/Contact/Memory/Open item); the team context *extends* it            | Low — same model; *data* hard-isolated per INV11, model shared                                                             | UC26, UC44, UC45, UC46, UC54, UC57, UC59 |
@@ -80,12 +95,12 @@ Ways** — with who owns the language and whether translation is needed.
 | Team ↔ Pulled-in collaborator (PIC)                               | **ACL** (scoped, ephemeral projection)                            | The team context owns the Thread; PIC gets a minimal view                                             | Yes — redact to "only what they need," isolation restored / revoked on exit (INV11, INV12)                                 | UC56                                     |
 | Product ↔ External correspondent (EXT)                            | **Conformist** (ordinary mail/chat semantics)                     | The standard mail/chat world                                                                          | Yes — the assistant's identity is translated *away*; EXT sees only the real human (INV9)                                   | UC15, UC43, UC60, UC64, UC92, UC108      |
 | Product ↔ EXT's *own* assistant (A2A negotiation)                 | **Conformist** today; **Published Language / Partnership** latent | No shared protocol exists yet — falls back to ordinary channels                                       | Yes — until a shared A2A *Published Language* emerges, each side translates to plain mail; provenance still governs (INV9) | UC71                                     |
-| Product ↔ External mail provider (Gmail/Graph/IMAP)               | **Conformist + ACL**                                              | The provider (its API/payload shapes)                                                                 | Yes — wrap provider payloads → clean Email/Thread model; additive overlay, never migrating (INV7)                          | UC26, UC27, UC94                         |
-| Product ↔ Chat providers (SYS)                                    | **Conformist + ACL**                                              | Each provider (WhatsApp/Telegram/…)                                                                   | Yes — per-provider connector → unified Message/Chat message                                                                | UC35, UC51, UC107, UC110                 |
-| Product ↔ System of record (SYS: CRM / sales / support desk)      | **Conformist + ACL** to read; **Customer/Supplier** to write      | The external system owns its schema; we are the downstream customer on write                          | Yes — read into one picture; any committing write-back is translated and gated (INV1)                                      | UC106, UC115, UC73                       |
-| Product ↔ Silent Portal (SYS)                                     | **Conformist + ACL**                                              | The portal (its login/page structure)                                                                 | Yes — translate a silent obligation into a Message/Obligation "as if it arrived"; granted & revocable (INV12)              | UC97, UC105, UC113                       |
-| Product ↔ World-events feed (SYS)                                 | **Conformist + ACL**                                              | The external feed/source                                                                              | Yes — translate a raw happening into a *World event* / *Entitlement* on the *Watch* (INV13, INV4)                          | UC80, UC98                               |
-| Product ↔ Omni-format sources (paper / voice / video)             | **Conformist + ACL**                                              | The inbound artefact's native form                                                                    | Yes — OCR/transcription translate into the same Message/Document model; no free pass by form (INV13)                       | UC76, UC87                               |
+| Product ↔ External mail provider (Gmail/Graph/IMAP)               | **ACL**                                                           | The provider (its API/payload shapes)                                                                 | Yes — wrap provider payloads → clean Email/Thread model; additive overlay, never migrating (INV7)                          | UC26, UC27, UC94                         |
+| Product ↔ Chat providers (SYS)                                    | **ACL**                                                           | Each provider (WhatsApp/Telegram/…)                                                                   | Yes — per-provider connector → unified Message/Chat message                                                                | UC35, UC51, UC107, UC110                 |
+| Product ↔ System of record (SYS: CRM / sales / support desk)      | **ACL** to read; **Customer/Supplier** to write                   | The external system owns its schema; we are the downstream customer on write                          | Yes — read into one picture; any committing write-back is translated and gated (INV1)                                      | UC106, UC115, UC73                       |
+| Product ↔ Silent Portal (SYS)                                     | **ACL**                                                           | The portal (its login/page structure)                                                                 | Yes — translate a silent obligation into a Message/Obligation "as if it arrived"; granted & revocable (INV12)              | UC97, UC105, UC113                       |
+| Product ↔ World-events feed (SYS)                                 | **ACL**                                                           | The external feed/source                                                                              | Yes — translate a raw happening into a *World event* / *Entitlement* on the *Watch* (INV13, INV4)                          | UC80, UC98                               |
+| Product ↔ Omni-format sources (paper / voice / video)             | **ACL**                                                           | The inbound artefact's native form                                                                    | Yes — OCR/transcription translate into the same Message/Document model; no free pass by form (INV13)                       | UC76, UC87                               |
 | Product ↔ specialist Extension                                    | **Open Host Service + Published Language**                        | The *product* publishes a stable extension language/contract; extensions conform to it                | Yes on the extension's side — it adapts to our published contract; reach bounded by INV12                                  | UC79, UC83                               |
 
 ## Notes
@@ -119,10 +134,14 @@ Ways** — with who owns the language and whether translation is needed.
 >   the vision enumerates no standalone commodity capability. A reviewer could
 >   instead promote CAP18's audit/retention mechanics or CAP20's OCR to a
 >   standalone Generic capability. *(med)* Cites UC48, UC76, UC87.
-> - **The two-tier Core split (differentiating vs. surface)** depends on the
->   competitive frame: vs. a plain mail client almost everything is Core; vs.
->   another AI-mail assistant the differentiators narrow to Memory, the anchor
->   watch, proactivity, trust, and know-your-normal safety. *(med)* Cites UC16,
+> - **The two-tier Core split (differentiating vs. surface)** rests on the
+>   vision's *own* emphasis, not on any competitor evaluation. Against a plain
+>   mail client almost everything is Core, so that baseline can't do the sorting;
+>   the split instead follows the caps the vision declares as its pillars/heart —
+>   Memory, the anchor watch, proactivity, trust, and know-your-normal safety —
+>   holding the headline surface caps (CAP1/CAP3/CAP4) as table stakes the vision
+>   leans on but never casts as novel. No rival feature set was researched here;
+>   actual competitive validation is a downstream task. *(med)* Cites UC16,
 >   UC28, UC80, UC97.
 > - **CAP16 (Delegation/Stewardship) tagged Supporting, not Core.** Emotionally
 >   central to the vision (V13, V15) but reads as an access/relationship extension

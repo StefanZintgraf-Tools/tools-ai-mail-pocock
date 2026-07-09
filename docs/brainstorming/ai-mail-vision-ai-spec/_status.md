@@ -1,8 +1,11 @@
 # Build status — ai-mail vision AI-spec companion
 
-status: in-progress
+status: finalized
 debug: off
 built-with-hash: 984bcc7e2d412fea8d1de078f3268927af002e27
+# ^ intentionally NOT re-stamped this pass — the skill-Upgrade sub-mode was DEFERRED
+#   (Vision-diff scoped re-run only). Current skill hash still drifts (c985a30b… ≠ 984bcc7e…),
+#   so this bundle still carries the pre-Upgrade skill shape; a future Upgrade re-run re-stamps it.
 vision: ../ai-mail-foundation-vision.md
 architecture-lens sibling: ../ai-mail-foundation-vision-architecture-lens.md
 vision-manifest: vision-manifest.md (per-ID fingerprint of the vision @ tag `temp1-reference`)
@@ -36,65 +39,108 @@ Scoped builder+critic loops COMPLETE, all critics clean:
 - [x] Phase 9 global mechanical gate — GREEN, all 8 gates, zero fixes, no blocker.
 - [x] Phase 10 whole-bundle critic — CLEAN. Pass 1 fixed 1 straggler (CAP6 intent "live commitments"→"live obligations"); pass 2 clean, no edit. critic-report.md updated. No new residuals.
 
-### ⏸️ RESUME HERE — Phase 11 full human review (PAUSED mid-review; 12 of 47 adjudicated)
+### ✅ Phase 11 COMPLETE (2026-07-09) — all 47 open rows adjudicated → Phase 12 next
 
-Paused 2026-07-08 at the user's request for a fresh session. No sub-agents in flight.
+**PHASE 11 DONE.** All 50 decisions.md rows now read `confirmed` (exit gate met: zero
+low/medium/high remaining, verified by grep). The 17 high rows were batch-confirmed as-is on
+the human's explicit blanket adjudication (mechanical merge-stub bookkeeping). **Next up:
+Phase 12 — re-spawn whole-bundle critic to reconcile the Phase-11 edits, then finalize.**
 
-**Done — all 12 low-confidence rows CONFIRMED** (3, 8, 13, 14, 15, 21, 22, 23, 28, 32, 34, 50).
-All upheld the builder's reading; the only directed change was on **row 32**:
-- Row 32 confirmed unrouted, WITH a strengthening edit applied by a sub-agent to
-  `invariants.md`: INV9's divergence-seam note now reads "must keep it an explicit boundary,
-  never blurred into the on-behalf-of paths"; INV1's relaxable-layer build note was already
-  present (L21), so it was left as-is. Row 32's decisions.md cell records this.
-- **Consequence for Phase 12:** `invariants.md` was edited during Phase 11 → the Phase-12
-  whole-bundle critic MUST reconcile it (and re-check INV9's asserting-list/consumers).
+Row 45 (V7's realizing list narrows to UC64/73 after
+UC21→UC64 merge, D26 intact) confirmed as-is. Row 37 (UC64→CAP15 secondary on CAP13 line,
+post-merge bookkeeping) confirmed as-is. Row 31 (UC30 carries INV10 in uc-index, reconciled to
+invariants.md) confirmed as-is. Row 27 (UC111 native rung)
+confirmed WITH an edit — human chose **S3** (aligns with the row-15 CAP6/S3 primary); edit
+sub-agent reclassified native S2→S3 in `uc-index.md` (UC111 row + S2/S3 tallies + checksum:
+S1 91 + S2 10 + S3 14 = 115) and `vision-index.md` (native-rung exception lists). UC111 now S3
+end-to-end. Row 26 (UC102 out of V7, stays native-S3) confirmed as-is. Row 25 (V34 primary
+CAP) confirmed as-is (CAP14) after a counter-question — HITL for team inboxes is guaranteed by
+INV1 (cites V34 + UC63) independent of the CAP12/CAP14 clustering, and INV8 can never repeal
+INV1's money/legal gate. No sub-agents in flight between rows.
 
-**Still open — 35 rows to confirm:**
-- **18 medium** (next up): 1, 2, 6, 9, 10, 11, 16, 17, 18, 19, 20, 24, 25, 26, 27, 31, 37, 45.
-  Watch the interacting pair **15 + 27**: row 15 already CONFIRMED UC111 primary = CAP6/S3;
-  if the user wants UC111 S3 end-to-end, row 27 (native rung S2) must be aligned to S3
-  (edit vision-index.md + uc-index.md via sub-agent) when it comes up.
-- **17 high** (bulk, mostly mechanical merge-stub conventions): 12, 29, 30, 33, 35, 36, 38,
-  39, 40, 41, 42, 43, 44, 46, 47, 48, 49.
+**Done — all 12 low-confidence rows CONFIRMED** (3, 8, 13, 14, 15, 21, 22, 23, 28, 32, 34, 50)
+plus **ALL 17 medium rows CONFIRMED** (1, 2, 6, 9, 10, 11, 16, 17, 18, 19, 20, 24, 25, 26, 27, 31, 37, 45) (rows 6, 16, 19, 25, 31, 37, 45 confirmed
+as-is after counter-question discussion; **rows 20, 24 and 27 confirmed WITH an edit**, see below). Directed
+edits so far touched three files:
+- **Row 32:** confirmed unrouted, WITH a strengthening edit to `invariants.md`: INV9's
+  divergence-seam note now reads "must keep it an explicit boundary, never blurred into the
+  on-behalf-of paths"; INV1's relaxable-layer build note was already present (L21), left as-is.
+- **Row 1:** confirmed INV5 cross-cutting, WITH a wording sharpening to `invariants.md`: INV5's
+  build-note now states it records the *assistant's own* actions/decisions, not surveillance of
+  the human/staff (cf. INV10), and UC48 is the representative demand while the invariant rides
+  under every assistant action path. INV5 statement + citations unchanged.
+- **Row 20:** confirmed the two-tier Core split, WITH a rationale re-anchor edit to
+  `subdomains-and-context-map.md`: the "Core — differentiating" basis reworded from a
+  "vs a rival AI-mail assistant" competitive comparison (no competitive research was done) to the
+  vision's *own* declared pillars/anchor (Memory, S3 anchor watch, proactivity, trust,
+  know-your-normal); a note now flags competitive validation as a downstream task. Both the
+  tier-definition prose and the embedded judgment-call note changed; all CAP tags/IDs byte-stable.
+- **Row 24:** confirmed the context-map re-tag, WITH a directed edit to
+  `subdomains-and-context-map.md` (via edit sub-agent): all six contradictory **Conformist + ACL**
+  boundary tags resolved to pure **ACL** (external mail provider, chat providers, system-of-record
+  *read* half, silent portal, world-events feed, omni-format sources — each wraps a foreign payload
+  into our own model); EXT kept **Conformist** (identity-only translation, INV9); A2A untouched
+  (row 22, confirmed). A DDD **pattern legend** was added for independent loadability. Row 24 cites
+  broadened to all six boundaries. Skill defect captured in
+  `create-vision-companion/fix_sdcmap.md` (deferred fix — do NOT fix mid-run).
+- **Consequence for Phase 12:** FOUR companion files were edited during Phase 11 → the Phase-12
+  whole-bundle critic MUST reconcile all of them: `invariants.md` (INV9 + INV5),
+  `subdomains-and-context-map.md`, `uc-index.md`, and `vision-index.md`.
+  `subdomains-and-context-map.md` carries **two** Phase-11 edits: the row-20 Core-tier rationale
+  reword **and** the row-24 context-map re-tag (six ACL resolutions + EXT-kept-Conformist) plus the
+  new pattern legend. `uc-index.md` + `vision-index.md` carry the **row-27 UC111 native S2→S3
+  reclassification** (UC111 row, S2/S3 tallies + 91+10+14=115 checksum, native-rung exception lists).
+  Re-check: INV9's asserting-list/consumers, INV5's build-note vs INV10 seam, the reworded Core-tier
+  rationale/judgment-call note vs the unchanged CAP tags, that the ACL re-tags + legend stay
+  altitude-clean (strategic only) with every context-map row still citing ≥1 UC, and that UC111 reads
+  native S3 consistently across uc-index + vision-index with counts intact.
+- **Stale reference for Phase 12 to reconcile:** `critic-report.md` (L91, L228) still records UC111
+  as native S2 and calls the S2-vs-S3 reading "the open call, row 27" — now resolved to S3. The
+  Phase-12 critic must update those lines to reflect the confirmed S3 disposition.
 
-**To resume:** re-invoke create-vision-companion, point at this bundle, say "continue the
-Vision-diff re-run at Phase 11 — resume the human review, 12/47 done, start at the 18 medium
-rows." Confirm each row's Confidence cell → `confirmed` as you go. After all 47 → Phase 12
-(re-spawn whole-bundle critic to reconcile the invariants.md edit, then finalize).
+**Still open — 0 rows.** All 50 confirmed. Phase 11 exit gate met (verified by grep: zero
+low/medium/high in decisions.md; 50 `confirmed`).
 
-All builder/critic work (Phases 0–10) for this Vision-diff re-run is DONE and on disk;
-no sub-agents in flight. The ONLY remaining work is the human review + Phase 12 finalize.
+### ⏸️ PAUSED before Phase 12 (2026-07-09) — user will run Phase 12 in a FRESH session
 
-- **Scope:** walk ALL 47 open rows in `decisions.md`, one at a time, per the user's directive
-  (a FULL review, not just changeset-reopened rows). Rows **D4, D5, D7 (rows 4,5,7) are already
-  `confirmed` and STAND** — do not reopen. Every other row (1,2,3,6,8–50) must reach `confirmed`
-  before Phase 12 (which requires every row confirmed).
-- **Confidence split of the 47:** 12 low (3,8,13,14,15,21,22,23,28,32,34,50), 18 medium
-  (1,2,6,9,10,11,16,17,18,19,20,24,25,26,27,31,37,45), 17 high (12,29,30 + re-run conventions
-  33,35,36,38,39,40,41,42,43,44,46,47,48,49). Recommended cadence: batch by confidence,
-  low-confidence first; high-confidence rows are mostly the mechanical merge-stub conventions
-  (bulk-confirmable). Update `_status.md` + set each row's Confidence cell to `confirmed` after
-  each adjudication so the review itself stays resumable.
-- **Live judgment calls worth the human's eye:** rows **34** (UC28 not given INV3) and **50**
-  (UC68 not given CAP6) are the only NEW calls the merge created; **13** (UC90→CAP5 resister),
-  **21** (CAP16 Supporting vs Core). **Interacting pair: rows 15 + 27** — UC111's primary is
-  CAP6/S3 (row 15) but its native rung was set S2 (row 27); if the user wants UC111 S3 end-to-end,
-  align row 27 to S3 (edit vision-index.md + uc-index.md via a sub-agent).
-- **How to apply any directed change:** per the skill, the orchestrator does NOT edit artifacts
-  itself — spawn a sub-agent to apply a cut/merge/reword to the affected companion file and reflect
-  it back into the row.
-- **After all 47 confirmed → Phase 12:** re-spawn whole-bundle critic to reconcile any Phase-11
-  edits (loop back to 11 if it surfaces a new residual), then finalize: flip `status: finalized`,
-  record date + what this pass changed, re-stamp `built-with-hash`, and **overwrite
-  `vision-manifest.md`** with a fresh per-ID fingerprint of the NOW-CURRENT vision (the 18 changed
-  UCs) so the next re-run diffs against this state. NOTE: the skill Upgrade sub-mode was
-  deliberately DEFERRED this pass (skill hash still drifts c985a30b… ≠ 984bcc7e…) — that is a
-  separate future re-run, not part of finalizing this one.
+Phase 11 is DONE and on disk. **No sub-agents in flight** — the Phase-12 whole-bundle critic
+was never spawned (user paused before it launched). Clean checkpoint. The ONLY remaining work
+is Phase 12 (critic reconcile → finalize).
+
+**To resume Phase 12 in a fresh session:** re-invoke `create-vision-companion`, point at this
+bundle. Phase 0 sees `status: in-progress`, next phase = 12. Then read
+[rubrics-9-12.md](../../../.claude/skills/create-vision-companion/rubrics-9-12.md) §Phase 12 and:
+
+1. **Re-spawn the whole-bundle critic** (fresh sub-agent, Phase-10 machinery) to update
+   `critic-report.md` and reconcile the **four Phase-11-edited files**:
+   - `invariants.md` — INV9 divergence-seam note + INV5 build-note-vs-INV10 seam (rows 32, 1)
+   - `subdomains-and-context-map.md` — row-20 Core-tier rationale reword **and** row-24 six-ACL
+     re-tag + EXT-kept-Conformist + new pattern legend
+   - `uc-index.md` + `vision-index.md` — row-27 UC111 native **S2→S3** (row + S2/S3 tallies +
+     91+10+14=115 checksum + native-rung exception lists)
+   Plus fix the **stale `critic-report.md` UC111-S2 references (L91, L228)** → confirmed S3.
+2. **Re-run the Phase-9 mechanical gates** (coverage 115, bidirectional links, INV-cited,
+   parked-items routed, every V#/S# present, vision byte-unchanged; + UC111 native S3 consistent).
+3. If the critic surfaces a **NEW** human-judgment residual → append to `decisions.md`
+   (unconfirmed) and **loop back to Phase 11** for that one row; do NOT self-confirm it.
+4. If clean → **finalize:** flip `status: finalized`, record date + what this pass changed,
+   re-stamp `built-with-hash`, and **overwrite `vision-manifest.md`** with a fresh per-ID
+   fingerprint of the NOW-CURRENT vision (the 18 changed UCs). NOTE: skill Upgrade sub-mode
+   stays DEFERRED (hash still drifts c985a30b… ≠ 984bcc7e…) — a separate future re-run.
+
+**Phase 11 history (COMPLETE 2026-07-09):** all 47 open rows walked one-at-a-time in confidence
+order (12 low → 17 medium → 17 high); D4/D5/D7 already confirmed and left standing. Directed
+edits during the review: rows 1, 32 → `invariants.md`; rows 20, 24 → `subdomains-and-context-map.md`;
+row 27 → `uc-index.md` + `vision-index.md` (UC111 S2→S3). All other rows confirmed as-is; the 17
+high rows batch-confirmed on the user's explicit blanket adjudication. See the "Consequence for
+Phase 12" block above for the full reconciliation checklist.
 
 ### To resume in a fresh session
 Re-invoke the `create-vision-companion` skill (read its SKILL.md → Phase 0 detects this bundle,
-sees `status: in-progress`, resumes). Point it at this bundle and say: continue the Vision-diff
-re-run at Phase 11 — full human review of all 47 open decisions.md rows.
+sees `status: in-progress`, resumes). Point it at this bundle and say: **Phase 11 is complete —
+run Phase 12** (re-spawn the whole-bundle critic to reconcile the four Phase-11-edited files +
+the stale critic-report.md UC111-S2 reference, re-run the mechanical gates, then finalize). Full
+Phase-12 checklist is in the "PAUSED before Phase 12" block above.
 
 ---
 
@@ -124,21 +170,18 @@ frozen vision; still-correct artifacts kept, stale ones replaced; missing files 
 - [x] Phase 8 — deferred-inputs.md (5 BVs homed once; BV4 GTM routed; row 32)
 - [x] Phase 9 — README.md + mechanical gate pass (GREEN, all 6 gates; vision byte-unchanged)
 - [x] Phase 10 — whole-bundle critic CLEAN (both passes)
-- [~] Phase 11 — decisions.md human review INCOMPLETE (3/32 confirmed: D4, D5, D7; 29 still `open`, see caveat below)
-- [x] Phase 12 — finalize (retroactive, 2026-07-07): built-with-hash stamped, vision-manifest.md written
+- [x] Phase 11 — decisions.md human review COMPLETE (2026-07-09): all 50 rows `confirmed`. Directed edits: rows 1, 32→invariants.md; rows 20, 24→subdomains-and-context-map.md; row 27→uc-index.md + vision-index.md. 17 high rows batch-confirmed.
+- [x] Phase 12 — COMPLETE (2026-07-09): whole-bundle critic reconciled the 4 Phase-11-edited files + fixed stale critic-report.md UC111-S2 refs (verdict CLEAN, no new residuals, 2 passes); Phase-9 mechanical gates all GREEN (UC111 native-S3 checksum 91+10+14=115); vision-manifest.md re-baselined; status flipped to `finalized`.
 
 ## Open threads
 
-- **Phase 11 human review is incomplete.** 3 of 32 rows are `confirmed` (D4, D5, D7); the
-  other 29 remain `open` — the build was finalized retroactively to enable the vision-diff
-  re-run machinery, not because the human adjudicated the readings. The Phase 11 leg of the
-  vision-diff re-run below (and the Phase 12 finalize gate, which requires every row
-  confirmed) should still walk the 29 open rows. Vision-diff mode only auto-reopens rows the
-  changeset touches, so direct the re-run to finish the full review.
+- **RESOLVED (2026-07-09).** The formerly-incomplete Phase 11 human review is now COMPLETE — all
+  50 decisions.md rows walked one-at-a-time and set to `confirmed` (the 47 open rows this pass +
+  the 3 pre-confirmed D4/D5/D7). Nothing open.
 
 ## Open low-confidence decisions
 
-29 open of 32 (D4, D5, D7 confirmed)
+0 open — all 50 rows `confirmed`.
 
 ## Run log
 
@@ -149,6 +192,21 @@ frozen vision; still-correct artifacts kept, stale ones replaced; missing files 
   vision this bundle was derived from) and stamped `built-with-hash`. Status flipped to
   `finalized` so the next skill invocation is treated as a re-run, not an in-progress resume.
   Phase 11 human review left incomplete (see Open threads).
+- 2026-07-09 — **Vision-diff (scoped) re-run FINALIZED.** Phase 11 completed (all 50 decisions
+  `confirmed`; directed edits rows 1,32→invariants.md, rows 20,24→subdomains-and-context-map.md,
+  row 27→uc-index.md+vision-index.md UC111 S2→S3). Phase 12 whole-bundle critic reconciled those
+  four files + fixed stale critic-report.md UC111-S2 refs → CLEAN, no new residuals. Phase-9
+  mechanical gates re-run GREEN (coverage 115, bidirectional links, INV-cited, BV routed, every
+  V#/S# present, vision content-unchanged; UC111 native-S3 checksum 91+10+14=115). What this pass
+  changed vs the prior finalize: the 18 re-derived UCs' closure across the spine, the four
+  Phase-11 human edits, and a re-baselined `vision-manifest.md`.
+  - **vision-manifest.md re-baselined** to fingerprint the now-current working-tree vision. Human
+    chose to KEEP an intentional whole-section re-spacing (a blank line inserted between every UC
+    list item, whitespace-only, zero content change). So vs the `temp1-reference` manifest, 107 UC
+    hashes differ = 18 genuine content edits + 89 whitespace-only re-spacing; S#/V#/BV# byte-identical.
+    Next re-run's Phase 0 diffs against THIS baseline.
+  - **built-with-hash intentionally NOT re-stamped** — skill-Upgrade sub-mode stays DEFERRED; a
+    future Upgrade re-run (current skill hash c985a30b… ≠ 984bcc7e…) is still on the table.
 
 ## Next run (what Phase 0 will detect)
 
