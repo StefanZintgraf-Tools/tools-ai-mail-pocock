@@ -354,3 +354,144 @@ confirming re-scan). The vision was **not** touched.
 | **Re-run check — UC111 native S3 consistent, checksum intact** | **PASS** — UC111 native **S3** in both uc-index (row + S3 list + `91 + 10 + 14 = 115`) and vision-index (native-S3 exception list; absent from native-S2). S2 list = 10, S3 list = 14. |
 
 No mechanical gate fails. Bundle is internally consistent and ready for finalize.
+
+---
+
+# Phase 10 — whole-bundle critic, partial skill-Upgrade audit (2026-07-10)
+
+**Verdict: CLEAN** — 0 mechanical defects; 0 auto-fixes needed; **1 new low-confidence
+judgment residual appended to `decisions.md` (D70)**; the bundle is internally consistent
+across the Upgrade edits. This pass audits the out-of-band **partial skill-Upgrade**
+(hand-applied 2026-07-10, `fix_ucorphan.md` + `fix_sdcmap.md`, skill hash 984bcc7e… →
+c47d20a8…) that the Phase-10 critic had **never** run against. The vision was **not**
+touched (`git status` confirms `ai-mail-foundation-vision.md` and the architecture-lens
+sibling are byte-unchanged). **Not finalized** — Phase 11 (D51–D70) and Phase 12 remain.
+
+Audit scope: the whole finished set re-read from disk against the frozen vision, with
+adversarial focus on the three Upgrade shape areas — the unpromised-UC treatment, the
+context-map `Relationship` enum, and the appended `decisions.md` rows D51–D69.
+
+## Unpromised-UC treatment — clean, all three surfaces agree
+- **28-UC set matches exactly across all three lists.** `uc-index.md` `Scope = —` set,
+  `vision-index.md` `## Unpromised UCs` table, and `vision-index.md`'s native-rung
+  Unpromised bucket are **identical**: UC4, UC6, UC7, UC9, UC12, UC16, UC18, UC20, UC21,
+  UC27, UC29, UC31, UC36, UC39, UC44, UC47, UC53, UC56, UC60, UC62, UC67, UC71, UC77,
+  UC82, UC84, UC89, UC92, UC93 (28). No `Scope = —` UC is absent from the table; no table
+  UC has a non-`—` scope. Diff clean.
+- **Tally sums to 115.** uc-index scope-rung tally **S1 63 + S2 10 + S3 14 + `—` 28 =
+  115**; matches the vision-index native-rung rule + exception lists (native-S3 14,
+  native-S2 10, Unpromised 28, native-S1 63 catch-all). The pre-Upgrade S1 91 → 63 shift
+  = the 28 unpromised UCs pulled out of the S1 catch-all; arithmetic reconciles.
+- **Every unpromised entry has a filled "Reason no V# fits"** (all 28 table rows).
+- **No unpromised UC actually realizes a V#** — swept all 46 `V#` "Realized by" lists;
+  none of the 28 appears in any. The partition is real (87 promised + 28 unpromised).
+- **Core-gate rows exact.** The 18 unpromised UCs whose primary CAP is **Core** (per
+  `subdomains-and-context-map.md`) each carry a †/decisions row: UC4, UC6, UC9, UC12,
+  UC16, UC20, UC21, UC29, UC31, UC36, UC47, UC60, UC62, UC71, UC77, UC89, UC92, UC93 →
+  **D51–D68** (order-aligned, verified row-by-row). The 10 Supporting-CAP unpromised UCs
+  (UC7, UC18, UC27, UC39, UC44, UC53, UC56, UC67, UC82, UC84) correctly carry **no** row
+  (none escalated). Each Core-gate UC's CAP-class tag in the Unpromised table matches both
+  its uc-index primary CAP and the subdomain classification.
+
+## Context-map `Relationship` enum — clean, one enum value per cell
+- **Every `Relationship` cell is a single enum value** from the fixed vocabulary
+  (Partnership / Shared Kernel / Customer/Supplier / Conformist / ACL / Open Host Service
+  / Published Language / Separate Ways). No hybrids, no `+`, no free-form qualifier in the
+  Relationship cell.
+- **The directional split is two rows, not a hybrid** — System-of-record **read** (ACL)
+  and **write** (Customer/Supplier) are separate rows citing UC106/115/73; this realizes
+  the already-confirmed **D24** (read → ACL, write stays Customer/Supplier), so no new row
+  is owed for the split.
+- **A2A (UC71) → Conformist** with the latent Published-Language future kept only as a
+  translation-cell note; **both Conformist rows read `Translation needed? = No`** — no
+  Conformist row pairs with translation. Covered by the new **D69**.
+- **Legend added and altitude-clean.** The `### Legend` is Evans strategic-design context-
+  mapping vocabulary (Part IV / Ch. 14) — sanctioned Phase-5 vocabulary, kept out of the
+  product glossary. No tactical DDD / tech / platform / MVP-phasing leaked in with it.
+
+### RESIDUAL → decisions.md D70 — Extension boundary enum collapse un-surfaced
+The Upgrade collapsed the **Product ↔ specialist Extension** boundary from an
+`Open Host Service + Published Language` hybrid to a single **Open Host Service** — but,
+unlike the structurally-parallel Conformist collapse (which got **D69**), it was left with
+**no backing decision row**. The collapse is defensible and higher-confidence than D69
+(OHS and Published Language *compose* — OHS is the relationship, PL the contract's form —
+rather than being mutually exclusive like Conformist-vs-ACL), so it is **not** a mechanical
+error to auto-fix. But it is a bundle-owned strategic-design reading a human must uphold,
+so per "surface, don't silently resolve" it is **appended to `decisions.md` as D70 (low)**
+for the Phase-11 review, keeping the enum-normalization audit trail complete. No artifact
+edited.
+
+## Other bundle-wide judgment checks — clean
+- **Cross-phase compounding** — none. The unpromised-UC signal propagates consistently
+  from subdomain CAP-class → vision-index Unpromised table → uc-index scope column →
+  decisions D51–D68; the context-map enum edits live only in
+  `subdomains-and-context-map.md` and its two decisions rows (D69, new D70). No earlier-phase
+  reading mis-propagated into the Upgrade edits.
+- **Single language** — the Upgrade introduced no synonym; canonical glossary terms and the
+  sanctioned Evans vocabulary only. "Customer/Supplier", "ACL", "Open Host Service",
+  "Published Language" used consistently against the Legend.
+- **Altitude held everywhere** — no tactical pattern, tech/platform, or MVP-phasing leaked
+  into any Upgrade edit; the enum values and Legend are strategic design only.
+- **Promises reconciled, not edited** — the three S9 coverage signals (unpromised UCs,
+  thin/unrealized promises V32/V33/V34, unpromised capabilities CAP3/CAP15/CAP19 + expected
+  CAP7/CAP8) are all surfaced across the set; the vision is byte-unchanged.
+- **Independently loadable** — each doc still stands alone with glossary + invariants; the
+  new Legend makes `subdomains-and-context-map.md` self-contained on the DDD vocabulary.
+
+## Residuals routed this pass
+- **decisions.md D70** (Phase 5, **low**) — Extension boundary tagged Open Host Service
+  (dropping the co-listed Published Language descriptor from the enum). Cites UC79, UC83;
+  INV12; D24, D69.
+
+The Upgrade edits are internally consistent; the only residual is the newly-surfaced D70,
+which joins D51–D69 for the single Phase-11 human review. Nothing else compounds across
+artifacts. No mechanical fix was required this pass.
+
+---
+
+# Phase 12 — critic reconcile (2026-07-10, skill-Upgrade cycle)
+
+**Verdict: CLEAN.** Phase 11 (D51–D70) is complete — **all 70 `decisions.md` rows read
+`confirmed`** (zero rows left at low/medium/high). This reconcile pass re-read the frozen
+vision and the entire bundle from disk, recorded the disposition of the Upgrade-cycle rows
+D51–D70, and re-ran the full Phase-9 mechanical gate set against the post-Phase-11 state.
+**No companion artifacts were edited in Phase 11** (D51–D68 blanket-confirmed as-is; D69
+and D70 walked individually and confirmed as-is), so this pass is a verification-and-record
+pass — **no artifact fixes were required**. **No new human-judgment residual surfaced** —
+nothing appended to `decisions.md`; no loop back to Phase 11. The vision was **not** touched
+(`git status` shows `ai-mail-foundation-vision.md` and the architecture-lens sibling
+byte-unchanged). This supersedes the head-of-file "50 rows" reconcile (2026-07-09), which
+predates the Upgrade cycle; that section remains as history.
+
+## Disposition of the Upgrade-cycle rows (D51–D70)
+
+| Row(s) | Reading | Disposition |
+| --- | --- | --- |
+| **D51, D57, D58** — merge-stub tombstones (UC4→UC3, UC21→UC64, UC29→UC28) | Unpromised (`Scope = —`) because content + promise moved to the merge target; preserved, not force-fit. | **accepted-by-human as-is** (blanket-confirmed). Reconciles across uc-index `Scope = —` set, vision-index Unpromised table, and the merge-stub pointer rows. |
+| **D52, D53, D54, D55, D56, D59–D68** — 15 Core-gate under-promise rows | Each Core-CAP unpromised UC surfaced as a candidate vision under-promise, not gold-plating. | **accepted-by-human as-is** (blanket-confirmed). Each carries a filled "Reason no V# fits"; none realizes a `V#`. |
+| **D69** — both Conformist boundaries (EXT correspondent, A2A) → `Translation = No` | Identity/provenance masking (INV9) rewrites *who is speaking*, not a foreign *model* → no ACL; Conformist stands, A2A collapses to single Conformist with the Published-Language future kept as a note. | **accepted-by-human as-is** (walked individually). Decision cell carries the "Phase 11 (2026-07-10): confirmed as-is" note. Both Conformist rows read `Translation needed? = No`; no Conformist row pairs with translation. |
+| **D70** — Extension boundary → single `Open Host Service` (Published Language kept as descriptor) | OHS (the relationship) and Published Language (the contract's form) are complementary Evans layers, not rival tags; OHS is the single enum, PL composes in the "Who owns the language" cell. | **accepted-by-human as-is** (walked individually). Decision cell carries the "Phase 11 (2026-07-10): confirmed as-is" note. Extension row is a single OHS enum. |
+
+The Upgrade's three shape changes (unpromised-UC treatment across uc-index + vision-index;
+context-map `Relationship` enum normalization in subdomains-and-context-map) are now
+**human-adjudicated**, and the two context-map judgment calls (D69, D70) are resolved. No
+prior finding still points at a since-edited artifact; the stale UC111-S2 lines in the
+Phase-10 passes above stay annotated `[Phase 12: superseded]`, and UC111 still reads **S3**
+end-to-end (uc-index row + native-S3 list; vision-index native-S3 exception list) — no
+staleness reintroduced.
+
+## Phase-9 mechanical gate set — re-verified against the post-Phase-11 state
+
+| Gate | Result |
+| --- | --- |
+| **Vision byte-unchanged** | **PASS** — `git status` clean for `ai-mail-foundation-vision.md` + architecture-lens; only companion files present. |
+| **Total coverage = 115** — each UC ≥1 primary CAP + ≥1 actor, zero orphans | **PASS** — reverse-index CAP counts sum to 115 (9+3+8+8+7+11+2+3+9+4+8+5+6+8+3+5+3+4+2+2+3+2); every UC1–UC115 carries a scope, actor, one primary CAP. |
+| **Promise coverage / Core-gate** — each UC in exactly one state; `Scope = —` set = Unpromised table; tally = 115 | **PASS** — uc-index `Scope = —` set (28) is identical to the vision-index `## Unpromised UCs` table (28) and the native-rung Unpromised bucket (28); tally **63 + 10 + 14 + 28 = 115**. The 18 Core-gate unpromised UCs each carry a D51–D68 row (order-aligned); the 10 Supporting-CAP unpromised UCs correctly carry none; every unpromised entry has a filled "Reason no V# fits"; no unpromised UC appears in any `V#` "Realized by" list. |
+| **Every V# / S# present** — V# → S# + ≥1 realizing UC or flagged gap; each S# on the ladder with anchor + horizon citing the architecture-lens | **PASS** — all 46 V# (V1–V46) mapped, none out of range; S1–S3 ladder, S3 anchor, horizon row cites `…-architecture-lens.md` (not re-derived). |
+| **Invariants cited** — every INV by ≥1 UC, not restated verbatim | **PASS** — INV1–INV15 each carry ≥1 asserting UC; UC/CAP descriptions reference by ID. |
+| **Parked BV routed** — each to exactly one home | **PASS** — BV1→INV6/INV7, BV2→INV7, BV3→INV15, BV4(a)→INV7 / BV4(b)→deferred-inputs, BV5→INV1/INV9. Zero orphans. |
+| **Bidirectional links resolve** | **PASS** — uc-index spot-checks (UC102/UC57/UC97/UC43) trace forward and back. |
+| **Context-map enum** — every Relationship cell a single enum value; no Conformist row paired with translation; Extension = single OHS | **PASS** — all 16 rows single-enum; both Conformist rows read `Translation = No`; the system-of-record boundary is two directional rows (read → ACL, write → Customer/Supplier), not a hybrid; Extension = single Open Host Service. |
+
+No mechanical gate fails. **No new unconfirmed residual raised.** The bundle is internally
+consistent and reconciled to the confirmed state; ready for the orchestrator to finalize.

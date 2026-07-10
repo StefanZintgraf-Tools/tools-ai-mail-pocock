@@ -106,21 +106,71 @@ source; grouping is by scope.
 ## UC → native rung (`S#`) — for Phase 7's uc-index
 
 Each UC's **native rung** is the **lowest `S#`** among the vision points it realizes
-(S1 < S2 < S3). Phase 7's `uc-index.md` carries this as a scope column. Rule + the two
-exception lists below fully determine all 115 UCs.
+(S1 < S2 < S3), **unless it realizes no vision point** — then it has no rung and carries
+`Scope = —` (the S9 unpromised-UC signal; see `## Unpromised UCs` below). Phase 7's
+`uc-index.md` carries this as a scope column. Rule + the three exception lists below fully
+determine all 115 UCs.
 
 - **Native S3** (serve only S3 promises — the silent watch, world-watch, portals; no
   S1/S2 promise): **UC80, UC96, UC97, UC98, UC99, UC100, UC101, UC102, UC103, UC104,
   UC105, UC111, UC113, UC114.**
 - **Native S2** (serve a channel/format promise but no S1 email promise): **UC35,
   UC51, UC76, UC78, UC87, UC106, UC107, UC108, UC109, UC112.**
-- **Native S1** — **all remaining UCs** (UC1–UC95 and UC110, UC115 not listed above).
-  These realize at least one S1 press-release promise; the silent-watch/channel UCs
-  that *extend* an S1 promise (e.g. UC110 cross-channel scam → V4) stay S1 by the
-  lowest-rung rule.
+- **Unpromised** (realize **no** `V#` at all → `Scope = —`): **UC4, UC6, UC7, UC9,
+  UC12, UC16, UC18, UC20, UC21, UC27, UC29, UC31, UC36, UC39, UC44, UC47, UC53, UC56,
+  UC60, UC62, UC67, UC71, UC77, UC82, UC84, UC89, UC92, UC93.**
+- **Native S1** — **all remaining UCs.** These realize at least one S1 press-release
+  promise; the silent-watch/channel UCs that *extend* an S1 promise (e.g. UC110
+  cross-channel scam → V4) stay S1 by the lowest-rung rule.
 
 > Note the ladder is **boundary/altitude**, not phasing: a UC's native rung says which
 > tier of ambition it *belongs to*, not when it gets built.
+
+## Unpromised UCs
+
+The third S9 coverage signal (alongside *unrealized promises* and *unpromised
+capabilities* below): use-cases that realize **no** press-release vision point.
+Preserved, **not** force-fit to a weak `V#` and never converted to `BV#` (the frozen
+vision owns `BV` IDs, S6). Each keeps `Scope = —` in [uc-index.md](uc-index.md). Those
+whose primary CAP is tagged **Core** (per [subdomains-and-context-map.md](subdomains-and-context-map.md))
+carry a `decisions.md` **Core-gate** row (marked †, D51–D68) for the Phase 11 human
+review; for Supporting/Generic ones the `Reason no V# fits` column is the whole record.
+
+| UC   | Primary CAP        | Reason no V# fits                                                                                                       |
+| ---- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| UC4  | CAP6 (Core) †      | Merge stub → UC3, which carries the costly-miss / due-date watch promise; no promise of its own.                       |
+| UC6  | CAP6 (Core) †      | Proactive "resurface the right thing, unprompted" corner; realized indirectly, no dedicated press-release point.       |
+| UC7  | CAP2 (Supporting)  | Filing into sensible places — Supporting hygiene; V2 promises noise-shrink via CAP1, not sorted filing.                |
+| UC9  | CAP4 (Core) †      | Pre-draft-the-dreaded-reply-in-voice corner; V22/V29 promise CAP4 outputs but none names this one.                     |
+| UC12 | CAP1 (Core) †      | Anti-lockout safety corner ("always able to open and read everything"); INV-shaped, no dedicated V#.                   |
+| UC16 | CAP7 (Core) †      | CAP7 (Memory) is a declared *foundational dependency* the press release doesn't headline (Notes; implied by V11/V27).  |
+| UC18 | CAP8 (Supporting)  | Archive taming — Supporting day-one seed; foundational, no headline V# by design (Notes).                              |
+| UC20 | CAP10 (Core) †     | Proactive whole-picture pattern-surfacing; CAP10 is promised via V43 (UC106), but this insight corner has no V#.       |
+| UC21 | CAP13 (Core) †     | Merge stub → UC64 (scheduling negotiation = one instance of carry-the-exchange-to-finish); no promise of its own.      |
+| UC27 | CAP11 (Supporting) | "Help one click away inside the existing inbox" — Supporting reach/continuity; no dedicated V#.                        |
+| UC29 | CAP9 (Core) †      | Merge stub → UC28 (urgent-money pressure folded into the money-fraud guard, V28); no promise of its own.               |
+| UC31 | CAP9 (Core) †      | Teach-why-it-smells-wrong corner; V4/V28 promise the catch, not the plain-words explanation.                          |
+| UC36 | CAP4 (Core) †      | Cold-start drafts (intro/reconnection/pitch) in voice; a CAP4 compose corner with no dedicated V#.                     |
+| UC39 | CAP17 (Supporting) | Plain-words "is this real?" helper — Supporting accessible access; V12 promises speak/type-any-language, not this Q&A. |
+| UC44 | CAP14 (Supporting) | File the shared inbox the team's way — Supporting collaboration; V23/V24 promise flow/handover, not filing.            |
+| UC47 | CAP12 (Core) †     | Show-its-work transparency log; V16 promises trust/"stays yours", not the show-everything-it-did surface specifically. |
+| UC53 | CAP2 (Supporting)  | Dedupe/tidy (always shown, never silent) — Supporting hygiene; no dedicated V#.                                        |
+| UC56 | CAP14 (Supporting) | Ephemeral pull-in-a-colleague (the ACL boundary) — Supporting collaboration; no dedicated V#.                          |
+| UC60 | CAP1 (Core) †      | Doorkeeper first-contact-vs-mass-pitch; overlaps CAP1 triage + V4, but no dedicated V# names it.                       |
+| UC62 | CAP7 (Core) †      | One-Contact-across-addresses/apps resolution — CAP7 keystone, foundational dependency, no headline V# (Notes).         |
+| UC67 | CAP8 (Supporting)  | Day-one usefulness learned from the whole archive — Supporting/foundational seed; no headline V# (Notes).              |
+| UC71 | CAP13 (Core) †     | Assistant-to-assistant settle-the-drudge; the A2A boundary (Conformist-today, latent); no V# promises A2A.             |
+| UC77 | CAP9 (Core) †      | Two-way provenance / anti-impersonation; V4 promises scams caught, but bidirectional provenance has no dedicated V#.   |
+| UC82 | CAP18 (Supporting) | Merge stub → UC48 (legal-hold folded into the assistant-decision record, V30); no promise of its own.                 |
+| UC84 | CAP18 (Supporting) | Revocable outbound hold ("what leaves can be pulled back"); V30/V31 promise audit/within-walls, not outbound recall.   |
+| UC89 | CAP1 (Core) †      | "Warm message not lost, never an engagement trick" corner; overlaps CAP1 triage, no dedicated V#.                      |
+| UC92 | CAP4 (Core) †      | Stay-a-real-human-at-scale voice drafting; a CAP4 compose corner with no dedicated V#.                                 |
+| UC93 | CAP10 (Core) †     | Whole job-search-campaign tracking — an instance of the CAP10 whole-picture watch; no dedicated V#.                    |
+
+18 Core-gate rows (†): UC4, UC6, UC9, UC12, UC16, UC20, UC21, UC29, UC31, UC36, UC47,
+UC60, UC62, UC71, UC77, UC89, UC92, UC93 → `decisions.md` D51–D68. Several are **merge
+stubs** (UC4, UC21, UC29) — unpromised because their content, and its promise, moved to
+the target UC; an easy Phase-11 confirm.
 
 ## Notes / judgment calls
 

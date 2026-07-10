@@ -49,9 +49,18 @@
 - [x] finish create-vision-companion skill run for ai-mail
 - [x] UCs without related V# (Vision) are allowed, OK or NOK?
 - [x] finalize
+- [x] review critic-report.md (how is it handled, when to remove etc.)
+- [x] run fix_sdcmap.md, fix_ucorphan.md, 
+  - [ ] update companion artifacts (or change skill to do a small, token-optimal review)
+ 
+- [ ] Check SW-Design strategies
+  - DDD: https://de.wikipedia.org/wiki/Domain-driven_Design, https://en.wikipedia.org/wiki/Domain-driven_design  
+  - AOP: 
+    - https://de.wikipedia.org/wiki/Aspektorientierte_Programmierung 
+    - https://people.csail.mit.edu/dnj/teaching/6898/papers/aop.pdf?utm_source=chatgpt.com 
+    - https://helpercode.com/2010/12/10/aspect-oriented-programming-in-python-using-decorators/ 
 
-- [ ] review critic-report.md (how is it handled, when to remove etc.)
-- [ ] run fix_sdcmap.md, fix_ucorphan.md
+
 - [ ] strategies.md S7 introduces "differentiating reason" which is not in strategies_sources.md S7 --> vision companion introduce core split
 - [ ] strategies_sources.md refers back to strategies.md which does not make sense!
 - [ ] Manual review of strategies.md based on its sources and the ai-mail companion results

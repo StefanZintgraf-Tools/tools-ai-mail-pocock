@@ -1,11 +1,15 @@
 # Build status — ai-mail vision AI-spec companion
 
 status: finalized
+# ^ FINALIZED 2026-07-10 — the deferred skill-Upgrade sub-mode (unpromised-UC + context-map-enum
+#   shape) is now fully closed through a proper Phase 10→12 run: Phase-10 critic CLEAN, Phase-11
+#   human review confirmed all of D51–D70, Phase-12 critic reconcile CLEAN with all mechanical
+#   gates green. built-with-hash re-stamped to the current skill (c47d20a8…). See the run log.
 debug: off
-built-with-hash: 984bcc7e2d412fea8d1de078f3268927af002e27
-# ^ intentionally NOT re-stamped this pass — the skill-Upgrade sub-mode was DEFERRED
-#   (Vision-diff scoped re-run only). Current skill hash still drifts (c985a30b… ≠ 984bcc7e…),
-#   so this bundle still carries the pre-Upgrade skill shape; a future Upgrade re-run re-stamps it.
+built-with-hash: c47d20a86616a3b192c1ef4ab021015ef7ea525a
+# ^ RE-STAMPED 2026-07-10 to the skill hash that produced this bundle's current shape (was
+#   984bcc7e…). Covers the fix_ucorphan.md + fix_sdcmap.md skill commits (unpromised-UC +
+#   context-map enum). Recomputed via the re-running.md recipe; matches the working skill tree.
 vision: ../ai-mail-foundation-vision.md
 architecture-lens sibling: ../ai-mail-foundation-vision-architecture-lens.md
 vision-manifest: vision-manifest.md (per-ID fingerprint of the vision @ tag `temp1-reference`)
@@ -173,15 +177,23 @@ frozen vision; still-correct artifacts kept, stale ones replaced; missing files 
 - [x] Phase 11 — decisions.md human review COMPLETE (2026-07-09): all 50 rows `confirmed`. Directed edits: rows 1, 32→invariants.md; rows 20, 24→subdomains-and-context-map.md; row 27→uc-index.md + vision-index.md. 17 high rows batch-confirmed.
 - [x] Phase 12 — COMPLETE (2026-07-09): whole-bundle critic reconciled the 4 Phase-11-edited files + fixed stale critic-report.md UC111-S2 refs (verdict CLEAN, no new residuals, 2 passes); Phase-9 mechanical gates all GREEN (UC111 native-S3 checksum 91+10+14=115); vision-manifest.md re-baselined; status flipped to `finalized`.
 
+### Skill-Upgrade cycle (2026-07-10) — re-run of Phases 10→12 over the partial Upgrade
+
+- [x] Phase 10 (re-pass) — whole-bundle critic CLEAN (1 pass, no auto-fixes); appended D70 (Extension OHS enum lacked a backing row, parallel to D69).
+- [x] Phase 11 (skill-Upgrade rows) — D51–D70 all `confirmed`. D51–D68 (3 merge-stub tombstones + 15 Core-gate under-promise rows) blanket-confirmed as-is on the human's explicit adjudication; D69 (Conformist Translation=No / identity masking = provenance duty) and D70 (Extension = single OHS, PL as descriptor) walked individually and confirmed AS-IS. NO companion artifacts edited this Phase 11.
+- [x] Phase 12 (re-pass) — critic reconcile CLEAN, no new residuals; all Phase-9 mechanical gates re-run GREEN (coverage 115; uc-index `Scope=—` set == vision-index Unpromised table == 28; tally 63+10+14+28=115; context-map single-enum, both Conformist rows Translation=No, Extension single OHS; vision byte-unchanged). built-with-hash re-stamped 984bcc7e…→c47d20a8…; vision-manifest.md left as-is (vision byte-unchanged since the 2026-07-09 re-baseline, so per-ID fingerprints are current). Status → `finalized`.
+
 ## Open threads
 
+- **RESOLVED (2026-07-10).** The deferred skill-Upgrade sub-mode is fully closed: D51–D70 all
+  `confirmed`, built-with-hash re-stamped to the current skill. Nothing open.
 - **RESOLVED (2026-07-09).** The formerly-incomplete Phase 11 human review is now COMPLETE — all
   50 decisions.md rows walked one-at-a-time and set to `confirmed` (the 47 open rows this pass +
   the 3 pre-confirmed D4/D5/D7). Nothing open.
 
 ## Open low-confidence decisions
 
-0 open — all 50 rows `confirmed`.
+0 open — all 70 rows `confirmed` (D1–D50 from prior runs + D51–D70 from the 2026-07-10 skill-Upgrade cycle).
 
 ## Run log
 
@@ -207,15 +219,66 @@ frozen vision; still-correct artifacts kept, stale ones replaced; missing files 
     Next re-run's Phase 0 diffs against THIS baseline.
   - **built-with-hash intentionally NOT re-stamped** — skill-Upgrade sub-mode stays DEFERRED; a
     future Upgrade re-run (current skill hash c985a30b… ≠ 984bcc7e…) is still on the table.
+- 2026-07-10 — **Skill-Upgrade sub-mode FINALIZED** (the previously-deferred axis). Closed the
+  partial out-of-band Upgrade (fix_ucorphan.md + fix_sdcmap.md: unpromised-UC treatment +
+  context-map Relationship enum) through a proper Phase 10→12 run. Phase 10 critic CLEAN (appended
+  D70). Phase 11 confirmed D51–D70: D51–D68 blanket-confirmed (3 merge-stub tombstones + 15
+  Core-gate under-promise rows) on the human's explicit adjudication; D69 + D70 (context-map enum
+  calls) walked individually and confirmed as-is — NO companion edits. Phase 12 critic reconcile
+  CLEAN, no new residuals, all mechanical gates GREEN. **built-with-hash re-stamped
+  984bcc7e…→c47d20a8…** (now matches the working skill tree). **vision-manifest.md NOT rewritten** —
+  the vision is byte-unchanged since the 2026-07-09 re-baseline (git clean; Phase-12 gate confirmed),
+  so its per-ID fingerprints are still current. What this pass changed vs the prior finalize: only
+  the review artifacts (decisions.md D51–D70 → confirmed, critic-report.md reconcile section) and
+  the re-stamped hash; no derived-artifact content changed.
 
 ## Next run (what Phase 0 will detect)
 
-`status: finalized` → this is now a **re-run**. Phase 0's two drift checks:
+`status: finalized` → the next invocation is a **re-run**. Phase 0's two drift checks, as of the
+2026-07-10 finalize:
 
-- **Vision drift (manifest):** the working vision has moved since `temp1-reference` —
-  **18 UCs modified, nothing added/removed/renumbered**: UC3, UC4, UC15, UC21, UC28, UC29,
-  UC48, UC50, UC58, UC59, UC64, UC68, UC82, UC88, UC96, UC99, UC101, UC111. S/V/BV all
-  byte-identical. A handful of IDs → the economical path is a **Vision-diff (scoped) re-run**.
-- **Skill drift (hash):** current skill fingerprint c985a30b… ≠ build-time 984bcc7e… → the
-  skill also drifted since this bundle was built, so an Upgrade sub-mode is also on the table.
-  The Phase 0 fork lets the human pick; Vision-diff is the sub-mode that matches the ask.
+- **Vision drift (manifest):** the `vision-manifest.md` baseline now fingerprints the current
+  working-tree vision (re-baselined 2026-07-09, still valid — the vision is byte-unchanged since).
+  Absent a new vision edit, Phase 0's manifest diff comes back **empty** → no Vision-diff pass
+  warranted; only the skill axis could be live.
+- **Skill drift (hash):** `built-with-hash` is now **c47d20a8…**, matching the skill tree that
+  produced this bundle's current shape. If the skill drifts again before the next run, Phase 0's
+  hash check flags it and the human picks Upgrade vs Review-iterate; if it still matches, a re-run
+  is at most a Review/iterate pass.
+
+## Partial skill-Upgrade pass — unpromised-UC + context-map enum (2026-07-10)
+
+Out-of-band manual application (not a full skill run) bringing the bundle up to the current
+skill shape after two skill commits: `applied fix_ucorphan.md` + `applied fix_sdcmap.md`
+(skill hash 984bcc7e… → c47d20a8…). Vision axis dead (manifest matches → no vision drift);
+this is the deferred **skill-Upgrade** sub-mode, scoped to the two shape changes only.
+
+**Applied:**
+- **subdomains-and-context-map.md** — `Relationship` column normalized to a strict enum
+  (one value per boundary): dropped free-form parentheticals; A2A (UC71) hybrid →
+  **Conformist**; SoR (UC106/115/73) directional hybrid split into **two rows** (ACL read /
+  Customer-Supplier write); Extension (UC79/83) `OHS + Published Language` → **Open Host
+  Service**; two **Conformist** rows corrected to `Translation needed? = No` (model adopted
+  wholesale; identity masking is a provenance duty, not an ACL). `### Legend` heading added.
+- **vision-index.md** — new `## Unpromised UCs` section (28 UCs realizing no `V#`); native-rung
+  section gains an **Unpromised (`Scope = —`)** bucket; three S9 coverage signals now represented.
+- **uc-index.md** — 28 UCs flipped to `Scope = —`; caption + scope-rung tally updated
+  (S1 91→63, new `—` bucket = 28; 63+10+14+28 = 115).
+- **decisions.md** — **D51–D68** added: the 18 Core-gate rows (unpromised UC in a Core CAP),
+  all `low`, Phase 6, awaiting Phase-11 confirm. The 10 Supporting/Generic unpromised UCs
+  carry only their `Reason no V# fits` (no row), per the rule. **D69** (Phase 5, `low`) added:
+  the context-map judgment call — the two Conformist boundaries (EXT, A2A) set to
+  `Translation = No` (identity/provenance masking ≠ a model ACL); alternative is re-tagging
+  them ACL. Touches confirmed D22/D24.
+
+**Mechanical re-check (Phase-9-equivalent) — GREEN:** 115 UCs partition cleanly (87 promised +
+28 unpromised); uc-index `—` set == Unpromised-UCs table (diff clean); every context-map
+`Relationship` cell is a single enum value; no Conformist row pairs with translation.
+
+**~~NOT done~~ → COMPLETED 2026-07-10** (see the Skill-Upgrade cycle in the phase checklist and the
+2026-07-10 run-log entry): Phase-10 whole-bundle critic re-pass ran CLEAN (appended D70); Phase-11
+reviewed D51–D70 (all `confirmed`; D51–D68 blanket, D69+D70 walked, no companion edits); Phase-12
+critic reconcile CLEAN with all mechanical gates green; `built-with-hash` re-stamped to c47d20a8….
+`vision-manifest.md` left as-is — vision byte-unchanged since the 2026-07-09 re-baseline, so its
+fingerprints are current (no rewrite needed). The merge-stub tombstones (D51 UC4, D57 UC21, D58
+UC29) confirmed as-is.
