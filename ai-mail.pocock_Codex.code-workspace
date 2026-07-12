@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "../../github/GoogleCloudPlatform/knowledge-catalog"
+		},
+		{
+			"path": "../../ai-knowhow/coding"
 		}
 	],
 	"settings": {}

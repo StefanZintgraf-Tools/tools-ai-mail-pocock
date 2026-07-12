@@ -17,6 +17,15 @@
 		},
 		{
 			"path": "../../github/GoogleCloudPlatform/knowledge-catalog"
+		},
+		{
+			"path": "../../ai-knowhow/coding/software_design"
+		},
+		{
+			"path": "../../github/agent-rules-books"
+		},
+		{
+			"path": "../../ai-knowhow/coding"
 		}
 	],
 	"settings": {}

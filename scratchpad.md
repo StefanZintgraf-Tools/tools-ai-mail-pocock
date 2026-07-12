@@ -51,15 +51,23 @@
 - [x] finalize
 - [x] review critic-report.md (how is it handled, when to remove etc.)
 - [x] run fix_sdcmap.md, fix_ucorphan.md, 
-  - [ ] update companion artifacts (or change skill to do a small, token-optimal review)
+  - [x] update companion artifacts (or change skill to do a small, token-optimal review)
  
-- [ ] Check SW-Design strategies
+- [~] Check SW-Design strategies
+  - [~] C:\PROJ\ai-knowhow\coding\software_design\software_design.md 
+    - [x] how do these fit: C:\PROJ\github\pocock\agent-rules-books  
+    - [x] agent-rules-github-repositories.md
+    - [x] software_design.md shall reference books also (and check if all rules-books are correctly referenced and not missing)
+
+  - [ ] Secure by Design: how?
   - DDD: https://de.wikipedia.org/wiki/Domain-driven_Design, https://en.wikipedia.org/wiki/Domain-driven_design  
   - AOP: 
     - https://de.wikipedia.org/wiki/Aspektorientierte_Programmierung 
     - https://people.csail.mit.edu/dnj/teaching/6898/papers/aop.pdf?utm_source=chatgpt.com 
     - https://helpercode.com/2010/12/10/aspect-oriented-programming-in-python-using-decorators/ 
 
+- [ ] how to continue with: C:\PROJ\ai-knowhow\coding\product_discovery_and_requirements 
+  - [ ] should become input for brainstorming about the workflow for a specific idea?
 
 - [ ] strategies.md S7 introduces "differentiating reason" which is not in strategies_sources.md S7 --> vision companion introduce core split
 - [ ] strategies_sources.md refers back to strategies.md which does not make sense!
