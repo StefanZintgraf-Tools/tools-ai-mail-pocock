@@ -1,73 +1,37 @@
 # ScratchPad/TODOs
+  - [x] answer 8. Open questions in prod_discovery_requirements_skillset_plan.md 
+  - [~] review prod_discovery_requirements_skillset_plan.md
+    - [x] glossary update
+    - [ ] create new skills, don't adjust brainstorm-vision etc.
+    - [ ] use sub-agents and only implement the next single skill, not all
+    - [ ] assure write-greate-skills rules are accomplished
+      - [ ] step 1: writing rule
+      - [ ] step 2: verify gating rules one rule per a single sub-agnet
+  - [ ] apply prod_discovery_requirements_skillset_plan.md
+        PROMPT:
+        Read @coding/product_discovery_and_requirements/github_skillsets.md — it is a completed
+        analysis of existing GitHub skillsets vs. our proprietary skillset plan, ending in a
+        decision (§4–5), identified gaps in the plan (§6), and an ordered edit list (§7).
 
-- [x] install Pocock skills local to this project
-- [x] move brainstorm-vision to ai-knowhow (canonical: skills-plugins/brainstorm-vision), junction-linked into .claude/skills, scope files + hook moved alongside, settings.json points via junction
-- [x] run brainstorming (check, ob steering geht)
-- [~] continue brainstorming (wip): 
-  - [x] mail archiving and rag based mail search
-  - [x] lookeen features (do web search)
-  - [x] Anbindung an (noch nicht existierendes) Dokumenten-Management 
-  - [x] temporarily looping someone in on a thread without fully handing it off
-  - [x] the limits/approvals a manager sets on what the assistant may do — per person, per inbox
-  - [x] other products features (do web search)
-  - [x] something missing that could have significant influence to the software architecture
-- [x] skill adjustment: before finalizing, check if this had been evaluated:
-        is there something missing that could have significant influence to the software architecture.
-        We did not discuss architecture at all, but if you can think of any use-case that may have a significant effect in the later architecture, let me know.
-- [x] currently brainstorming-vision and scope-boundary strictly forbid to put architecture/integration items into the vision
-      Adjust: In case this pops up, ask user if that shall be added into a new "Constraints" section (just to not forget the idea)
-      --> Add DMS integration, RAG etc. (ask AI agent, what could make sense)
-- [x] shorter output wording 
-- [x] Skill create-vision-companion must be able to be paused temporarily (marked as work-in-progress, wip). Maybe similar as in the brainstorm-vision skill if it makes sense.  In addition, the AI agent shall suggest to pause and continue fresh after finishing each of the internal phases, whenever reasonable.  
-- [x] Skill create-vision-companion shall be executed multiple times on the same vision document.
-  - use case 1: Skill was enhanced and Companion files must be adjusted
-  - use case 2: Companion Review (e.g. with stronger LLM), Ralph-Looping
-- [x] manual review skill brainstorm-vision (siehe auch neuer Skill von Pocock und das Video dazu)
-  - [x] SKILL.md
-  - [x] brainstorm.md
-  - [x] architecture-significance-lens-template.md
-  - [x] finalizing.md
-- [x] Phase 1: assure scope boundary works
-- [x] Test mit Re-run ai-mail (auch wegen neuen Artefakt/en)
-  - nochmal weitermachen mit der einen neuen Idee
-- [x] Vision in Bullet-List Shape (better for humans, and make them also better for AI compared to long sentence)
-- [x] Use-cases also in Bullet-List Shape
-- [x] Neue Lens-Phase: Abstraktion eine Ebene drüber (Human Mail --> Human Interaction --> Interaction)
-  - Lens sucht nur maximal EINE Abstraktion, aber geht nicht im Detail drauf ein
-  - Nur eine Abstraktion selektieren (oder Finalisierung). Dann Pause mit Resume auf Basis dieser Abstraktion
-  - Ziel: eigentliches Brainstorming immer in der gleichen Phase mit dem gleichen Prompt
-- [x] enforce brainstorm pause after configurable number of additional UCs.
-- [x] scope_boundary.md was changed, must become generic so no change is needed!
-- [x] re-run brainstorming-vision: make it fully compliant to the new skill
-- [x] output file very long, does it make sens to split into separate files?
-- [x] review/adjust create-vision-companion 
-  - [x] shall re-use the glossary.md?
-  - [x] enhance uc-index.md: vision index, scope index?
-- [x] nochmal "writing-great-skill" anwenden an alle Teile
-  - keine ai-Mail spezifischen Dinge etc.
-  - glossary.md zu lange?
-- [x] finish create-vision-companion skill run for ai-mail
-- [x] UCs without related V# (Vision) are allowed, OK or NOK?
-- [x] finalize
-- [x] review critic-report.md (how is it handled, when to remove etc.)
-- [x] run fix_sdcmap.md, fix_ucorphan.md, 
-  - [x] update companion artifacts (or change skill to do a small, token-optimal review)
- 
+        Apply §7 to @coding/product_discovery_and_requirements/prod_discovery_requirements_skillset_plan.md:
+        work through items 1–7 in order, consulting the method docs in the same folder where §7
+        references them (especially product_discovery.md for item 1). Do not re-fetch the external
+        repos — the analysis file is authoritative. Where §7 leaves a decision open (e.g. solutions.md
+        vs. a section in opportunities.md), propose a choice with a one-line rationale and ask before
+        finalizing. Show me the plan diff summary when done.
+
+
 - [~] Check SW-Design strategies
   - [~] C:\PROJ\ai-knowhow\coding\software_design\software_design.md 
     - [x] how do these fit: C:\PROJ\github\pocock\agent-rules-books  
     - [x] agent-rules-github-repositories.md
     - [x] software_design.md shall reference books also (and check if all rules-books are correctly referenced and not missing)
-
-  - [ ] Secure by Design: how?
-  - DDD: https://de.wikipedia.org/wiki/Domain-driven_Design, https://en.wikipedia.org/wiki/Domain-driven_design  
-  - AOP: 
-    - https://de.wikipedia.org/wiki/Aspektorientierte_Programmierung 
-    - https://people.csail.mit.edu/dnj/teaching/6898/papers/aop.pdf?utm_source=chatgpt.com 
-    - https://helpercode.com/2010/12/10/aspect-oriented-programming-in-python-using-decorators/ 
-
-- [ ] how to continue with: C:\PROJ\ai-knowhow\coding\product_discovery_and_requirements 
-  - [ ] should become input for brainstorming about the workflow for a specific idea?
+    - [ ] Secure by Design: how?
+    - DDD: https://de.wikipedia.org/wiki/Domain-driven_Design, https://en.wikipedia.org/wiki/Domain-driven_design  
+    - AOP: 
+      - https://de.wikipedia.org/wiki/Aspektorientierte_Programmierung 
+      - https://people.csail.mit.edu/dnj/teaching/6898/papers/aop.pdf?utm_source=chatgpt.com 
+      - https://helpercode.com/2010/12/10/aspect-oriented-programming-in-python-using-decorators/ 
 
 - [ ] strategies.md S7 introduces "differentiating reason" which is not in strategies_sources.md S7 --> vision companion introduce core split
 - [ ] strategies_sources.md refers back to strategies.md which does not make sense!
